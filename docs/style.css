@@ -262,3 +262,6 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 /* Gespiegeld: scorebordje links, tekst rechts uitgelijnd, gouden streep rechts */
 .proof{flex-direction:row-reverse;border-left:0;border-right:2px solid var(--cta)}
 .quotes figure{text-align:right;margin-left:auto}
+/* Naam reviewer ondergeschikt aan het citaat */
+.quotes figcaption{font-size:.62rem;letter-spacing:.14em;opacity:.72;margin-top:.3rem}
+@media(max-width:780px){.quotes figcaption{font-size:.6rem}}
