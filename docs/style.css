@@ -246,3 +246,16 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 .proof{width:fit-content;max-width:100%;background:#0d0d0d59;border-left:2px solid var(--cta);border-radius:2px;padding:.6rem .85rem .55rem}
 .proof .quotes{flex:0 1 auto}
 .quotes figure{background:none;border-left:0;padding:0}
+/* Recensieblok: smaller, max. 2 regels tekst, bordje uitgelijnd met de tekst */
+.proof{max-width:min(100%,27rem);align-items:center;gap:1rem}
+.quotes blockquote{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;text-wrap:balance}
+.scores{width:auto;height:3.9rem;align-self:center}
+.scores li,.scores a{height:100%;display:block}
+.hero .scores img{height:100%;width:auto;filter:drop-shadow(0 3px 8px #0d0d0d59)}
+@media(max-width:780px){.proof{max-width:100%;gap:.8rem}.scores{height:3.4rem}}
+.scores{height:auto}
+.hero .scores img{height:3.9rem;width:auto}
+@media(max-width:780px){.hero .scores img{height:3.4rem}}
+@media(max-width:780px){.hero div{padding-top:max(7.6rem,calc(36svh - 6.3rem))}}
+@media(max-width:380px){.quotes blockquote{font-size:.76rem}.hero .scores img{height:3rem}.hero div{padding-top:8.8rem}}
+@media(max-width:380px){.proof{gap:.55rem;padding:.55rem .65rem .5rem}.quotes blockquote{text-wrap:wrap}}
