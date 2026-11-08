@@ -337,3 +337,10 @@ address{position:relative}
 
 /* Boekknoppen zonder kapotte logo's */
 .btn-booking,.btn-airbnb{gap:.8rem}
+/* Kenmerken als 2x2-raster: icoon boven, label en waarde eronder */
+.apt dl{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.apt dl div,.apt dl div:first-child{display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;gap:.35rem;padding:1.1rem 1rem 1.15rem;border:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.apt dt{flex-direction:column;align-items:flex-start;gap:.7rem}
+.apt dt .ic{width:1.35rem;height:1.35rem}
+.apt dd{text-align:left;line-height:1.35}
+@media(max-width:380px){.apt dl div,.apt dl div:first-child{padding:.9rem .75rem}}

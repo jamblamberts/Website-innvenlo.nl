@@ -6,6 +6,7 @@
 
 const translations = {
   nl: {
+    kitchenEquipped: "Goed uitgerust",
     reviewsLead: "Benieuwd wat gasten over ons zeggen? Lees hun ervaringen op",
     and: "en",
     ratings: "Beoordelingen",
@@ -109,6 +110,7 @@ const translations = {
   },
 
   en: {
+    kitchenEquipped: "Well equipped",
     reviewsLead: "Curious what our guests say? Read their reviews on",
     and: "and",
     ratings: "Ratings",
@@ -212,6 +214,7 @@ const translations = {
   },
 
   de: {
+    kitchenEquipped: "Gut ausgestattet",
     reviewsLead: "Neugierig, was unsere Gäste sagen? Lesen Sie ihre Bewertungen auf",
     and: "und",
     ratings: "Bewertungen",
@@ -315,6 +318,7 @@ const translations = {
   },
 
   fr: {
+    kitchenEquipped: "Bien équipée",
     reviewsLead: "Curieux de savoir ce que disent nos clients ? Lisez leurs avis sur",
     and: "et",
     ratings: "Notes",
