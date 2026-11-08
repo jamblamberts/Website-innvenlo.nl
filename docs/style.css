@@ -279,3 +279,6 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 .hero .quotes .score img{position:static;inset:auto;height:3.9rem;width:auto;object-fit:contain;animation:none;filter:drop-shadow(0 3px 8px #0d0d0d59)}
 @media(max-width:780px){.quotes li{gap:.75rem}.hero .quotes .score img{height:3.4rem}}
 @media(max-width:380px){.quotes li{gap:.55rem}.hero .quotes .score img{height:3rem}}
+/* Namen reviewers 15% kleiner */
+.quotes figcaption{font-size:.527rem}
+@media(max-width:780px){.quotes figcaption{font-size:.51rem}}
