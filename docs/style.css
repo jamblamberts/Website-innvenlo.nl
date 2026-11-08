@@ -181,3 +181,7 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 .btn-airbnb{background:#FF5A5F;border-color:#FF5A5F}
 .btn-airbnb:hover{background:#e8474c;border-color:#e8474c}
 
+.hd nav{align-items:center}
+.hd nav a.nav-book{padding:.6rem 1.15rem;border-radius:999px;background:#f5c518;color:#13201c;font-weight:500;letter-spacing:.14em;white-space:nowrap;box-shadow:0 4px 14px #13201c33;transition:background .3s,transform .3s,box-shadow .3s}
+.hd nav a.nav-book:hover{background:#ffd43b;transform:translateY(-1px);box-shadow:0 8px 20px #13201c40}
+@media(max-width:780px){.hd nav{flex-wrap:wrap;gap:.2rem 1.6rem}.hd nav a.nav-book{padding:.5rem 1rem}}

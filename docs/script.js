@@ -6,6 +6,7 @@
 
 const translations = {
   nl: {
+    bookDirect: "Direct boeken!",
     home: "Home",
     apartments: "Appartementen",
     contact: "Contact",
@@ -104,6 +105,7 @@ const translations = {
   },
 
   en: {
+    bookDirect: "Book now!",
     home: "Home",
     apartments: "Apartments",
     contact: "Contact",
@@ -202,6 +204,7 @@ const translations = {
   },
 
   de: {
+    bookDirect: "Jetzt buchen!",
     home: "Startseite",
     apartments: "Apartments",
     contact: "Kontakt",
@@ -300,6 +303,7 @@ const translations = {
   },
 
   fr: {
+    bookDirect: "Réserver !",
     home: "Accueil",
     apartments: "Appartements",
     contact: "Contact",
