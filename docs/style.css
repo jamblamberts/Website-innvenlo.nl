@@ -282,3 +282,10 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 /* Namen reviewers 15% kleiner */
 .quotes figcaption{font-size:.527rem}
 @media(max-width:780px){.quotes figcaption{font-size:.51rem}}
+/* Menu, boekknop en logo 4% groter */
+.logo{font-size:1.9656rem}
+.hd nav{font-size:.819rem}
+.hd nav a.nav-book{height:28.1px;padding-inline:.468rem;margin-left:-.468rem}
+@media(max-width:780px){.hd nav a.nav-book{padding-inline:.416rem;margin-left:-.416rem}}
+@media(max-width:380px){.logo{font-size:7.49vw}}
+@media(max-width:780px){.logo{font-size:min(1.9656rem,calc((100vw - 2 * var(--pad) - 76px) / 9.1))}}
