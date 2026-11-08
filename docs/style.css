@@ -539,3 +539,8 @@ address{position:relative}
  .apt-grid .act .btn::after{display:none}
 }
 @media(max-width:767px){.apt-grid .fac{column-gap:.75rem;row-gap:.15rem}.apt-grid .fac li+li::before{content:none}}
+/* FAQ: zelfde uitklapblok als 'Waarom kiezen' */
+.sec.faq{display:block;padding-top:clamp(2.25rem,5vw,4.5rem);padding-bottom:clamp(2.25rem,5vw,4.5rem)}
+.faq .why[open] h2{position:relative;padding-bottom:.7rem}
+.faq .why[open] h2::after{content:"";position:absolute;left:0;bottom:0;width:3rem;height:1px;background:var(--clay)}
+.faq .bn{margin-top:1.75rem}
