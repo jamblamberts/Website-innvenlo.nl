@@ -205,3 +205,16 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 @media(max-width:780px){.hero div{padding-bottom:calc(6rem + env(safe-area-inset-bottom))}}
 /* Telefoon: kop op vaste hoogte (36% van het scherm), ongeacht toestel */
 @media(max-width:780px){.hero{align-items:start}.hero div{padding-top:36svh}}
+/* Recensies in de hero: wisselen elkaar af, vaste hoogte zodat de kop niet verspringt */
+.quotes{display:grid;max-width:30rem;margin-bottom:clamp(1.6rem,4vh,2.6rem)}
+.quotes li{grid-area:1/1;opacity:0;transform:translateY(.6rem);transition:opacity .9s ease,transform .9s ease;pointer-events:none}
+.quotes li.is-active{opacity:1;transform:none;pointer-events:auto}
+.quotes figure{border-left:2px solid var(--cta);padding-left:1rem}
+.quotes .stars{display:block;color:var(--cta);font-size:.8rem;letter-spacing:.2em;line-height:1;margin-bottom:.55rem}
+.quotes blockquote{font:italic 300 clamp(1.02rem,1.5vw,1.2rem)/1.45 var(--serif);text-shadow:0 1px 3px #0d0d0d99}
+.quotes figcaption{margin-top:.5rem;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85}
+@media(max-width:780px){.hero div{padding-top:max(7.5rem,calc(36svh - 10.5rem))}}
+.quotes figure{background:#0d0d0d73;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);padding:.85rem 1.1rem .8rem;border-radius:2px}
+.quotes blockquote{font-weight:400;text-shadow:none}
+@media(max-width:780px){.quotes blockquote{font-size:.93rem;line-height:1.4}.quotes{margin-bottom:1.2rem}.hero div{padding-top:max(7.6rem,calc(36svh - 10rem))}}
+@media(max-width:380px){.hero div{padding-top:8.8rem}}
