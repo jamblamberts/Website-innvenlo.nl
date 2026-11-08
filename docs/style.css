@@ -186,3 +186,8 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 .hd nav a.nav-book:hover{background:#ffd43b;transform:translateY(-1px);box-shadow:0 4px 12px #13201c33}
 @media(max-width:780px){.hd nav{flex-wrap:wrap;gap:.2rem 1.6rem}.hd nav a.nav-book{padding:.45rem .55rem}}
 @media(max-width:380px){.logo{font-size:7.2vw}}
+/* Boekknop: één accentkleur, zelfde hoogte als taalknop, optisch gelijke afstand */
+:root{--cta:#f5c518}
+.home{--gold:var(--cta)}
+.hd nav a.nav-book{display:inline-flex;align-items:center;height:32px;padding-block:0;background:var(--cta);margin-left:-.6rem}
+@media(max-width:780px){.hd nav a.nav-book{margin-left:-.55rem}}
