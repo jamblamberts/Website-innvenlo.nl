@@ -379,3 +379,4 @@ address{position:relative}
 .quotes blockquote{-webkit-line-clamp:3;line-clamp:3}
 .proof{max-width:min(100%,30rem)}
 @media(max-width:780px){.hero div{padding-top:max(7.6rem,calc(36svh - 7rem))}}
+.sec.about{padding-top:clamp(2.25rem,5vw,4.5rem);padding-bottom:clamp(2.25rem,5vw,4.5rem)}
