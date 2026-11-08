@@ -265,3 +265,7 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 /* Naam reviewer ondergeschikt aan het citaat */
 .quotes figcaption{font-size:.62rem;letter-spacing:.14em;opacity:.72;margin-top:.3rem}
 @media(max-width:780px){.quotes figcaption{font-size:.6rem}}
+/* Recensieblok rechts tegen de schermrand */
+.hero div{max-width:none}
+.hero h1{max-width:calc(62rem - 2 * var(--pad))}
+.proof{margin-left:auto;margin-right:calc(-1 * var(--pad));border-radius:2px 0 0 2px}
