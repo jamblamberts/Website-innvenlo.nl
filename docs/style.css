@@ -382,3 +382,7 @@ address{position:relative}
 .sec.about{padding-top:clamp(2.25rem,5vw,4.5rem);padding-bottom:clamp(2.25rem,5vw,4.5rem)}
 /* Scorebordje rechts van de recensietekst */
 .quotes li{flex-direction:row-reverse;justify-content:flex-end}
+/* Recensies + kop samen omhoog */
+@media(min-width:781px){.hero div{padding-bottom:calc(clamp(2.5rem,9vh,5.5rem) + 4.9rem)}}
+@media(max-width:780px){.hero div{padding-top:7.4rem}}
+@media(max-width:380px){.hero div{padding-top:8.6rem}}
