@@ -189,5 +189,5 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 /* Boekknop: één accentkleur, zelfde hoogte als taalknop, optisch gelijke afstand */
 :root{--cta:#f5c518}
 .home{--gold:var(--cta)}
-.hd nav a.nav-book{display:inline-flex;align-items:center;height:32px;padding-block:0;background:var(--cta);margin-left:-.45rem}
+.hd nav a.nav-book{display:inline-flex;align-items:center;height:30.7px;padding-block:0;background:var(--cta);margin-left:-.45rem}
 @media(max-width:780px){.hd nav a.nav-book{margin-left:-.4rem}}
