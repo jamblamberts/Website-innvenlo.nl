@@ -189,7 +189,7 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 /* Boekknop: één accentkleur, zelfde hoogte als taalknop, optisch gelijke afstand */
 :root{--cta:#f5c518}
 .home{--gold:var(--cta)}
-.hd nav a.nav-book{display:inline-flex;align-items:center;height:30.7px;padding-block:0;background:var(--cta);margin-left:-.45rem}
+.hd nav a.nav-book{display:inline-flex;align-items:center;height:28.2px;padding-block:0;background:var(--cta);margin-left:-.45rem}
 @media(max-width:780px){.hd nav a.nav-book{margin-left:-.4rem}}
 /* Leesbaarheid header op de foto (alleen homepage) */
 .hero::after{background:linear-gradient(to top,#0a1d1aeb,#0a1d1a00 62%),linear-gradient(#0a1d1ae6 0,#0a1d1a99 16%,#0a1d1a33 30%,#0a1d1a00 42%)}
