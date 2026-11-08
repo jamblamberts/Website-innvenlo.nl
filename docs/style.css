@@ -302,3 +302,7 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 .proof{padding-top:calc(.3rem + 2.5px);padding-bottom:calc(.2rem + 2.5px)}
 @media(max-width:380px){.proof{padding-top:calc(.275rem + 2.5px);padding-bottom:calc(.2rem + 2.5px)}}
 .rev-links a{text-underline-offset:.25em;text-decoration-thickness:1px}
+/* Recensieblok links, op de lijn van de kop */
+.proof{margin-left:0;margin-right:0;border-right:0;border-left:2px solid var(--cta)}
+.quotes li{right:auto;left:0}
+.quotes figure{text-align:left;margin-left:0}
