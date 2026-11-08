@@ -259,3 +259,6 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 @media(max-width:780px){.hero div{padding-top:max(7.6rem,calc(36svh - 6.3rem))}}
 @media(max-width:380px){.quotes blockquote{font-size:.76rem}.hero .scores img{height:3rem}.hero div{padding-top:8.8rem}}
 @media(max-width:380px){.proof{gap:.55rem;padding:.55rem .65rem .5rem}.quotes blockquote{text-wrap:wrap}}
+/* Gespiegeld: scorebordje links, tekst rechts uitgelijnd, gouden streep rechts */
+.proof{flex-direction:row-reverse;border-left:0;border-right:2px solid var(--cta)}
+.quotes figure{text-align:right;margin-left:auto}

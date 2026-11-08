@@ -644,19 +644,20 @@ function initQuoteRotator() {
 function fitQuoteBoxes() {
   document.querySelectorAll(".quotes figure").forEach(figure => {
     figure.style.width = "";
-    const left = figure.getBoundingClientRect().left;
     const range = document.createRange();
-    let right = 0;
+    let widest = 0;
 
+    // Breedte van de langste regel (werkt bij links- én rechts uitgelijnde tekst).
     figure.querySelectorAll("blockquote, figcaption").forEach(el => {
       range.selectNodeContents(el);
       for (const rect of range.getClientRects()) {
-        right = Math.max(right, rect.right - left);
+        widest = Math.max(widest, rect.width);
       }
     });
 
-    const padRight = parseFloat(getComputedStyle(figure).paddingRight) || 0;
-    if (right > 0) figure.style.width = Math.ceil(right + padRight + 1) + "px";
+    const style = getComputedStyle(figure);
+    const pad = (parseFloat(style.paddingLeft) || 0) + (parseFloat(style.paddingRight) || 0);
+    if (widest > 0) figure.style.width = Math.ceil(widest + pad + 1) + "px";
   });
 }
 
