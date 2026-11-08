@@ -353,3 +353,7 @@ address{position:relative}
 .apt dt span{grid-column:2;align-self:end;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
 .apt dd{grid-column:2;align-self:start;text-align:left;line-height:1.4}
 @media(max-width:380px){.apt dl div,.apt dl div:first-child{padding:1rem 0}}
+/* 'Waarom kiezen': witruimte boven en onder de kop gehalveerd */
+.sec.alt{padding-top:clamp(2.25rem,5vw,4.5rem)}
+.alt h2{padding-bottom:.7rem}
+.alt .bn{margin-top:1.75rem}
