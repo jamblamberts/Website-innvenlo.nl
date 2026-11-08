@@ -306,3 +306,34 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 .proof{margin-left:0;margin-right:0;border-right:0;border-left:2px solid var(--cta)}
 .quotes li{right:auto;left:0}
 .quotes figure{text-align:left;margin-left:0}
+/* ============ Iconen & accenten ============ */
+.ic{width:1.15rem;height:1.15rem;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* Waarom-lijst: icoon in fijne ring in plaats van nummer */
+.bn li::before{content:none}
+.bn li{grid-template-columns:3.4rem 1fr 1.2fr;align-items:center;transition:background .4s}
+.ic-wrap{display:grid;place-items:center;width:2.9rem;height:2.9rem;border-radius:50%;border:1px solid #b2552d59;color:var(--clay);background:#f3efe799;transition:background .4s,color .4s,border-color .4s}
+.ic-wrap .ic{width:1.3rem;height:1.3rem}
+.bn li:hover .ic-wrap{background:var(--clay);border-color:var(--clay);color:var(--paper)}
+.bn li:last-child{border-bottom:1px solid var(--line)}
+.alt h2{position:relative;padding-bottom:1.4rem}
+.alt h2::after{content:"";position:absolute;left:0;bottom:0;width:3rem;height:1px;background:var(--clay)}
+@media(max-width:780px){
+ .bn li{grid-template-columns:2.9rem 1fr;gap:.35rem 1.1rem;align-items:start;padding:1.5rem 0}
+ .bn li .ic-wrap{grid-row:1/3;margin-top:.15rem}
+ .bn h3{align-self:center}
+}
+
+/* Appartementen: iconen bij kenmerken */
+.apt dt{display:flex;align-items:center;gap:.6rem;padding-top:0}
+.apt dt .ic{color:var(--clay);width:1.1rem;height:1.1rem}
+.apt dl div{align-items:center}
+
+/* Contact: iconen bij gegevens */
+.ct-list li{display:flex;align-items:center;gap:.8rem}
+.ct-list .ic{color:var(--clay)}
+address{position:relative}
+.ic-addr{display:block;width:1.6rem;height:1.6rem;color:var(--clay);margin-bottom:.8rem}
+
+/* Boekknoppen zonder kapotte logo's */
+.btn-booking,.btn-airbnb{gap:.8rem}
