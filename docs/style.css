@@ -229,3 +229,7 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 .quotes figure{background:#0d0d0d59}
 .quotes blockquote{font-size:clamp(.94rem,1.38vw,1.1rem)}
 @media(max-width:780px){.quotes blockquote{font-size:.856rem}}
+/* Compacter recensievlak */
+.quotes figure{padding:.6rem .85rem .55rem}
+.quotes figcaption{margin-top:.35rem}
+.quotes blockquote{text-wrap:balance}

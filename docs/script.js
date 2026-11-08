@@ -635,6 +635,27 @@ function initQuoteRotator() {
 }
 
 
+/* Vlak achter een recensie precies zo breed maken als de langste tekstregel.
+   (CSS maakt een blok met afgebroken tekst altijd even breed als de beschikbare ruimte.) */
+function fitQuoteBoxes() {
+  document.querySelectorAll(".quotes figure").forEach(figure => {
+    figure.style.width = "";
+    const left = figure.getBoundingClientRect().left;
+    const range = document.createRange();
+    let right = 0;
+
+    figure.querySelectorAll("blockquote, figcaption").forEach(el => {
+      range.selectNodeContents(el);
+      for (const rect of range.getClientRects()) {
+        right = Math.max(right, rect.right - left);
+      }
+    });
+
+    const padRight = parseFloat(getComputedStyle(figure).paddingRight) || 0;
+    if (right > 0) figure.style.width = Math.ceil(right + padRight + 1) + "px";
+  });
+}
+
 /* =================================
    WEBSITE STARTEN
 ================================= */
@@ -644,6 +665,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initImageSliders();
 	initLogoReveal();
   initQuoteRotator();
+  fitQuoteBoxes();
+  if (document.fonts) document.fonts.ready.then(fitQuoteBoxes);
+  window.addEventListener("resize", fitQuoteBoxes);
   translatePage(getSavedLanguage());
 });
 
