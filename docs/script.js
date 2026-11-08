@@ -7,7 +7,6 @@
 const translations = {
   nl: {
     guestReviews: "Ervaringen van gasten",
-    fiveStars: "5 van 5 sterren",
     bookDirect: "Direct boeken",
     home: "Home",
     apartments: "Appartementen",
@@ -108,7 +107,6 @@ const translations = {
 
   en: {
     guestReviews: "Guest reviews",
-    fiveStars: "5 out of 5 stars",
     bookDirect: "Book now",
     home: "Home",
     apartments: "Apartments",
@@ -209,7 +207,6 @@ const translations = {
 
   de: {
     guestReviews: "Gästebewertungen",
-    fiveStars: "5 von 5 Sternen",
     bookDirect: "Jetzt buchen",
     home: "Startseite",
     apartments: "Apartments",
@@ -310,7 +307,6 @@ const translations = {
 
   fr: {
     guestReviews: "Avis des clients",
-    fiveStars: "5 sur 5 étoiles",
     bookDirect: "Réserver",
     home: "Accueil",
     apartments: "Appartements",
