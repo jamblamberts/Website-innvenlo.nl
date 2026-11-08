@@ -386,3 +386,7 @@ address{position:relative}
 @media(min-width:781px){.hero div{padding-bottom:calc(clamp(2.5rem,9vh,5.5rem) + 4.9rem)}}
 @media(max-width:780px){.hero div{padding-top:7.4rem}}
 @media(max-width:380px){.hero div{padding-top:8.6rem}}
+/* Recensies 1,5 regel omlaag, kop-gedeelte 3 regels omlaag */
+@media(min-width:781px){.hero div{padding-bottom:clamp(2.5rem,9vh,5.5rem)}.proof{margin-bottom:calc(clamp(1.6rem,4vh,2.6rem) + 2.45rem)}}
+@media(max-width:780px){.hero div{padding-top:calc(7.4rem + 1.75rem)}.proof{margin-bottom:calc(1.2rem + 1.75rem)}}
+@media(max-width:380px){.hero div{padding-top:calc(8.6rem + 1.6rem)}.proof{margin-bottom:calc(1.2rem + 1.6rem)}}
