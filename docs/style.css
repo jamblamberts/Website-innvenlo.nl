@@ -357,28 +357,21 @@ address{position:relative}
 .sec.alt{padding-top:clamp(2.25rem,5vw,4.5rem)}
 .alt h2{padding-bottom:.7rem}
 .alt .bn{margin-top:1.75rem}
-/* 'Waarom kiezen': uitklapbare punten met +-knop */
-.bn li{display:block;padding:0}
-.bn details{padding:0}
-.bn summary{display:grid;grid-template-columns:2.9rem 1fr 2.2rem;align-items:center;column-gap:1.1rem;padding:1.4rem 0;cursor:pointer;list-style:none}
-.bn summary::-webkit-details-marker{display:none}
-.bn summary:focus-visible{outline:2px solid var(--clay);outline-offset:4px}
-.bn summary .ic-wrap{grid-row:auto;margin:0}
-.bn h3{align-self:center}
-.plus{position:relative;width:2.2rem;height:2.2rem;border-radius:50%;border:1px solid var(--line);transition:background .3s,border-color .3s,transform .4s}
-.plus::before,.plus::after{content:"";position:absolute;left:50%;top:50%;width:.8rem;height:1px;background:var(--ink);translate:-50% -50%;transition:transform .4s}
+/* 'Waarom kiezen': hele blok uitklapbaar met +-knop */
+.why summary{display:flex;align-items:center;justify-content:space-between;gap:1.2rem;cursor:pointer;list-style:none}
+.why summary::-webkit-details-marker{display:none}
+.why summary:focus-visible{outline:2px solid var(--clay);outline-offset:6px}
+.why summary h2{flex:1}
+.plus{position:relative;flex:none;width:2.6rem;height:2.6rem;border-radius:50%;border:1px solid #13201c40;transition:background .3s,border-color .3s}
+.plus::before,.plus::after{content:"";position:absolute;left:50%;top:50%;width:.9rem;height:1.5px;background:var(--ink);translate:-50% -50%;transition:transform .4s,background .3s}
 .plus::after{transform:rotate(90deg)}
-.bn summary:hover .plus{border-color:var(--clay)}
-.bn details[open] .plus{background:var(--clay);border-color:var(--clay)}
-.bn details[open] .plus::before,.bn details[open] .plus::after{background:var(--paper)}
-.bn details[open] .plus::after{transform:rotate(0deg)}
-.bn details p{padding:0 3.3rem 1.5rem 4rem;margin-top:-.4rem;max-width:42rem}
-.bn details[open] p{animation:bn-open .4s ease}
-@keyframes bn-open{from{opacity:0;transform:translateY(-.3rem)}}
-.bn li:hover .ic-wrap{background:#f3efe799;border-color:#b2552d59;color:var(--clay)}
-.bn details[open] .ic-wrap,.bn summary:hover .ic-wrap{background:var(--clay);border-color:var(--clay);color:var(--paper)}
-@media(max-width:780px){
- .bn summary{grid-template-columns:2.9rem 1fr 2rem;column-gap:1rem;padding:1.15rem 0}
- .plus{width:2rem;height:2rem}
- .bn details p{padding:0 0 1.3rem 3.9rem;margin-top:-.3rem}
-}
+.why summary:hover .plus{border-color:var(--clay)}
+.why[open] .plus{background:var(--clay);border-color:var(--clay)}
+.why[open] .plus::before,.why[open] .plus::after{background:var(--paper)}
+.why[open] .plus::after{transform:rotate(0deg)}
+.why[open] .bn{animation:why-open .45s ease}
+@keyframes why-open{from{opacity:0;transform:translateY(-.4rem)}}
+.why:not([open]) h2{padding-bottom:0}
+.why:not([open]) h2::after{content:none}
+@media(max-width:780px){.plus{width:2.3rem;height:2.3rem}}
+.sec.alt:has(.why:not([open])){padding-bottom:clamp(2.25rem,5vw,4.5rem)}
