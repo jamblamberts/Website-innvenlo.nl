@@ -634,6 +634,7 @@ function initQuoteRotator() {
       items[current].classList.remove("is-active");
       current = (current + 1) % items.length;
       items[current].classList.add("is-active");
+      if (list.classList.contains("quotes")) fitQuoteBoxes();
     }, 6500);
   });
 }
@@ -642,7 +643,7 @@ function initQuoteRotator() {
 /* Vlak achter een recensie precies zo breed maken als de langste tekstregel.
    (CSS maakt een blok met afgebroken tekst altijd even breed als de beschikbare ruimte.) */
 function fitQuoteBoxes() {
-  document.querySelectorAll(".quotes figure").forEach(figure => {
+  document.querySelectorAll(".quotes li.is-active figure").forEach(figure => {
     figure.style.width = "";
     const range = document.createRange();
     let widest = 0;
