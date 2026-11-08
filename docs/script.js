@@ -588,26 +588,102 @@ function initLanguageMenu() {
 ================================= */
 
 function initImageSliders() {
-  document.querySelectorAll("[data-slider]").forEach(slider => {
-    const images = slider.querySelectorAll("img");
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const labels = {
+    nl: ["Vorige foto", "Volgende foto", "Foto"],
+    en: ["Previous photo", "Next photo", "Photo"],
+    de: ["Vorheriges Foto", "Nächstes Foto", "Foto"],
+    fr: ["Photo précédente", "Photo suivante", "Photo"]
+  };
+  const t = labels[document.documentElement.lang] || labels.nl;
 
+  document.querySelectorAll("[data-slider]").forEach(slider => {
+    const images = [...slider.querySelectorAll("img")];
     if (images.length < 2) return;
 
-    let current = 0;
+    // Foto's in een veegbare strook zetten (scroll-snap: werkt native met aanraking).
+    const track = document.createElement("div");
+    track.className = "track";
+    images.forEach(img => {
+      img.classList.remove("active");
+      img.draggable = false;
+      track.appendChild(img);
+    });
+    slider.appendChild(track);
 
-    images.forEach((image, index) => {
-      image.classList.toggle("active", index === 0);
+    const prev = document.createElement("button");
+    const next = document.createElement("button");
+    prev.type = next.type = "button";
+    prev.className = "gal-btn gal-prev";
+    next.className = "gal-btn gal-next";
+    prev.setAttribute("aria-label", t[0]);
+    next.setAttribute("aria-label", t[1]);
+
+    const dots = document.createElement("div");
+    dots.className = "gal-dots";
+    const dotEls = images.map((_, i) => {
+      const d = document.createElement("button");
+      d.type = "button";
+      d.setAttribute("aria-label", `${t[2]} ${i + 1} / ${images.length}`);
+      d.addEventListener("click", () => { go(i); pause(); });
+      dots.appendChild(d);
+      return d;
+    });
+    slider.append(prev, next, dots);
+
+    let current = 0;
+    let pausedUntil = 0;
+    let visible = false;
+
+    const setActive = i => {
+      current = i;
+      dotEls.forEach((d, k) => d.classList.toggle("on", k === i));
+    };
+    const go = i => {
+      const n = (i + images.length) % images.length;
+      track.scrollTo({ left: n * track.clientWidth, behavior: reduceMotion ? "auto" : "smooth" });
+      setActive(n);
+    };
+    const pause = () => { pausedUntil = Date.now() + 8000; };
+
+    prev.addEventListener("click", () => { go(current - 1); pause(); });
+    next.addEventListener("click", () => { go(current + 1); pause(); });
+    track.addEventListener("pointerdown", pause, { passive: true });
+    track.addEventListener("touchstart", pause, { passive: true });
+    track.addEventListener("wheel", pause, { passive: true });
+
+    let raf = 0;
+    track.addEventListener("scroll", () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const i = Math.round(track.scrollLeft / track.clientWidth);
+        if (i !== current) setActive(Math.max(0, Math.min(images.length - 1, i)));
+      });
+    }, { passive: true });
+
+    slider.addEventListener("keydown", e => {
+      if (e.key === "ArrowRight") { go(current + 1); pause(); }
+      if (e.key === "ArrowLeft") { go(current - 1); pause(); }
     });
 
-    setInterval(() => {
-      images[current].classList.remove("active");
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(entries => {
+        visible = entries[0].isIntersecting;
+      }, { threshold: 0.4 }).observe(slider);
+    } else {
+      visible = true;
+    }
 
-      current = (current + 1) % images.length;
+    setActive(0);
 
-      images[current].classList.add("active");
-    }, 2500);
+    if (!reduceMotion) {
+      setInterval(() => {
+        if (visible && Date.now() > pausedUntil && !document.hidden) go(current + 1);
+      }, 3500);
+    }
   });
 }
+
 function initLogoReveal() {
   const logo = document.querySelector(".logo");
   if (!logo || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
