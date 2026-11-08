@@ -6,6 +6,8 @@
 
 const translations = {
   nl: {
+    bathPriv: "Eigen badkamer",
+    bathPrivText: "Met badkuip en douche, inclusief gratis bad- en toiletartikelen.",
     kitchenEquipped: "Goed uitgerust",
     reviewsLead: "Benieuwd wat gasten over ons zeggen? Lees hun ervaringen op",
     and: "en",
@@ -110,6 +112,8 @@ const translations = {
   },
 
   en: {
+    bathPriv: "Private bathroom",
+    bathPrivText: "With bathtub and shower, including free toiletries.",
     kitchenEquipped: "Well equipped",
     reviewsLead: "Curious what our guests say? Read their reviews on",
     and: "and",
@@ -214,6 +218,8 @@ const translations = {
   },
 
   de: {
+    bathPriv: "Eigenes Badezimmer",
+    bathPrivText: "Mit Badewanne und Dusche, inklusive kostenloser Pflegeprodukte.",
     kitchenEquipped: "Gut ausgestattet",
     reviewsLead: "Neugierig, was unsere Gäste sagen? Lesen Sie ihre Bewertungen auf",
     and: "und",
@@ -318,6 +324,8 @@ const translations = {
   },
 
   fr: {
+    bathPriv: "Salle de bains privée",
+    bathPrivText: "Avec baignoire et douche, articles de toilette gratuits inclus.",
     kitchenEquipped: "Bien équipée",
     reviewsLead: "Curieux de savoir ce que disent nos clients ? Lisez leurs avis sur",
     and: "et",
