@@ -298,3 +298,6 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 /* Gastnaam een derde hoger, minder ruimte eronder */
 .quotes figcaption{margin-top:.2rem;line-height:1.2}
 .proof{padding-bottom:.2rem}
+/* Recensievlak 8% hoger */
+.proof{padding-top:calc(.3rem + 2.5px);padding-bottom:calc(.2rem + 2.5px)}
+@media(max-width:380px){.proof{padding-top:calc(.275rem + 2.5px);padding-bottom:calc(.2rem + 2.5px)}}
