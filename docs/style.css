@@ -408,3 +408,29 @@ address{position:relative}
 .gal-btn:hover{background:#fff}
 @media(hover:none){.gal-btn{display:none}}
 .sec.alt{padding-bottom:clamp(2.25rem,5vw,4.5rem)}
+/* ============ Appartementen naast elkaar (homepage) ============ */
+.apc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1.25rem,2.5vw,2.5rem);margin-top:clamp(2rem,4vw,3.5rem);align-items:stretch}
+.apc{display:flex;flex-direction:column;background:#faf8f3;border:1px solid var(--line);overflow:hidden}
+.apc .im{aspect-ratio:4/3;grid-column:auto;width:100%}
+.apc-body{display:flex;flex-direction:column;gap:1rem;padding:clamp(1.25rem,2.4vw,2rem);flex:1}
+.apc-type{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--clay)}
+.apc h3{font-size:clamp(1.6rem,2.4vw,2.1rem);margin-top:-.35rem}
+.apc-lead{color:var(--mute);font-size:1rem;line-height:1.55}
+.apc-facts{border-top:1px solid var(--line);margin-top:.2rem}
+.apc-facts div{display:grid;grid-template-columns:1.25rem 7.5rem 1fr;align-items:center;gap:.75rem;padding:.7rem 0;border-bottom:1px solid var(--line)}
+.apc-facts .ic{color:var(--clay);width:1.15rem;height:1.15rem}
+.apc-facts dt{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.apc-facts dd{font-size:.95rem;line-height:1.35}
+.apc-act{display:grid;gap:.6rem;margin-top:auto;padding-top:.6rem}
+.apc-act .btn{justify-content:space-between;width:100%}
+.apc .im .track img{transition:none}
+.more{margin-top:clamp(2rem,4vw,3rem)}
+@media(max-width:767px){
+ .apc-grid{grid-template-columns:1fr;gap:1.5rem}
+ .apc-facts div{grid-template-columns:1.25rem 6.6rem 1fr}
+}
+@media(min-width:768px) and (max-width:1023px){
+ .apc-facts div{grid-template-columns:1.15rem 1fr;row-gap:.1rem}
+ .apc-facts .ic{grid-row:1/3}
+ .apc-facts dd{grid-column:2}
+}

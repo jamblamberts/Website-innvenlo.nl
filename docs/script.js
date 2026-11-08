@@ -6,6 +6,16 @@
 
 const translations = {
   nl: {
+    oneType: "Appartement · 2 ruimtes",
+    deluxeType: "Kamer · 1 ruimte",
+    oneLead: "Ruim appartement met parketvloer, zithoek met flatscreen-tv en uitzicht over Venlo.",
+    deluxeLead: "Ruime kamer met eigen ingang, koffiemachine en een bank om te ontspannen.",
+    cmpLayout: "Indeling",
+    oneLayout: "Woonkamer + aparte slaapkamer",
+    deluxeLayout: "Eén ruimte met zit- en eethoek",
+    oneKitchenVal: "Eigen keuken, volledig uitgerust",
+    deluxeKitchenVal: "Toegang tot uitgeruste keuken",
+    bathBoth: "Bad en douche",
     bathPriv: "Eigen badkamer",
     bathPrivText: "Met badkuip en douche, inclusief gratis bad- en toiletartikelen.",
     kitchenEquipped: "Goed uitgerust",
@@ -112,6 +122,16 @@ const translations = {
   },
 
   en: {
+    oneType: "Apartment · 2 rooms",
+    deluxeType: "Room · 1 space",
+    oneLead: "Spacious apartment with parquet flooring, a seating area with flat-screen TV and views over Venlo.",
+    deluxeLead: "Spacious room with private entrance, coffee machine and a sofa to relax on.",
+    cmpLayout: "Layout",
+    oneLayout: "Living room + separate bedroom",
+    deluxeLayout: "One room with seating and dining area",
+    oneKitchenVal: "Private, fully equipped kitchen",
+    deluxeKitchenVal: "Access to an equipped kitchen",
+    bathBoth: "Bath and shower",
     bathPriv: "Private bathroom",
     bathPrivText: "With bathtub and shower, including free toiletries.",
     kitchenEquipped: "Well equipped",
@@ -218,6 +238,16 @@ const translations = {
   },
 
   de: {
+    oneType: "Apartment · 2 Räume",
+    deluxeType: "Zimmer · 1 Raum",
+    oneLead: "Geräumiges Apartment mit Parkettboden, Sitzecke mit Flachbildfernseher und Blick über Venlo.",
+    deluxeLead: "Geräumiges Zimmer mit eigenem Eingang, Kaffeemaschine und einem Sofa zum Entspannen.",
+    cmpLayout: "Aufteilung",
+    oneLayout: "Wohnzimmer + separates Schlafzimmer",
+    deluxeLayout: "Ein Raum mit Sitz- und Essbereich",
+    oneKitchenVal: "Eigene, voll ausgestattete Küche",
+    deluxeKitchenVal: "Zugang zu ausgestatteter Küche",
+    bathBoth: "Badewanne und Dusche",
     bathPriv: "Eigenes Badezimmer",
     bathPrivText: "Mit Badewanne und Dusche, inklusive kostenloser Pflegeprodukte.",
     kitchenEquipped: "Gut ausgestattet",
@@ -324,6 +354,16 @@ const translations = {
   },
 
   fr: {
+    oneType: "Appartement · 2 pièces",
+    deluxeType: "Chambre · 1 pièce",
+    oneLead: "Appartement spacieux avec parquet, coin salon avec télévision à écran plat et vue sur Venlo.",
+    deluxeLead: "Chambre spacieuse avec entrée privée, machine à café et un canapé pour se détendre.",
+    cmpLayout: "Agencement",
+    oneLayout: "Salon + chambre séparée",
+    deluxeLayout: "Une pièce avec coin salon et coin repas",
+    oneKitchenVal: "Cuisine privée entièrement équipée",
+    deluxeKitchenVal: "Accès à une cuisine équipée",
+    bathBoth: "Baignoire et douche",
     bathPriv: "Salle de bains privée",
     bathPrivText: "Avec baignoire et douche, articles de toilette gratuits inclus.",
     kitchenEquipped: "Bien équipée",
