@@ -6,6 +6,7 @@
 
 const translations = {
   nl: {
+    ratings: "Beoordelingen",
     guestReviews: "Ervaringen van gasten",
     bookDirect: "Direct boeken",
     home: "Home",
@@ -106,6 +107,7 @@ const translations = {
   },
 
   en: {
+    ratings: "Ratings",
     guestReviews: "Guest reviews",
     bookDirect: "Book now",
     home: "Home",
@@ -206,6 +208,7 @@ const translations = {
   },
 
   de: {
+    ratings: "Bewertungen",
     guestReviews: "Gästebewertungen",
     bookDirect: "Jetzt buchen",
     home: "Startseite",
@@ -306,6 +309,7 @@ const translations = {
   },
 
   fr: {
+    ratings: "Notes",
     guestReviews: "Avis des clients",
     bookDirect: "Réserver",
     home: "Accueil",
