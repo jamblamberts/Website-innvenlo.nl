@@ -407,3 +407,4 @@ address{position:relative}
 [data-slider]:hover .gal-btn,.gal-btn:focus-visible{opacity:1}
 .gal-btn:hover{background:#fff}
 @media(hover:none){.gal-btn{display:none}}
+.sec.alt{padding-bottom:clamp(2.25rem,5vw,4.5rem)}
