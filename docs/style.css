@@ -293,3 +293,5 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 .proof{padding-top:.3rem;padding-bottom:.275rem}
 @media(max-width:380px){.proof{padding-top:.275rem;padding-bottom:.25rem}}
 @media(max-width:780px){.hero div{padding-top:max(7.6rem,calc(36svh - 5.7rem))}}
+/* Menu-items en boekknop vetgedrukt */
+.hd nav a,.home .hd nav a:not(.nav-book),.hd nav a.nav-book{font-weight:700}
