@@ -11,7 +11,7 @@ const translations = {
     apartments: "Appartementen",
     contact: "Contact",
 
-    homeTitle: "Appartement huren in Venlo",
+    homeTitle: "Overnachten in het centrum van Venlo",
     homeIntro: "Overnachten in Venlo in een ruim, comfortabel short stay appartement met eigen ingang, keuken en gratis WiFi.",
     view: "Bekijk de appartementen",
     about: "Overnachten in Venlo, op een toplocatie",
@@ -110,7 +110,7 @@ const translations = {
     apartments: "Apartments",
     contact: "Contact",
 
-    homeTitle: "Apartment rental in Venlo",
+    homeTitle: "Stay in the centre of Venlo",
     homeIntro: "Stay in Venlo in a spacious, comfortable short-stay apartment with a private entrance, kitchen and free WiFi.",
     view: "View apartments",
     about: "Stay in Venlo in a great location",
@@ -209,7 +209,7 @@ const translations = {
     apartments: "Apartments",
     contact: "Kontakt",
 
-    homeTitle: "Apartment in Venlo mieten",
+    homeTitle: "Übernachten im Zentrum von Venlo",
     homeIntro: "Übernachten Sie in Venlo in einem geräumigen und komfortablen Apartment mit eigenem Eingang, Küche und kostenlosem WLAN.",
     view: "Apartments ansehen",
     about: "Übernachten in Venlo in bester Lage",
@@ -308,7 +308,7 @@ const translations = {
     apartments: "Appartements",
     contact: "Contact",
 
-    homeTitle: "Louer un appartement à Venlo",
+    homeTitle: "Séjourner dans le centre de Venlo",
     homeIntro: "Séjournez à Venlo dans un appartement spacieux et confortable avec entrée privée, cuisine et Wi-Fi gratuit.",
     view: "Voir les appartements",
     about: "Séjourner à Venlo dans un emplacement idéal",
