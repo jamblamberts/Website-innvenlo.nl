@@ -52,7 +52,7 @@ const translations = {
     phone: "Telefoon",
     directBooking: "Direct boeken? Bekijk de appartementen en boek via Booking.com of Airbnb.",
 
-    titleHome: "Appartement huren in Venlo | InnVenlo Apartments",
+    titleHome: "Overnachten in Venlo centrum | InnVenlo Apartments",
     titleApartments: "Appartementen in Venlo huren | InnVenlo Apartments",
     titleContact: "Contact | InnVenlo Apartments Venlo",
     mainMenu: "Hoofdmenu",
@@ -151,7 +151,7 @@ const translations = {
     phone: "Phone",
     directBooking: "Want to book directly? View our apartments and book via Booking.com or Airbnb.",
 
-    titleHome: "Rent an apartment in Venlo | InnVenlo Apartments",
+    titleHome: "Stay in Venlo city centre | InnVenlo Apartments",
     titleApartments: "Rent apartments in Venlo | InnVenlo Apartments",
     titleContact: "Contact | InnVenlo Apartments Venlo",
     mainMenu: "Main menu",
@@ -250,7 +250,7 @@ const translations = {
     phone: "Telefon",
     directBooking: "Direkt buchen? Sehen Sie sich unsere Apartments an und buchen Sie über Booking.com oder Airbnb.",
 
-    titleHome: "Apartment in Venlo mieten | InnVenlo Apartments",
+    titleHome: "Übernachten im Zentrum von Venlo | InnVenlo Apartments",
     titleApartments: "Apartments in Venlo mieten | InnVenlo Apartments",
     titleContact: "Kontakt | InnVenlo Apartments Venlo",
     mainMenu: "Hauptmenü",
@@ -349,7 +349,7 @@ const translations = {
     phone: "Téléphone",
     directBooking: "Vous souhaitez réserver directement ? Consultez nos appartements et réservez via Booking.com ou Airbnb.",
 
-    titleHome: "Louer un appartement à Venlo | InnVenlo Apartments",
+    titleHome: "Séjourner au centre de Venlo | InnVenlo Apartments",
     titleApartments: "Louer des appartements à Venlo | InnVenlo Apartments",
     titleContact: "Contact | InnVenlo Apartments Venlo",
     mainMenu: "Menu principal",
