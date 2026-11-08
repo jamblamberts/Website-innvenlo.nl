@@ -269,3 +269,4 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 .hero div{max-width:none}
 .hero h1{max-width:calc(62rem - 2 * var(--pad))}
 .proof{margin-left:auto;margin-right:calc(-1 * var(--pad));border-radius:2px 0 0 2px}
+.proof{margin-right:calc(12px - var(--pad));border-radius:2px}
