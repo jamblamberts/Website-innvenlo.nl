@@ -191,3 +191,12 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 .home{--gold:var(--cta)}
 .hd nav a.nav-book{display:inline-flex;align-items:center;height:30.7px;padding-block:0;background:var(--cta);margin-left:-.45rem}
 @media(max-width:780px){.hd nav a.nav-book{margin-left:-.4rem}}
+/* Leesbaarheid header op de foto (alleen homepage) */
+.hero::after{background:linear-gradient(to top,#0a1d1aeb,#0a1d1a00 62%),linear-gradient(#0a1d1ae6 0,#0a1d1a99 16%,#0a1d1a33 30%,#0a1d1a00 42%)}
+.home .hd{text-shadow:0 1px 2px #0a1d1a73}
+.home .logo span:not(.l){opacity:.88}
+.home .hd nav a:not(.nav-book){font-weight:500}
+.home .language-current{background:#0a1d1a59;border-color:#ffffff80;text-shadow:none}
+.home .language-current:hover,.home .open .language-current{background:#0a1d1a8c}
+.hd nav a.nav-book{font-weight:600;color:#0d1714;text-shadow:none;box-shadow:0 0 0 1px #0a1d1a14,0 4px 14px #0a1d1a59}
+.hd nav a.nav-book:hover{background:#ffd23f}
