@@ -879,6 +879,37 @@ function fitQuoteBoxes() {
 }
 
 /* =================================
+   UITKLAPBLOKKEN OPENEN BIJ SCROLLEN
+================================= */
+
+// Opent een uitklapblok één keer zodra het in beeld scrolt.
+// Klapt de bezoeker het daarna zelf dicht, dan blijft het dicht.
+function initAutoOpen() {
+  const blocks = document.querySelectorAll("details.why");
+  if (!blocks.length) return;
+
+  if (!("IntersectionObserver" in window)) {
+    blocks.forEach(block => { block.open = true; });
+    return;
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.open = true;
+      observer.unobserve(entry.target);
+    });
+  }, { rootMargin: "0px 0px -25% 0px" });
+
+  blocks.forEach(block => {
+    // Handmatig gebruik gaat voor: dan niet meer automatisch openen.
+    block.querySelector("summary")?.addEventListener("click", () => observer.unobserve(block), { once: true });
+    observer.observe(block);
+  });
+}
+
+
+/* =================================
    WEBSITE STARTEN
 ================================= */
 
@@ -887,6 +918,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initImageSliders();
 	initLogoReveal();
   initQuoteRotator();
+  initAutoOpen();
   fitQuoteBoxes();
   if (document.fonts) document.fonts.ready.then(fitQuoteBoxes);
   window.addEventListener("resize", fitQuoteBoxes);
