@@ -499,3 +499,43 @@ address{position:relative}
 }
 @media(max-width:780px){.g{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:767px){.apc-facts div{min-height:3.25rem}}
+/* ============ Appartementenpagina: appartementen naast elkaar ============ */
+.apt-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(7,auto);column-gap:clamp(1.25rem,3vw,3rem);padding:clamp(2.5rem,5vw,4rem) var(--pad) clamp(3rem,6vw,5rem);border-top:1px solid var(--line)}
+.apt-grid .apt{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:subgrid;grid-row:span 7;row-gap:1.1rem;padding:0;border:0;gap:1.1rem 0}
+.apt-grid .apt .in{display:contents}
+.apt-grid .photo-slider,.apt-grid .apt.rev .photo-slider{position:relative;top:0;order:0;aspect-ratio:4/3;margin-bottom:.4rem}
+.apt-grid .apt h2{font-size:clamp(1.5rem,2.6vw,2.4rem);align-self:end}
+.apt-grid .apt>.in>p{color:var(--mute)}
+.apt-grid .apt dl{align-self:start}
+.apt-grid .apt h3{align-self:end;margin-top:.4rem}
+.apt-grid .fac{align-self:start}
+.apt-grid .act{align-self:end;display:grid;gap:.6rem;padding-top:.6rem}
+.apt-grid .act .btn{justify-content:space-between;width:100%}
+@media(max-width:767px){
+ .apt-grid{column-gap:.6rem;padding:2rem var(--pad) 3rem}
+ .apt-grid .apt{row-gap:.7rem;gap:.7rem 0}
+ .apt-grid .photo-slider,.apt-grid .apt.rev .photo-slider{aspect-ratio:4/5;margin-bottom:.2rem}
+ .apt-grid .apt h2{font-size:1rem;line-height:1.2}
+ .apt-grid .apt>.in>p{font-size:.8rem;line-height:1.45}
+ .apt-grid .apt dl div,.apt-grid .apt dl div:first-child{grid-template-columns:1.6rem 1fr;column-gap:.5rem;padding:.6rem 0}
+ .apt-grid .apt dt .ic{width:1.6rem;height:1.6rem;padding:.38rem}
+ .apt-grid .apt dt span{font-size:.55rem;letter-spacing:.1em}
+ .apt-grid .apt dd{font-size:.78rem;line-height:1.3}
+ .apt-grid .apt h3{font-size:.6rem}
+ .apt-grid .fac{font-size:.74rem;line-height:1.5}
+ .apt-grid .fac li+li::before{margin:0 .35rem}
+ .apt-grid .act{gap:.4rem}
+ .apt-grid .act .btn{padding:.8rem .7rem;font-size:.6rem;letter-spacing:.1em;gap:.3rem}
+ .apt-grid .act .btn span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+ .apt-grid .act .btn-booking::before{content:"Booking.com"}
+ .apt-grid .act .btn-airbnb::before{content:"Airbnb"}
+ .apt-grid .gal-dots{padding:0 .5rem;bottom:.5rem}
+ .apt-grid .gal-dots button{width:12px;height:14px}
+ .apt-grid .gal-dots button::before{width:5px;height:5px}
+}
+@media(max-width:360px){
+ .apt-grid{column-gap:.45rem}
+ .apt-grid .act .btn{padding:.75rem .5rem;font-size:.55rem;letter-spacing:.06em}
+ .apt-grid .act .btn::after{display:none}
+}
+@media(max-width:767px){.apt-grid .fac{column-gap:.75rem;row-gap:.15rem}.apt-grid .fac li+li::before{content:none}}
