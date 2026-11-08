@@ -214,8 +214,11 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 .quotes blockquote{font:italic 300 clamp(1.02rem,1.5vw,1.2rem)/1.45 var(--serif);text-shadow:0 1px 3px #0d0d0d99}
 .quotes figcaption{margin-top:.5rem;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85}
 @media(max-width:780px){.hero div{padding-top:max(7.5rem,calc(36svh - 10.5rem))}}
-.quotes figure{background:#0d0d0d2d;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);padding:.85rem 1.1rem .8rem;border-radius:2px}
+.quotes figure{background:#0d0d0d2d;padding:.85rem 1.1rem .8rem;border-radius:2px}
 .quotes blockquote{font-weight:400;text-shadow:none}
 @media(max-width:780px){.quotes blockquote{font-size:.93rem;line-height:1.4}.quotes{margin-bottom:1.2rem}.hero div{padding-top:max(7.6rem,calc(36svh - 10rem))}}
 @media(max-width:380px){.hero div{padding-top:8.8rem}}
 .quotes blockquote{text-shadow:0 1px 3px #0d0d0db3}
+/* Recensies wisselen na elkaar (eerst uit, dan in) in plaats van door elkaar heen */
+.quotes li{transition:opacity .5s ease,transform .5s ease}
+.quotes li.is-active{transition:opacity .8s ease .55s,transform .8s ease .55s}
