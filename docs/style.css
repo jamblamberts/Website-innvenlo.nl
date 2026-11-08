@@ -204,3 +204,5 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 .hero::after{background:linear-gradient(to top,#0a1d1af2 0,#0a1d1ab3 28%,#0a1d1a4d 52%,#0a1d1a00 70%),linear-gradient(#0a1d1ae6 0,#0a1d1a99 16%,#0a1d1a33 30%,#0a1d1a00 42%)}
 .hero h1{font-weight:400}
 @media(max-width:780px){.hero div{padding-bottom:calc(6rem + env(safe-area-inset-bottom))}}
+/* Telefoon: kop op vaste hoogte (36% van het scherm), ongeacht toestel */
+@media(max-width:780px){.hero{align-items:start}.hero div{padding-top:36svh}}
