@@ -6,6 +6,12 @@
 
 const translations = {
   nl: {
+    aptType: "Appartement · eigen ingang",
+    aptLead: "Ruim appartement met woonkamer, bank en flatscreen-tv, een eigen keuken en een eigen badkamer.",
+    livingLbl: "Woonkamer",
+    livingVal: "Met bank en flatscreen-tv",
+    kitchenOwn: "Eigen keuken, volledig uitgerust",
+    bathOwn: "Eigen badkamer met bad",
     faqLabel: "Praktische informatie",
     faqTitle: "Veelgestelde vragen",
     faqParkQ: "Is er parkeergelegenheid beschikbaar?",
@@ -136,6 +142,12 @@ const translations = {
   },
 
   en: {
+    aptType: "Apartment · private entrance",
+    aptLead: "Spacious apartment with a living room, sofa and flat-screen TV, a private kitchen and a private bathroom.",
+    livingLbl: "Living room",
+    livingVal: "With sofa and flat-screen TV",
+    kitchenOwn: "Private, fully equipped kitchen",
+    bathOwn: "Private bathroom with bathtub",
     faqLabel: "Practical information",
     faqTitle: "Frequently asked questions",
     faqParkQ: "Is parking available?",
@@ -266,6 +278,12 @@ const translations = {
   },
 
   de: {
+    aptType: "Apartment · eigener Eingang",
+    aptLead: "Geräumiges Apartment mit Wohnzimmer, Sofa und Flachbildfernseher, eigener Küche und eigenem Badezimmer.",
+    livingLbl: "Wohnzimmer",
+    livingVal: "Mit Sofa und Flachbildfernseher",
+    kitchenOwn: "Eigene, voll ausgestattete Küche",
+    bathOwn: "Eigenes Bad mit Badewanne",
     faqLabel: "Praktische Informationen",
     faqTitle: "Häufig gestellte Fragen",
     faqParkQ: "Gibt es Parkmöglichkeiten?",
@@ -396,6 +414,12 @@ const translations = {
   },
 
   fr: {
+    aptType: "Appartement · entrée privée",
+    aptLead: "Appartement spacieux avec salon, canapé et télévision à écran plat, cuisine privée et salle de bains privée.",
+    livingLbl: "Salon",
+    livingVal: "Avec canapé et télévision à écran plat",
+    kitchenOwn: "Cuisine privée entièrement équipée",
+    bathOwn: "Salle de bains privée avec baignoire",
     faqLabel: "Informations pratiques",
     faqTitle: "Questions fréquentes",
     faqParkQ: "Peut-on se garer à proximité ?",
