@@ -301,3 +301,4 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 /* Recensievlak 8% hoger */
 .proof{padding-top:calc(.3rem + 2.5px);padding-bottom:calc(.2rem + 2.5px)}
 @media(max-width:380px){.proof{padding-top:calc(.275rem + 2.5px);padding-bottom:calc(.2rem + 2.5px)}}
+.rev-links a{text-underline-offset:.25em;text-decoration-thickness:1px}

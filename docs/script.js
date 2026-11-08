@@ -6,6 +6,8 @@
 
 const translations = {
   nl: {
+    reviewsLead: "Benieuwd wat gasten over ons zeggen? Lees hun ervaringen op",
+    and: "en",
     ratings: "Beoordelingen",
     guestReviews: "Ervaringen van gasten",
     bookDirect: "Direct boeken",
@@ -107,6 +109,8 @@ const translations = {
   },
 
   en: {
+    reviewsLead: "Curious what our guests say? Read their reviews on",
+    and: "and",
     ratings: "Ratings",
     guestReviews: "Guest reviews",
     bookDirect: "Book now",
@@ -208,6 +212,8 @@ const translations = {
   },
 
   de: {
+    reviewsLead: "Neugierig, was unsere Gäste sagen? Lesen Sie ihre Bewertungen auf",
+    and: "und",
     ratings: "Bewertungen",
     guestReviews: "Gästebewertungen",
     bookDirect: "Jetzt buchen",
@@ -309,6 +315,8 @@ const translations = {
   },
 
   fr: {
+    reviewsLead: "Curieux de savoir ce que disent nos clients ? Lisez leurs avis sur",
+    and: "et",
     ratings: "Notes",
     guestReviews: "Avis des clients",
     bookDirect: "Réserver",
