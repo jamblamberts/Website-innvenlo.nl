@@ -242,3 +242,7 @@ form button{justify-self:start;cursor:pointer;font-family:var(--sans)}
 .scores img{width:100%;height:auto;filter:drop-shadow(0 4px 10px #0d0d0d66)}
 @media(max-width:780px){.proof{margin-bottom:1.2rem}}
 .hero .scores img{position:static;inset:auto;width:100%;height:auto;object-fit:contain;animation:none}
+/* Eén vlak om recensie én scorebordje */
+.proof{width:fit-content;max-width:100%;background:#0d0d0d59;border-left:2px solid var(--cta);border-radius:2px;padding:.6rem .85rem .55rem}
+.proof .quotes{flex:0 1 auto}
+.quotes figure{background:none;border-left:0;padding:0}
