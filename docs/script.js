@@ -6,6 +6,25 @@
 
 const translations = {
   nl: {
+    resLabel: "Reserveringsaanvraag",
+    resTitle: "Direct bij ons aanvragen",
+    resIntro: "Kies uw appartement en datums. U ontvangt binnen 24 uur een persoonlijke bevestiging per e-mail. Uw aanvraag is pas definitief na onze bevestiging.",
+    resChoose: "Appartement",
+    resIn: "Aankomst",
+    resOut: "Vertrek",
+    resGuests: "Gasten",
+    resPhone: "Telefoon (optioneel)",
+    resMsg: "Opmerking (optioneel)",
+    resSend: "Reservering aanvragen",
+    resNote: "Liever direct zeker van uw verblijf? Boek via Booking.com of Airbnb met de knoppen bij de appartementen.",
+    resDoneTitle: "Bedankt voor uw aanvraag",
+    resDoneText: "We hebben uw aanvraag ontvangen en bevestigen zo snel mogelijk per e-mail of de datums beschikbaar zijn.",
+    resNight: "nacht",
+    resNights: "nachten",
+    resErrDates: "Kies een vertrekdatum na de aankomstdatum.",
+    resErrFields: "Vul alle verplichte velden correct in.",
+    resErrSend: "Versturen is niet gelukt. Probeer het opnieuw of neem contact op via WhatsApp of e-mail.",
+    resErrSetup: "Het aanvraagformulier is nog niet geactiveerd. Neem contact op via WhatsApp of e-mail.",
     aptType: "Appartement · eigen ingang",
     aptLead: "Ruim appartement met woonkamer, bank en flatscreen-tv, een eigen keuken en een eigen badkamer.",
     livingLbl: "Woonkamer",
@@ -142,6 +161,25 @@ const translations = {
   },
 
   en: {
+    resLabel: "Booking request",
+    resTitle: "Request directly with us",
+    resIntro: "Choose your apartment and dates. You will receive a personal confirmation by email within 24 hours. Your request is only final after our confirmation.",
+    resChoose: "Apartment",
+    resIn: "Arrival",
+    resOut: "Departure",
+    resGuests: "Guests",
+    resPhone: "Phone (optional)",
+    resMsg: "Comment (optional)",
+    resSend: "Request booking",
+    resNote: "Prefer instant confirmation? Book via Booking.com or Airbnb using the buttons with each apartment.",
+    resDoneTitle: "Thank you for your request",
+    resDoneText: "We have received your request and will confirm by email as soon as possible whether the dates are available.",
+    resNight: "night",
+    resNights: "nights",
+    resErrDates: "Choose a departure date after the arrival date.",
+    resErrFields: "Please fill in all required fields correctly.",
+    resErrSend: "Sending failed. Please try again or contact us via WhatsApp or email.",
+    resErrSetup: "The booking form is not active yet. Please contact us via WhatsApp or email.",
     aptType: "Apartment · private entrance",
     aptLead: "Spacious apartment with a living room, sofa and flat-screen TV, a private kitchen and a private bathroom.",
     livingLbl: "Living room",
@@ -278,6 +316,25 @@ const translations = {
   },
 
   de: {
+    resLabel: "Buchungsanfrage",
+    resTitle: "Direkt bei uns anfragen",
+    resIntro: "Wählen Sie Ihr Apartment und Ihre Daten. Sie erhalten innerhalb von 24 Stunden eine persönliche Bestätigung per E-Mail. Ihre Anfrage ist erst nach unserer Bestätigung verbindlich.",
+    resChoose: "Apartment",
+    resIn: "Anreise",
+    resOut: "Abreise",
+    resGuests: "Gäste",
+    resPhone: "Telefon (optional)",
+    resMsg: "Anmerkung (optional)",
+    resSend: "Buchung anfragen",
+    resNote: "Lieber sofort Gewissheit? Buchen Sie über Booking.com oder Airbnb mit den Buttons bei den Apartments.",
+    resDoneTitle: "Vielen Dank für Ihre Anfrage",
+    resDoneText: "Wir haben Ihre Anfrage erhalten und bestätigen so schnell wie möglich per E-Mail, ob die Daten verfügbar sind.",
+    resNight: "Nacht",
+    resNights: "Nächte",
+    resErrDates: "Bitte wählen Sie ein Abreisedatum nach dem Anreisedatum.",
+    resErrFields: "Bitte füllen Sie alle Pflichtfelder korrekt aus.",
+    resErrSend: "Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder kontaktieren Sie uns per WhatsApp oder E-Mail.",
+    resErrSetup: "Das Anfrageformular ist noch nicht aktiv. Bitte kontaktieren Sie uns per WhatsApp oder E-Mail.",
     aptType: "Apartment · eigener Eingang",
     aptLead: "Geräumiges Apartment mit Wohnzimmer, Sofa und Flachbildfernseher, eigener Küche und eigenem Badezimmer.",
     livingLbl: "Wohnzimmer",
@@ -414,6 +471,25 @@ const translations = {
   },
 
   fr: {
+    resLabel: "Demande de réservation",
+    resTitle: "Réservez directement chez nous",
+    resIntro: "Choisissez votre appartement et vos dates. Vous recevrez une confirmation personnelle par e-mail sous 24 heures. Votre demande n'est définitive qu'après notre confirmation.",
+    resChoose: "Appartement",
+    resIn: "Arrivée",
+    resOut: "Départ",
+    resGuests: "Personnes",
+    resPhone: "Téléphone (facultatif)",
+    resMsg: "Remarque (facultatif)",
+    resSend: "Demander une réservation",
+    resNote: "Vous préférez une confirmation immédiate ? Réservez via Booking.com ou Airbnb avec les boutons de chaque appartement.",
+    resDoneTitle: "Merci pour votre demande",
+    resDoneText: "Nous avons bien reçu votre demande et vous confirmerons au plus vite par e-mail si les dates sont disponibles.",
+    resNight: "nuit",
+    resNights: "nuits",
+    resErrDates: "Choisissez une date de départ postérieure à la date d'arrivée.",
+    resErrFields: "Veuillez remplir correctement tous les champs obligatoires.",
+    resErrSend: "L'envoi a échoué. Réessayez ou contactez-nous via WhatsApp ou par e-mail.",
+    resErrSetup: "Le formulaire de réservation n'est pas encore activé. Contactez-nous via WhatsApp ou par e-mail.",
     aptType: "Appartement · entrée privée",
     aptLead: "Appartement spacieux avec salon, canapé et télévision à écran plat, cuisine privée et salle de bains privée.",
     livingLbl: "Salon",
@@ -910,6 +986,87 @@ function initAutoOpen() {
 
 
 /* =================================
+   RESERVERINGSAANVRAAG
+================================= */
+
+function initReservation() {
+  const form = document.getElementById("res-form");
+  if (!form) return;
+
+  const tr = key => (translations[document.documentElement.lang] || translations.nl)[key] || translations.nl[key];
+  const arrive = form.querySelector("#res-in");
+  const leave = form.querySelector("#res-out");
+  const nightsOut = document.getElementById("res-nights");
+  const errorOut = document.getElementById("res-error");
+  const done = document.getElementById("res-done");
+  const submit = form.querySelector(".res-submit");
+
+  const iso = d => new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+  const today = new Date();
+  arrive.min = iso(today);
+  leave.min = iso(new Date(today.getTime() + 86400000));
+
+  const nights = () => {
+    if (!arrive.value || !leave.value) return 0;
+    return Math.round((new Date(leave.value) - new Date(arrive.value)) / 86400000);
+  };
+
+  const update = () => {
+    if (arrive.value) {
+      const next = new Date(new Date(arrive.value).getTime() + 86400000);
+      leave.min = iso(next);
+      if (leave.value && leave.value <= arrive.value) leave.value = iso(next);
+    }
+    const n = nights();
+    nightsOut.textContent = n > 0 ? `${n} ${n === 1 ? tr("resNight") : tr("resNights")}` : "";
+    errorOut.textContent = "";
+  };
+  arrive.addEventListener("change", update);
+  leave.addEventListener("change", update);
+
+  form.addEventListener("submit", async event => {
+    event.preventDefault();
+    errorOut.textContent = "";
+
+    if (!form.checkValidity()) {
+      errorOut.textContent = tr("resErrFields");
+      form.querySelector(":invalid")?.focus();
+      return;
+    }
+    if (nights() < 1) {
+      errorOut.textContent = tr("resErrDates");
+      leave.focus();
+      return;
+    }
+    if (form.action.includes("VUL_HIER_UW_ID_IN")) {
+      errorOut.textContent = tr("resErrSetup");
+      return;
+    }
+
+    submit.disabled = true;
+    try {
+      const data = new FormData(form);
+      data.append("nachten", String(nights()));
+      data.append("taal", document.documentElement.lang);
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" }
+      });
+      if (!response.ok) throw new Error(response.status);
+      form.hidden = true;
+      done.hidden = false;
+      done.focus();
+    } catch (error) {
+      errorOut.textContent = tr("resErrSend");
+    } finally {
+      submit.disabled = false;
+    }
+  });
+}
+
+
+/* =================================
    WEBSITE STARTEN
 ================================= */
 
@@ -919,6 +1076,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	initLogoReveal();
   initQuoteRotator();
   initAutoOpen();
+  initReservation();
   fitQuoteBoxes();
   if (document.fonts) document.fonts.ready.then(fitQuoteBoxes);
   window.addEventListener("resize", fitQuoteBoxes);

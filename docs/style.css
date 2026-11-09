@@ -544,3 +544,32 @@ address{position:relative}
 .faq .why[open] h2{position:relative;padding-bottom:.7rem}
 .faq .why[open] h2::after{content:"";position:absolute;left:0;bottom:0;width:3rem;height:1px;background:var(--clay)}
 .faq .bn{margin-top:1.75rem}
+/* ============ Reserveringsaanvraag (appartementenpagina) ============ */
+.reserve{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(1.5rem,4vw,4rem);border-top:1px solid var(--line)}
+.res-head{grid-column:1/5;align-self:start}
+.res-head h2{margin-bottom:1rem}
+.res-intro{color:var(--mute)}
+.res-form,.res-done{grid-column:5/13}
+.res-form{gap:1.6rem}
+.res-apts{border:0;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.res-apts legend{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-bottom:.7rem}
+.res-apt{position:relative;display:block;cursor:pointer;text-transform:none;letter-spacing:0;color:var(--ink)}
+.res-apt input{position:absolute;opacity:0;width:1px;height:1px}
+.res-apt span{display:flex;align-items:center;gap:.7rem;padding:1rem 1.1rem;border:1px solid var(--line);background:#faf8f3;font:400 1.05rem/1.25 var(--serif);transition:border-color .3s,background .3s}
+.res-apt span::before{content:"";flex:none;width:1rem;height:1rem;border-radius:50%;border:1px solid #13201c59;box-shadow:inset 0 0 0 3px #faf8f3;transition:background .3s,border-color .3s}
+.res-apt input:checked+span{border-color:var(--clay);background:#fff}
+.res-apt input:checked+span::before{background:var(--clay);border-color:var(--clay)}
+.res-apt input:focus-visible+span{outline:2px solid var(--clay);outline-offset:3px}
+.res-row{display:grid;grid-template-columns:1fr 1fr .7fr;gap:1.4rem}
+.res-row-2{grid-template-columns:1fr 1fr}
+.res-form select{width:100%;padding:.6rem 0;font:inherit;font-size:1.15rem;color:inherit;background:none;border:0;border-bottom:1px solid var(--ink);border-radius:0;-webkit-appearance:none;appearance:none;background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);background-position:calc(100% - 10px) 55%,calc(100% - 5px) 55%;background-size:5px 5px;background-repeat:no-repeat}
+.res-form select:focus{outline:0;border-color:var(--clay)}
+.res-form input[type=date]{min-height:2.6rem}
+.res-nights{margin-top:-.8rem;min-height:1.2em;font:italic 300 1.1rem var(--serif);color:var(--clay)}
+.res-error{min-height:1.2em;color:#a3361c;font-size:.95rem}
+.res-error:empty{display:none}
+.res-submit{justify-self:start}
+.res-done{padding:2rem;border:1px solid var(--clay);background:#faf8f3}
+.res-done h3{margin-bottom:.6rem}
+@media(max-width:900px){.res-head,.res-form,.res-done{grid-column:1/-1}}
+@media(max-width:560px){.res-row{grid-template-columns:1fr 1fr}.res-row>div:last-child{grid-column:1/-1}.res-row-2{grid-template-columns:1fr}.res-apts{grid-template-columns:1fr}.res-submit{justify-self:stretch;justify-content:space-between}}
