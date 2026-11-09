@@ -729,3 +729,83 @@ address{position:relative}
  .page-book .bk-card{padding-top:1.1rem}
 }
 @media(max-width:380px){.page-book .bk-wrap{padding-top:7.6rem}}
+/* ================= Reserveringsmodule v3 ================= */
+.page-book .bk-step{gap:1.1rem}
+/* Appartementkeuze: segmentknop */
+.seg{display:grid;grid-template-columns:repeat(3,1fr);padding:4px;background:var(--paper);border-radius:999px;border:1px solid var(--line)}
+.seg label{position:relative;cursor:pointer;text-transform:none;letter-spacing:0;color:var(--ink)}
+.seg input{position:absolute;opacity:0;width:1px;height:1px}
+.seg span{display:block;text-align:center;padding:.6rem .4rem;border-radius:999px;font-size:.85rem;line-height:1.2;transition:background .25s,color .25s,box-shadow .25s}
+.seg input:checked+span{background:var(--green);color:#fff;box-shadow:0 2px 6px #0f3d3640}
+.seg input:focus-visible+span{outline:2px solid var(--clay);outline-offset:2px}
+/* Snelkeuzes */
+.quick{display:flex;gap:.5rem;overflow-x:auto;scrollbar-width:none;margin:0 -.1rem;padding:.1rem}
+.quick::-webkit-scrollbar{display:none}
+.qk{flex:none;display:grid;gap:.1rem;text-align:left;padding:.55rem .85rem;border:1px solid var(--line);background:#fff;border-radius:12px;font:inherit;color:var(--ink);cursor:pointer;transition:border-color .2s,background .2s}
+.qk b{font-weight:500;font-size:.78rem}
+.qk span{font-size:.75rem;color:var(--mute)}
+.qk:hover{border-color:var(--green)}
+/* Kalender */
+.cal2{position:relative}
+.cal2-nav{position:absolute;left:0;right:0;top:-.2rem;display:flex;justify-content:space-between;pointer-events:none;z-index:1}
+.cal2-nav .cal-nav{pointer-events:auto;background:#fff}
+.cal2-months{display:grid;grid-template-columns:1fr;gap:2rem}
+.cm-title{text-align:center;font:400 1.15rem/2.1rem var(--serif);text-transform:capitalize;margin-bottom:.6rem}
+.cm-wd,.cm-grid{display:grid;grid-template-columns:repeat(7,1fr)}
+.cm-wd span{text-align:center;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);padding-bottom:.5rem}
+.cm-grid{row-gap:4px}
+.cd{position:relative;aspect-ratio:1;border:0;background:none;padding:0;font:inherit;font-size:.92rem;color:var(--ink);cursor:pointer;display:grid;place-items:center;-webkit-tap-highlight-color:transparent}
+.cd span{position:relative;z-index:1;display:grid;place-items:center;width:min(2.6rem,88%);aspect-ratio:1;border-radius:50%;transition:background .15s,color .15s}
+.cd.is-free:hover span,.cd.is-checkout:hover span,.cd.is-preview:hover span{background:#0f3d361a}
+.cd:focus-visible{outline:none}
+.cd:focus-visible span{outline:2px solid var(--clay);outline-offset:1px}
+.cd.is-today span{font-weight:600}
+.cd.is-today:not(.is-start):not(.is-end) span::after{content:"";position:absolute;bottom:18%;width:4px;height:4px;border-radius:50%;background:var(--clay)}
+.cd.is-past{color:#13201c38;cursor:default}
+.cd.is-busy{color:#13201c4d;cursor:not-allowed}
+.cd.is-busy span{background:repeating-linear-gradient(135deg,#13201c12 0 3px,transparent 3px 7px);text-decoration:line-through;text-decoration-color:#13201c40}
+.cd.is-unreachable{color:#13201c40;cursor:not-allowed}
+.cd.is-checkout span{background:linear-gradient(135deg,transparent 50%,#13201c14 50%)}
+/* Gekozen periode als doorlopende band */
+.cd.is-range::before,.cd.is-preview::before,.cd.is-start::before,.cd.is-end::before{content:"";position:absolute;top:6%;bottom:6%;left:0;right:0;background:#0f3d361f}
+.cd.is-start::before{left:50%}.cd.is-end::before{right:50%}
+.cd.is-start:not(:has(~ .is-range, ~ .is-end))::before{display:none}
+.cd.is-start span,.cd.is-end span{background:var(--green);color:#fff;font-weight:500}
+.cm-grid > .cd:nth-child(7n+1)::before{border-radius:999px 0 0 999px}
+.cm-grid > .cd:nth-child(7n)::before{border-radius:0 999px 999px 0}
+.cal-legend .lg-free::before{background:#fff}
+.cal-legend .lg-busy::before{background:repeating-linear-gradient(135deg,#13201c26 0 3px,transparent 3px 6px)}
+.cal-legend .lg-sel::before{background:var(--green);border-color:var(--green);border-radius:50%}
+.cal-legend .lg::before{border-radius:50%}
+.cal-msg{min-height:0;font-size:.9rem;color:#a3361c}
+.cal-msg:empty{display:none}
+/* Samenvatting */
+.range{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
+.range-box{display:grid;gap:.15rem;padding:.8rem 1rem}
+.range-box+.range-box{border-left:1px solid var(--line)}
+.range-box span{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.range-box b{font:400 1.05rem var(--serif)}
+.range-sum{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem 1rem;border-top:1px solid var(--line);background:var(--paper)}
+.range-sum p{font:400 1.1rem var(--serif)}
+.range.is-set .range-sum p{color:var(--green)}
+.range-clear{border:0;background:none;padding:.3rem 0;font:inherit;font-size:.8rem;color:var(--mute);text-decoration:underline;text-underline-offset:.25em;cursor:pointer}
+.range .bk-note{grid-column:1/-1;padding:0 1rem .8rem;background:var(--paper)}
+/* Gasten-teller + opmerking */
+.guests{display:flex;align-items:center;justify-content:space-between;padding:.4rem 0;border-bottom:1px solid var(--line)}
+.guests-l{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.stepper{display:flex;align-items:center;gap:.9rem}
+.stepper output{min-width:1.2rem;text-align:center;font-size:1.1rem}
+.st-btn{width:2.4rem;height:2.4rem;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:1.15rem;line-height:1;cursor:pointer;color:var(--ink)}
+.st-btn:hover:not(:disabled){border-color:var(--green)}
+.st-btn:disabled{opacity:.35;cursor:default}
+.add-note{justify-self:start;border:0;background:none;padding:.2rem 0;font:inherit;font-size:.85rem;color:var(--green);cursor:pointer;text-decoration:underline;text-underline-offset:.25em}
+.page-book .bk-fields{grid-template-columns:1fr 1fr}
+@media(min-width:901px){.cal2-months{grid-template-columns:1fr 1fr}.cd span{width:min(2.5rem,90%)}}
+@media(max-width:560px){.page-book .bk-fields{grid-template-columns:1fr}.seg span{font-size:.78rem;padding:.6rem .2rem}}
+/* Vaste balk: knop altijd actief, tekst past zich aan */
+.bk-bar-btn{opacity:1!important}
+.cm-grid{column-gap:0}
+.cd{width:100%;justify-self:stretch}
+.cd span{width:min(2.35rem,78%)}
+.cd.is-range::before,.cd.is-preview::before,.cd.is-start::before,.cd.is-end::before{top:12%;bottom:12%}
+@media(min-width:901px){.cd span{width:min(2.3rem,80%)}}

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0f3d36"><meta property="og:type" content="website"><meta property="og:locale" content="nl_NL"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=105">
+<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0f3d36"><meta property="og:type" content="website"><meta property="og:locale" content="nl_NL"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=107">
 <title data-i18n="titleReserve">Reserveren | InnVenlo Apartments Venlo</title>
 <meta name="description" content="Vraag direct een reservering aan bij InnVenlo Apartments in Venlo. Kies uw appartement en datums; u ontvangt een persoonlijke bevestiging per e-mail.">
 <link rel="canonical" href="https://www.innvenlo.nl/reserveren.html"><meta property="og:title" content="Reserveren | InnVenlo Apartments"><meta property="og:description" content="Vraag direct een reservering aan in Venlo."><meta property="og:url" content="https://www.innvenlo.nl/reserveren.html"><meta property="og:image" content="https://www.innvenlo.nl/images/hero-venlo.jpg"></head><body class="page-book">
@@ -26,33 +26,38 @@
 <input type="hidden" name="from_name" value="InnVenlo Apartments – website"><input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 <input type="hidden" name="subject" value="Nieuwe reserveringsaanvraag – InnVenlo Apartments">
 
-<div class="bk-step"><p class="bk-step-h"><span>1</span><b data-i18n="bkStep1b">Kies appartement en datums</b></p>
-<fieldset class="bk-apts"><legend data-i18n="resChoose">Appartement</legend>
+<div class="bk-step" id="step-dates"><p class="bk-step-h"><span>1</span><b data-i18n="bkStep1b">Kies appartement en datums</b></p>
+<div class="seg" role="radiogroup" aria-label="Appartement" data-i18n-aria="resChoose">
 <label><input type="radio" name="appartement" value="Geen voorkeur" checked><span data-i18n="bkNoPref">Geen voorkeur</span></label>
 <label><input type="radio" name="appartement" value="Appartement 1"><span data-i18n="oneBedroomShort">Appartement 1</span></label>
 <label><input type="radio" name="appartement" value="Appartement 2"><span data-i18n="deluxeShort">Appartement 2</span></label>
-</fieldset>
-<div class="cal" id="res-cal">
-<div class="cal-top"><button type="button" class="cal-nav cal-prev" aria-label="Vorige maand" data-i18n-aria="calPrev"></button><p class="cal-month" id="cal-month" aria-live="polite"></p><button type="button" class="cal-nav cal-next" aria-label="Volgende maand" data-i18n-aria="calNext"></button></div>
-<div class="cal-days" id="cal-days" aria-hidden="true"></div>
-<div class="cal-grid" id="cal-grid" role="group" aria-labelledby="cal-month"></div>
-<p class="cal-legend"><span class="lg lg-free" data-i18n="calFree">Beschikbaar</span><span class="lg lg-busy" data-i18n="calBusy">Bezet</span><span class="cal-updated" id="cal-updated" aria-live="polite"></span></p>
-<input type="hidden" id="res-in" name="aankomst"><input type="hidden" id="res-out" name="vertrek">
 </div>
-<div class="bk-sum" id="bk-sum" aria-live="polite">
-<p class="cal-status" id="res-nights"></p>
-<p class="bk-price"><span id="bk-total" data-i18n="bkFrom">Vanaf € 90 per nacht</span></p>
+<div class="quick" id="bk-quick" aria-label="Snel kiezen" data-i18n-aria="qkLabel"></div>
+<div class="cal2" id="res-cal">
+<div class="cal2-nav"><button type="button" class="cal-nav cal-prev" aria-label="Vorige maand" data-i18n-aria="calPrev"></button><button type="button" class="cal-nav cal-next" aria-label="Volgende maand" data-i18n-aria="calNext"></button></div>
+<div class="cal2-months" id="cal-months"></div>
+<p class="cal-legend"><span class="lg lg-free" data-i18n="calFree">Beschikbaar</span><span class="lg lg-busy" data-i18n="calBusy">Bezet</span><span class="lg lg-sel" data-i18n="calSel">Uw verblijf</span><span class="cal-updated" id="cal-updated"></span></p>
+</div>
+<p class="cal-msg" id="cal-msg" role="status" aria-live="polite"></p>
+<div class="range" id="bk-range">
+<div class="range-box"><span data-i18n="resIn">Aankomst</span><b id="rg-in">–</b></div>
+<div class="range-box"><span data-i18n="resOut">Vertrek</span><b id="rg-out">–</b></div>
+<div class="range-sum"><p id="bk-total">Vanaf € 90 per nacht</p><button type="button" class="range-clear" id="rg-clear" hidden data-i18n="rgClear">Wissen</button></div>
 <p class="bk-note" data-i18n="bkPriceNote">De prijs kan variëren afhankelijk van het seizoen. U ontvangt de definitieve prijs bij de bevestiging.</p>
 </div>
+<input type="hidden" id="res-in" name="aankomst"><input type="hidden" id="res-out" name="vertrek">
 </div>
 
-<div class="bk-step"><p class="bk-step-h"><span>2</span><b data-i18n="bkStep2">Uw gegevens</b></p>
+<div class="bk-step" id="step-details"><p class="bk-step-h"><span>2</span><b data-i18n="bkStep2">Uw gegevens</b></p>
 <div class="bk-fields">
-<div class="bk-f bk-f-wide"><label for="res-name" data-i18n="name">Naam</label><input id="res-name" name="name" type="text" autocomplete="name" required aria-describedby="err-name"><p class="f-err" id="err-name" data-msg="errName"></p></div>
-<div class="bk-f bk-f-wide"><label for="res-email" data-i18n="email">E-mailadres</label><input id="res-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="err-email"><p class="f-err" id="err-email" data-msg="errEmail"></p></div>
-<div class="bk-f"><label for="res-guests" data-i18n="resGuests">Gasten</label><select id="res-guests" name="gasten" required><option>1</option><option selected>2</option><option>3</option></select></div>
-<div class="bk-f"><label for="res-msg" data-i18n="resMsg">Opmerking (optioneel)</label><input id="res-msg" name="opmerking" type="text"></div>
+<div class="bk-f"><label for="res-name" data-i18n="name">Naam</label><input id="res-name" name="name" type="text" autocomplete="name" required aria-describedby="err-name"><p class="f-err" id="err-name" data-msg="errName"></p></div>
+<div class="bk-f"><label for="res-email" data-i18n="email">E-mailadres</label><input id="res-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="err-email"><p class="f-err" id="err-email" data-msg="errEmail"></p></div>
 </div>
+<div class="guests"><span class="guests-l" id="guests-l" data-i18n="resGuests">Gasten</span>
+<div class="stepper" role="group" aria-labelledby="guests-l"><button type="button" class="st-btn" data-step="-1" aria-label="Minder gasten" data-i18n-aria="gMinus">−</button><output id="guests-out" aria-live="polite">2</output><button type="button" class="st-btn" data-step="1" aria-label="Meer gasten" data-i18n-aria="gPlus">+</button></div>
+<input type="hidden" name="gasten" id="res-guests" value="2"></div>
+<button type="button" class="add-note" id="add-note" aria-expanded="false" aria-controls="note-wrap" data-i18n="addNote">+ Opmerking toevoegen</button>
+<div class="bk-f" id="note-wrap" hidden><label for="res-msg" data-i18n="resMsg">Opmerking (optioneel)</label><input id="res-msg" name="opmerking" type="text"></div>
 </div>
 
 <p class="res-error" id="res-error" role="alert"></p>
@@ -84,7 +89,7 @@
 
 </section>
 
-<div class="bk-bar" id="bk-bar" aria-hidden="true"><div><b id="bk-bar-dates" data-i18n="bkBarPick">Kies uw datums</b><span id="bk-bar-price"></span></div><button type="button" class="bk-bar-btn" tabindex="-1" data-i18n="bkBarBtn">Aanvragen</button></div>
+<div class="bk-bar" id="bk-bar"><div><b id="bk-bar-dates">Kies uw datums</b><span id="bk-bar-price"></span></div><button type="button" class="bk-bar-btn" id="bk-bar-btn">Kies data</button></div>
 </main>
 <footer class="ft"><div><p><strong>InnVenlo Apartments</strong> · <span data-i18n="footerTag">Appartement huren in Venlo, Limburg</span></p><nav aria-label="Footermenu" data-i18n-aria="footerMenu"><a href="appartementen.html" data-i18n="apartments">Appartementen</a><a href="contact.html" data-i18n="contact">Contact</a></nav><p data-i18n="footerRights">© 2026 InnVenlo Apartments. Alle rechten voorbehouden.</p></div></footer>
 <div class="cb">
@@ -92,5 +97,5 @@
     <a class="cb-i cb-wa" href="https://wa.me/31648742693" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp"><img src="https://cdn.simpleicons.org/whatsapp/FFFFFF" alt=""></a>
     <a class="cb-i cb-mail" href="mailto:jamb.lamberts@ziggo.nl" aria-label="E-mail" title="E-mail"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt=""></a>
   </div>  
-<script src="script.js?v=105"></script></body></html>
+<script src="script.js?v=106"></script></body></html>
 

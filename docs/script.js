@@ -6,9 +6,27 @@
 
 const translations = {
   nl: {
+    calSel: "Uw verblijf",
+    qkLabel: "Snel kiezen",
+    qkFirst: "Eerst beschikbaar",
+    qkWeekend: "Dit weekend",
+    qkNextWeekend: "Volgend weekend",
+    rgClear: "Wissen",
+    rgPickOut: "Kies vertrek",
+    msgBusy: "Deze nacht is al bezet. Kies een andere aankomstdag.",
+    msgCross: "Uw verblijf kan niet over een bezette nacht lopen. Vertrek uiterlijk op {d}.",
+    bkTotal: "vanaf € {p}",
+    bkBarPick: "Kies uw datums",
+    barPick: "Kies data",
+    barPickOut: "Kies vertrek",
+    barNext: "Verder",
+    barSend: "Versturen",
+    gMinus: "Minder gasten",
+    gPlus: "Meer gasten",
+    addNote: "+ Opmerking toevoegen",
+    resErrDates: "Kies eerst uw aankomst- en vertrekdatum.",
     bkStep1b: "Kies appartement en datums",
     bkFrom: "Vanaf € 90 per nacht",
-    bkTotal: "Vanaf € {p}",
     resPrice: "Vanaf € 90 per nacht. De prijs kan variëren afhankelijk van het seizoen.",
     errName: "Vul uw naam in.",
     errEmail: "Vul een geldig e-mailadres in, bijvoorbeeld naam@voorbeeld.nl.",
@@ -33,14 +51,12 @@ const translations = {
     bkHow2: "Wij controleren de beschikbaarheid.",
     bkHow3: "U ontvangt een persoonlijke bevestiging per e-mail.",
     bkHelp: "Vragen? Wij helpen u graag.",
-    bkBarPick: "Kies uw datums",
     bkBarBtn: "Aanvragen",
     titleReserve: "Reserveren | InnVenlo Apartments Venlo",
     resPick: "Kies uw aankomstdatum",
     resPickOut: "kies uw vertrekdatum",
     calPrev: "Vorige maand",
     calNext: "Volgende maand",
-    resErrDates: "Kies uw aankomst- en vertrekdatum in de kalender.",
     contactDoneTitle: "Bedankt voor uw bericht",
     contactDoneText: "We nemen zo snel mogelijk contact met u op.",
     resLabel: "Reserveringsaanvraag",
@@ -197,9 +213,27 @@ const translations = {
   },
 
   en: {
+    calSel: "Your stay",
+    qkLabel: "Quick pick",
+    qkFirst: "First available",
+    qkWeekend: "This weekend",
+    qkNextWeekend: "Next weekend",
+    rgClear: "Clear",
+    rgPickOut: "Choose departure",
+    msgBusy: "This night is already booked. Please choose another arrival day.",
+    msgCross: "Your stay cannot include a booked night. Latest departure: {d}.",
+    bkTotal: "from € {p}",
+    bkBarPick: "Choose your dates",
+    barPick: "Choose dates",
+    barPickOut: "Choose departure",
+    barNext: "Continue",
+    barSend: "Send",
+    gMinus: "Fewer guests",
+    gPlus: "More guests",
+    addNote: "+ Add a comment",
+    resErrDates: "Please choose your arrival and departure date first.",
     bkStep1b: "Choose apartment and dates",
     bkFrom: "From € 90 per night",
-    bkTotal: "From € {p}",
     resPrice: "From € 90 per night. Prices may vary by season.",
     errName: "Please enter your name.",
     errEmail: "Please enter a valid email address, e.g. name@example.com.",
@@ -224,14 +258,12 @@ const translations = {
     bkHow2: "We check availability.",
     bkHow3: "You receive a personal confirmation by email.",
     bkHelp: "Questions? We are happy to help.",
-    bkBarPick: "Choose your dates",
     bkBarBtn: "Request",
     titleReserve: "Book | InnVenlo Apartments Venlo",
     resPick: "Choose your arrival date",
     resPickOut: "choose your departure date",
     calPrev: "Previous month",
     calNext: "Next month",
-    resErrDates: "Please choose your arrival and departure date in the calendar.",
     contactDoneTitle: "Thank you for your message",
     contactDoneText: "We will get back to you as soon as possible.",
     resLabel: "Booking request",
@@ -388,9 +420,27 @@ const translations = {
   },
 
   de: {
+    calSel: "Ihr Aufenthalt",
+    qkLabel: "Schnellauswahl",
+    qkFirst: "Nächster freier Termin",
+    qkWeekend: "Dieses Wochenende",
+    qkNextWeekend: "Nächstes Wochenende",
+    rgClear: "Löschen",
+    rgPickOut: "Abreise wählen",
+    msgBusy: "Diese Nacht ist bereits belegt. Bitte wählen Sie einen anderen Anreisetag.",
+    msgCross: "Ihr Aufenthalt kann keine belegte Nacht enthalten. Späteste Abreise: {d}.",
+    bkTotal: "ab {p} €",
+    bkBarPick: "Daten wählen",
+    barPick: "Daten wählen",
+    barPickOut: "Abreise wählen",
+    barNext: "Weiter",
+    barSend: "Senden",
+    gMinus: "Weniger Gäste",
+    gPlus: "Mehr Gäste",
+    addNote: "+ Anmerkung hinzufügen",
+    resErrDates: "Bitte wählen Sie zuerst Ihr An- und Abreisedatum.",
     bkStep1b: "Apartment und Daten wählen",
     bkFrom: "Ab 90 € pro Nacht",
-    bkTotal: "Ab {p} €",
     resPrice: "Ab 90 € pro Nacht. Der Preis kann je nach Saison variieren.",
     errName: "Bitte geben Sie Ihren Namen ein.",
     errEmail: "Bitte geben Sie eine gültige E-Mail-Adresse ein, z. B. name@beispiel.de.",
@@ -415,14 +465,12 @@ const translations = {
     bkHow2: "Wir prüfen die Verfügbarkeit.",
     bkHow3: "Sie erhalten eine persönliche Bestätigung per E-Mail.",
     bkHelp: "Fragen? Wir helfen gerne.",
-    bkBarPick: "Daten wählen",
     bkBarBtn: "Anfragen",
     titleReserve: "Reservieren | InnVenlo Apartments Venlo",
     resPick: "Wählen Sie Ihr Anreisedatum",
     resPickOut: "wählen Sie Ihr Abreisedatum",
     calPrev: "Vorheriger Monat",
     calNext: "Nächster Monat",
-    resErrDates: "Bitte wählen Sie Ihr An- und Abreisedatum im Kalender.",
     contactDoneTitle: "Vielen Dank für Ihre Nachricht",
     contactDoneText: "Wir melden uns so schnell wie möglich bei Ihnen.",
     resLabel: "Buchungsanfrage",
@@ -579,9 +627,27 @@ const translations = {
   },
 
   fr: {
+    calSel: "Votre séjour",
+    qkLabel: "Choix rapide",
+    qkFirst: "Première disponibilité",
+    qkWeekend: "Ce week-end",
+    qkNextWeekend: "Week-end prochain",
+    rgClear: "Effacer",
+    rgPickOut: "Choisir le départ",
+    msgBusy: "Cette nuit est déjà réservée. Choisissez un autre jour d’arrivée.",
+    msgCross: "Votre séjour ne peut pas inclure une nuit réservée. Départ au plus tard : {d}.",
+    bkTotal: "à partir de {p} €",
+    bkBarPick: "Choisissez vos dates",
+    barPick: "Choisir les dates",
+    barPickOut: "Choisir le départ",
+    barNext: "Continuer",
+    barSend: "Envoyer",
+    gMinus: "Moins de personnes",
+    gPlus: "Plus de personnes",
+    addNote: "+ Ajouter une remarque",
+    resErrDates: "Choisissez d'abord vos dates d'arrivée et de départ.",
     bkStep1b: "Choisissez appartement et dates",
     bkFrom: "À partir de 90 € par nuit",
-    bkTotal: "À partir de {p} €",
     resPrice: "À partir de 90 € par nuit. Le prix peut varier selon la saison.",
     errName: "Veuillez indiquer votre nom.",
     errEmail: "Veuillez indiquer une adresse e-mail valide, p. ex. nom@exemple.fr.",
@@ -606,14 +672,12 @@ const translations = {
     bkHow2: "Nous vérifions la disponibilité.",
     bkHow3: "Vous recevez une confirmation personnelle par e-mail.",
     bkHelp: "Des questions ? Nous sommes là pour vous aider.",
-    bkBarPick: "Choisissez vos dates",
     bkBarBtn: "Demander",
     titleReserve: "Réserver | InnVenlo Apartments Venlo",
     resPick: "Choisissez votre date d'arrivée",
     resPickOut: "choisissez votre date de départ",
     calPrev: "Mois précédent",
     calNext: "Mois suivant",
-    resErrDates: "Veuillez choisir vos dates d'arrivée et de départ dans le calendrier.",
     contactDoneTitle: "Merci pour votre message",
     contactDoneText: "Nous vous répondrons dans les plus brefs délais.",
     resLabel: "Demande de réservation",
@@ -1133,258 +1197,392 @@ function initAutoOpen() {
    RESERVERINGSAANVRAAG
 ================================= */
 
+/* ---------------------------------------------------------------
+   RESERVERING – 1. Datumhulpjes
+   Datums zijn overal tekst "JJJJ-MM-DD" (een kalenderdag, geen tijdstip).
+   Rekenen gebeurt in UTC, zodat zomer-/wintertijd nooit dagen verschuift.
+--------------------------------------------------------------- */
+const DateKey = {
+  today: () => new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Amsterdam", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()),
+  toDate: key => { const [y, m, d] = key.split("-").map(Number); return new Date(Date.UTC(y, m - 1, d)); },
+  from: (y, m, d) => new Date(Date.UTC(y, m, d)).toISOString().slice(0, 10),
+  add: (key, n) => { const d = DateKey.toDate(key); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); },
+  diff: (a, b) => Math.round((DateKey.toDate(b) - DateKey.toDate(a)) / 864e5),
+  weekday: key => (DateKey.toDate(key).getUTCDay() + 6) % 7, // 0 = maandag
+  format: (key, lang, opts) => new Intl.DateTimeFormat(lang, { timeZone: "UTC", ...opts }).format(DateKey.toDate(key))
+};
+
+
+/* ---------------------------------------------------------------
+   RESERVERING – 2. Beschikbaarheid (data uit availability.json)
+   Een "nacht" is de datum waarop je overnacht; de vertrekdag is geen nacht.
+--------------------------------------------------------------- */
+const Availability = {
+  busy: { "1": new Set(), "2": new Set() },
+  updated: null,
+  MAX_NIGHTS: 60,
+
+  load() {
+    return fetch("availability.json?ts=" + Date.now(), { cache: "no-store" })
+      .then(r => (r.ok ? r.json() : null))
+      .then(data => {
+        if (!data?.apartments) return;
+        ["1", "2"].forEach(a => { this.busy[a] = new Set(data.apartments[a] || []); });
+        this.updated = data.updated ? new Date(data.updated) : null;
+      })
+      .catch(() => {});
+  },
+  nightFree(key, apts) { return apts.some(a => !this.busy[a].has(key)); },
+  // Laatst mogelijke vertrekdag vanaf aankomst `from` (per appartement de eerste bezette nacht).
+  maxDeparture(from, apts) {
+    let best = from;
+    for (const a of apts) {
+      let k = from;
+      for (let i = 0; i < this.MAX_NIGHTS && !this.busy[a].has(k); i++) k = DateKey.add(k, 1);
+      if (k > best) best = k;
+    }
+    return best;
+  },
+  stayFree(from, to, apts) {
+    return apts.some(a => { for (let k = from; k < to; k = DateKey.add(k, 1)) if (this.busy[a].has(k)) return false; return true; });
+  },
+  // Eerstvolgende aankomstdag (vanaf `from`) met `nights` vrije nachten op rij.
+  findStay(from, nights, apts, horizon = 180) {
+    for (let i = 0, k = from; i < horizon; i++, k = DateKey.add(k, 1)) {
+      if (this.stayFree(k, DateKey.add(k, nights), apts)) return k;
+    }
+    return null;
+  }
+};
+
+
+/* ---------------------------------------------------------------
+   RESERVERING – 3. Interface
+--------------------------------------------------------------- */
 function initReservation() {
   const form = document.getElementById("res-form");
   if (!form) return;
 
+  const $ = id => document.getElementById(id);
   const lang = () => document.documentElement.lang || "nl";
   const tr = key => (translations[lang()] || translations.nl)[key] || translations.nl[key];
-  const arrive = form.querySelector("#res-in");
-  const leave = form.querySelector("#res-out");
-  const status = document.getElementById("res-nights");
-  const errorOut = document.getElementById("res-error");
-  const done = document.getElementById("res-done");
-  const submit = form.querySelector(".res-submit");
-  const grid = document.getElementById("cal-grid");
-  const daysRow = document.getElementById("cal-days");
-  const monthLabel = document.getElementById("cal-month");
-  const prevBtn = form.querySelector(".cal-prev");
-  const nextBtn = form.querySelector(".cal-next");
+  const PRICE_FROM = 90;
+  const euro = v => new Intl.NumberFormat(lang(), { maximumFractionDigits: 0 }).format(v);
+  const desktop = matchMedia("(min-width: 901px)");
 
-  const DAY = 86400000;
-  const iso = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
-  const parse = s => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
-  const today = new Date(); today.setHours(0, 0, 0, 0);
-  let view = new Date(today.getFullYear(), today.getMonth(), 1);
-  let start = null;
-  let end = null;
+  const el = {
+    months: $("cal-months"), prev: form.querySelector(".cal-prev"), next: form.querySelector(".cal-next"),
+    msg: $("cal-msg"), quick: $("bk-quick"), updated: $("cal-updated"),
+    rgIn: $("rg-in"), rgOut: $("rg-out"), total: $("bk-total"), clear: $("rg-clear"),
+    inArrive: $("res-in"), inLeave: $("res-out"),
+    error: $("res-error"), done: $("res-done"), submit: form.querySelector(".res-submit"),
+    bar: $("bk-bar"), barDates: $("bk-bar-dates"), barPrice: $("bk-bar-price"), barBtn: $("bk-bar-btn"),
+    guestsOut: $("guests-out"), guests: $("res-guests")
+  };
 
-  // ---- Beschikbaarheid (iCal van Airbnb + Booking.com via availability.json) ----
-  const busy = { "1": new Set(), "2": new Set() };
-  let availabilityUpdated = null;
-  const aptChoice = () => {
+  // ---- Toestand (één bron van waarheid) ----
+  const today = DateKey.today();
+  const state = {
+    start: null, end: null, maxDep: null, hover: null,
+    view: today.slice(0, 8) + "01" // eerste dag van de getoonde maand
+  };
+  const apts = () => {
     const v = form.querySelector('input[name="appartement"]:checked')?.value || "";
     return v.endsWith("1") ? ["1"] : v.endsWith("2") ? ["2"] : ["1", "2"];
   };
-  // Nacht d is vrij als minstens één gekozen appartement die nacht vrij is.
-  const nightFree = key => aptChoice().some(a => !busy[a].has(key));
-  // Verblijf van s t/m e (vertrek) is mogelijk als één appartement álle nachten vrij heeft.
-  const stayFree = (s, e) => aptChoice().some(a => {
-    for (let t = s.getTime(); t < e.getTime(); t += DAY) if (busy[a].has(iso(new Date(t)))) return false;
-    return true;
-  });
-  fetch("availability.json?ts=" + Date.now(), { cache: "no-store" })
-    .then(r => (r.ok ? r.json() : null))
-    .then(data => {
-      if (!data?.apartments) return;
-      ["1", "2"].forEach(a => (data.apartments[a] || []).forEach(d => busy[a].add(d)));
-      availabilityUpdated = data.updated ? new Date(data.updated) : null;
-      if (start && end && !stayFree(start, end)) { start = end = null; arrive.value = leave.value = ""; }
-      render();
-    })
-    .catch(() => {});
+  const nights = () => (state.start && state.end ? DateKey.diff(state.start, state.end) : 0);
+  const fmtShort = k => DateKey.format(k, lang(), { weekday: "short", day: "numeric", month: "short" });
+  const fmtDay = k => DateKey.format(k, lang(), { day: "numeric", month: "short" });
 
-  const nights = () => (start && end ? Math.round((end - start) / DAY) : 0);
-  const fmt = (d, opts) => new Intl.DateTimeFormat(lang(), opts).format(d);
+  const say = text => { el.msg.textContent = text || ""; };
+
+  const setRange = (start, end, view = true) => {
+    state.start = start; state.end = end;
+    state.maxDep = start && !end ? Availability.maxDeparture(start, apts()) : null;
+    el.inArrive.value = start || ""; el.inLeave.value = end || "";
+    if (view && start) state.view = start.slice(0, 8) + "01";
+    update();
+  };
+
+  // ---- Kalender tekenen ----
+  const dayState = key => {
+    const a = apts();
+    if (key < today) return "past";
+    const s = state.start, e = state.end;
+    if (key === s) return "start";
+    if (key === e) return "end";
+    if (s && e && key > s && key < e) return "range";
+    if (s && !e && key > s) {
+      if (key > state.maxDep) return Availability.nightFree(key, a) ? "unreachable" : "busy";
+      if (state.hover && key <= state.hover) return "preview";
+      return Availability.nightFree(key, a) ? "free" : "checkout";
+    }
+    return Availability.nightFree(key, a) ? "free" : "busy";
+  };
+
+  const monthHTML = first => {
+    const [y, m] = first.split("-").map(Number);
+    const days = new Date(Date.UTC(y, m, 0)).getUTCDate();
+    const title = DateKey.format(first, lang(), { month: "long", year: "numeric" });
+    const wd = Array.from({ length: 7 }, (_, i) =>
+      `<span>${DateKey.format(DateKey.from(2024, 0, 1 + i), lang(), { weekday: "short" }).replace(".", "").slice(0, 2)}</span>`).join("");
+    let cells = "";
+    // Weken die volledig voorbij zijn overslaan.
+    let d1 = 1;
+    if (first === today.slice(0, 8) + "01") d1 = Math.max(1, Number(today.slice(8)) - DateKey.weekday(today));
+    const lead = DateKey.weekday(DateKey.from(y, m - 1, d1));
+    cells += "<span></span>".repeat(lead);
+    for (let d = d1; d <= days; d++) {
+      const key = DateKey.from(y, m - 1, d);
+      const st = dayState(key);
+      const label = DateKey.format(key, lang(), { weekday: "long", day: "numeric", month: "long" });
+      const dis = st === "past" ? " disabled" : "";
+      const ariaDis = ["busy", "unreachable"].includes(st) ? ' aria-disabled="true"' : "";
+      const sel = st === "start" || st === "end";
+      cells += `<button type="button" class="cd is-${st}${key === today ? " is-today" : ""}" data-date="${key}" tabindex="-1" aria-label="${label}${st === "busy" ? " – " + tr("calBusy") : ""}" aria-pressed="${sel}"${dis}${ariaDis}><span>${d}</span></button>`;
+    }
+    return `<div class="cm"><p class="cm-title">${title}</p><div class="cm-wd" aria-hidden="true">${wd}</div><div class="cm-grid" role="group" aria-label="${title}">${cells}</div></div>`;
+  };
 
   const render = () => {
-    const locale = lang();
-    monthLabel.textContent = fmt(view, { month: "long", year: "numeric" });
-    prevBtn.disabled = view <= new Date(today.getFullYear(), today.getMonth(), 1);
-
-    daysRow.innerHTML = "";
-    for (let i = 0; i < 7; i++) {
-      const d = new Date(2024, 0, 1 + i); // maandag
-      const span = document.createElement("span");
-      span.textContent = new Intl.DateTimeFormat(locale, { weekday: "short" }).format(d).replace(".", "").slice(0, 2);
-      daysRow.appendChild(span);
+    const count = desktop.matches ? 2 : 1;
+    let html = "", k = state.view;
+    for (let i = 0; i < count; i++) {
+      html += monthHTML(k);
+      const [y, m] = k.split("-").map(Number);
+      k = DateKey.from(y, m, 1);
     }
-
-    grid.innerHTML = "";
-    const offset = (view.getDay() + 6) % 7;
-    const daysInMonth = new Date(view.getFullYear(), view.getMonth() + 1, 0).getDate();
-    // Weken die helemaal in het verleden liggen niet tonen.
-    let firstDay = 1;
-    if (view.getFullYear() === today.getFullYear() && view.getMonth() === today.getMonth()) {
-      const weekStart = today.getDate() - ((today.getDay() + 6) % 7);
-      if (weekStart > 1) firstDay = weekStart;
-    }
-    const lead = firstDay === 1 ? offset : 0;
-    for (let i = 0; i < lead; i++) grid.appendChild(document.createElement("span"));
-    for (let n = firstDay; n <= daysInMonth; n++) {
-      const d = new Date(view.getFullYear(), view.getMonth(), n);
-      const b = document.createElement("button");
-      b.type = "button";
-      b.className = "cal-day";
-      b.textContent = n;
-      b.dataset.date = iso(d);
-      b.setAttribute("aria-label", fmt(d, { weekday: "long", day: "numeric", month: "long", year: "numeric" }));
-      if (d < today) { b.disabled = true; b.classList.add("is-past"); }
-      const key = iso(d);
-      const choosingEnd = start && !end && d > start;
-      if (!b.disabled) {
-        if (choosingEnd) {
-          // Vertrekdag: toegestaan zolang alle nachten ertussen vrij zijn
-          // (ook als die dag zelf de aankomstdag van een ander is).
-          if (!stayFree(start, d)) { b.disabled = true; b.classList.add(nightFree(key) ? "is-unreachable" : "is-busy"); }
-          else if (!nightFree(key)) b.classList.add("is-checkout-only");
-        } else if (!nightFree(key)) {
-          b.disabled = true;
-          b.classList.add("is-busy");
-        }
-      }
-      if (d.getTime() === today.getTime()) b.classList.add("is-today");
-      const t = d.getTime();
-      const isStart = start && t === start.getTime();
-      const isEnd = end && t === end.getTime();
-      if (isStart) b.classList.add("is-start");
-      if (isEnd) b.classList.add("is-end");
-      if (start && end && t > start && t < end) b.classList.add("is-range");
-      b.setAttribute("aria-pressed", String(Boolean(isStart || isEnd)));
-      grid.appendChild(b);
-    }
-    updateStatus();
+    el.months.innerHTML = html;
+    el.prev.disabled = state.view <= today.slice(0, 8) + "01";
+    // Eén tabstop in de kalender (pijltjestoetsen voor de rest).
+    const focusable = el.months.querySelector(".is-start, .is-end") || el.months.querySelector(".cd:not([disabled]):not([aria-disabled])");
+    if (focusable) focusable.tabIndex = 0;
   };
 
-  const updateStatus = () => {
-    const short = d => fmt(d, { day: "numeric", month: "short" });
-    if (start && end) {
-      const n = nights();
-      status.textContent = `${short(start)} – ${short(end)} · ${n} ${n === 1 ? tr("resNight") : tr("resNights")}`;
-    } else if (start) {
-      status.textContent = `${short(start)} – ${tr("resPickOut")}`;
-    } else {
-      status.textContent = "";
-    }
-    status.hidden = !start;
-    status.classList.toggle("is-set", Boolean(start && end));
-    const upd = document.getElementById("cal-updated");
-    if (upd && availabilityUpdated) {
-      upd.textContent = `${tr("calUpdated")} ${fmt(availabilityUpdated, { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}`;
-    }
-    updateSummary();
-  };
-
-  // Prijsindicatie en (mobiele) boekingsbalk; alleen als die op de pagina staan.
-  const totalOut = document.getElementById("bk-total");
-  const bar = document.getElementById("bk-bar");
-  const barDates = document.getElementById("bk-bar-dates");
-  const barPrice = document.getElementById("bk-bar-price");
-  const PRICE_FROM = 90;
-  const euro = v => new Intl.NumberFormat(lang(), { maximumFractionDigits: 0 }).format(v);
-  const updateSummary = () => {
+  // ---- Samenvatting, CTA en snelkeuzes ----
+  const summary = () => {
     const n = nights();
-    const unit = n === 1 ? tr("resNight") : tr("resNights");
-    if (totalOut) {
-      totalOut.textContent = n > 0
-        ? tr("bkTotal").replace("{p}", euro(n * PRICE_FROM)).replace("{n}", n).replace("{u}", unit)
-        : tr("bkFrom");
-    }
-    if (barDates) {
-      barDates.textContent = start ? status.textContent : tr("bkBarPick");
-      barPrice.textContent = n > 0 ? `€ ${euro(n * PRICE_FROM)}+` : "";
-      bar.classList.toggle("is-ready", n > 0);
+    el.rgIn.textContent = state.start ? fmtShort(state.start) : "–";
+    el.rgOut.textContent = state.end ? fmtShort(state.end) : (state.start ? tr("rgPickOut") : "–");
+    el.total.textContent = n > 0
+      ? `${n} ${n === 1 ? tr("resNight") : tr("resNights")} · ${tr("bkTotal").replace("{p}", euro(n * PRICE_FROM))}`
+      : tr("bkFrom");
+    el.clear.hidden = !state.start;
+    form.querySelector("#bk-range").classList.toggle("is-set", n > 0);
+    if (Availability.updated) {
+      el.updated.textContent = `${tr("calUpdated")} ${new Intl.DateTimeFormat(lang(), { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }).format(Availability.updated)}`;
     }
   };
-  if (bar) {
-    bar.querySelector(".bk-bar-btn").addEventListener("click", () => {
-      if (nights() < 1) document.getElementById("res-cal").scrollIntoView({ behavior: "smooth", block: "center" });
-      else form.requestSubmit();
-    });
-    if ("IntersectionObserver" in window) {
-      new IntersectionObserver(([e]) => bar.classList.toggle("is-hidden", e.isIntersecting), { threshold: 0.4 })
-        .observe(submit);
-    }
-  }
 
-  grid.addEventListener("click", event => {
-    const b = event.target.closest(".cal-day");
+  const detailsValid = () => form.querySelector("#res-name").checkValidity() && form.querySelector("#res-email").checkValidity();
+  const updateBar = () => {
+    if (!el.bar) return;
+    const n = nights();
+    let label, btn;
+    if (!state.start) { label = tr("bkBarPick"); btn = tr("barPick"); }
+    else if (!state.end) { label = `${fmtDay(state.start)} – …`; btn = tr("barPickOut"); }
+    else { label = `${fmtDay(state.start)} – ${fmtDay(state.end)} · ${n} ${n === 1 ? tr("resNight") : tr("resNights")}`; btn = detailsValid() ? tr("barSend") : tr("barNext"); }
+    el.barDates.textContent = label;
+    el.barPrice.textContent = n > 0 ? tr("bkTotal").replace("{p}", euro(n * PRICE_FROM)) : tr("bkFrom");
+    el.barBtn.textContent = btn;
+    el.bar.classList.toggle("is-ready", n > 0);
+  };
+
+  const quickPicks = () => {
+    const a = apts();
+    const picks = [];
+    const first = Availability.findStay(today, 2, a);
+    if (first) picks.push([tr("qkFirst"), first, DateKey.add(first, 2)]);
+    // Eerstvolgende vrijdag (vandaag telt mee) en de vrijdag daarna.
+    const fri = DateKey.add(today, (4 - DateKey.weekday(today) + 7) % 7);
+    [[tr("qkWeekend"), fri], [tr("qkNextWeekend"), DateKey.add(fri, 7)]].forEach(([label, f]) => {
+      if (Availability.stayFree(f, DateKey.add(f, 2), a) && !(first === f)) picks.push([label, f, DateKey.add(f, 2)]);
+    });
+    el.quick.innerHTML = picks.map(([label, s, e]) =>
+      `<button type="button" class="qk" data-s="${s}" data-e="${e}"><b>${label}</b><span>${fmtDay(s)} – ${fmtDay(e)}</span></button>`).join("");
+    el.quick.hidden = !picks.length;
+  };
+
+  const update = () => { render(); summary(); updateBar(); };
+
+  // ---- Interactie kalender ----
+  el.months.addEventListener("click", event => {
+    const b = event.target.closest(".cd");
     if (!b || b.disabled) return;
-    const d = parse(b.dataset.date);
-    if (!start || end || d <= start) {
-      start = d;
-      end = null;
-    } else {
-      end = d;
+    const key = b.dataset.date;
+    const st = dayState(key);
+    const a = apts();
+    const choosingEnd = state.start && !state.end && key > state.start;
+
+    if (choosingEnd) {
+      if (key > state.maxDep) {
+        say(tr("msgCross").replace("{d}", fmtShort(state.maxDep)));
+        return;
+      }
+      say("");
+      setRange(state.start, key, false);
+      return;
     }
-    arrive.value = start ? iso(start) : "";
-    leave.value = end ? iso(end) : "";
-    errorOut.textContent = "";
-    render();
-    grid.querySelector(`[data-date="${b.dataset.date}"]`)?.focus();
+    if (!Availability.nightFree(key, a)) {
+      say(st === "busy" ? tr("msgBusy") : "");
+      return;
+    }
+    say("");
+    setRange(key, null, false);
+    el.months.querySelector(`[data-date="${key}"]`)?.focus();
   });
 
-  form.querySelectorAll('input[name="appartement"]').forEach(r => r.addEventListener("change", () => {
-    if (start && end && !stayFree(start, end)) {
-      start = end = null; arrive.value = leave.value = "";
-      errorOut.textContent = tr("calNotFree");
-    }
+  // Voorbeeld van het verblijf bij aanwijzen (alleen met muis).
+  el.months.addEventListener("pointerover", event => {
+    if (event.pointerType !== "mouse" || !state.start || state.end) return;
+    const k = event.target.closest(".cd")?.dataset.date || null;
+    const hover = k && k > state.start && k <= state.maxDep ? k : null;
+    if (hover === state.hover) return;
+    state.hover = hover;
+    el.months.querySelectorAll(".cd").forEach(b => {
+      const d = b.dataset.date;
+      b.classList.toggle("is-preview", Boolean(hover) && d > state.start && d <= hover);
+    });
+  });
+  el.months.addEventListener("pointerleave", () => {
+    state.hover = null;
+    el.months.querySelectorAll(".is-preview").forEach(b => b.classList.remove("is-preview"));
+  });
+
+  // Pijltjestoetsen: dag ±1, week ±7.
+  el.months.addEventListener("keydown", event => {
+    const step = { ArrowLeft: -1, ArrowRight: 1, ArrowUp: -7, ArrowDown: 7 }[event.key];
+    const cur = event.target.closest(".cd");
+    if (!step || !cur) return;
+    event.preventDefault();
+    const target = DateKey.add(cur.dataset.date, step);
+    if (target < today) return;
+    let btn = el.months.querySelector(`[data-date="${target}"]`);
+    if (!btn) { state.view = target.slice(0, 8) + "01"; render(); btn = el.months.querySelector(`[data-date="${target}"]`); }
+    if (btn) { el.months.querySelectorAll(".cd").forEach(b => (b.tabIndex = -1)); btn.tabIndex = 0; btn.focus(); }
+  });
+
+  const shiftMonth = n => {
+    const [y, m] = state.view.split("-").map(Number);
+    state.view = DateKey.from(y, m - 1 + n, 1);
     render();
+  };
+  el.prev.addEventListener("click", () => shiftMonth(-1));
+  el.next.addEventListener("click", () => shiftMonth(1));
+
+  // Vegen op telefoon: volgende/vorige maand.
+  let touchX = null;
+  el.months.addEventListener("touchstart", e => { touchX = e.touches[0].clientX; }, { passive: true });
+  el.months.addEventListener("touchend", e => {
+    if (touchX === null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    touchX = null;
+    if (Math.abs(dx) > 60) { if (dx < 0) shiftMonth(1); else if (!el.prev.disabled) shiftMonth(-1); }
+  }, { passive: true });
+
+  el.quick.addEventListener("click", event => {
+    const q = event.target.closest(".qk");
+    if (!q) return;
+    say("");
+    setRange(q.dataset.s, q.dataset.e);
+  });
+  el.clear.addEventListener("click", () => { say(""); setRange(null, null, false); });
+
+  form.querySelectorAll('input[name="appartement"]').forEach(r => r.addEventListener("change", () => {
+    const a = apts();
+    if (state.start && state.end && !Availability.stayFree(state.start, state.end, a)) {
+      setRange(null, null, false);
+      say(tr("calNotFree"));
+    } else if (state.start && !state.end && !Availability.nightFree(state.start, a)) {
+      setRange(null, null, false);
+      say(tr("calNotFree"));
+    } else {
+      setRange(state.start, state.end, false);
+    }
+    quickPicks();
   }));
 
-  prevBtn.addEventListener("click", () => { view = new Date(view.getFullYear(), view.getMonth() - 1, 1); render(); });
-  nextBtn.addEventListener("click", () => { view = new Date(view.getFullYear(), view.getMonth() + 1, 1); render(); });
+  // ---- Gasten en opmerking ----
+  const MAX_GUESTS = 3;
+  form.querySelectorAll(".st-btn").forEach(btn => btn.addEventListener("click", () => {
+    const v = Math.min(MAX_GUESTS, Math.max(1, Number(el.guests.value) + Number(btn.dataset.step)));
+    el.guests.value = v; el.guestsOut.textContent = v;
+    form.querySelector('.st-btn[data-step="-1"]').disabled = v <= 1;
+    form.querySelector('.st-btn[data-step="1"]').disabled = v >= MAX_GUESTS;
+  }));
+  const noteBtn = $("add-note");
+  noteBtn?.addEventListener("click", () => {
+    $("note-wrap").hidden = false; noteBtn.hidden = true; noteBtn.setAttribute("aria-expanded", "true");
+    $("res-msg").focus();
+  });
 
-  // Taalwissel: kalender opnieuw opbouwen in de nieuwe taal.
-  new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
-
-  render();
-
-  // Foutmelding direct onder een veld, zodra het veld verlaten wordt.
+  // ---- Validatie per veld ----
+  const fields = [...form.querySelectorAll("input[aria-describedby]")];
   const checkField = input => {
-    const err = document.getElementById(input.getAttribute("aria-describedby"));
+    const err = $(input.getAttribute("aria-describedby"));
     const bad = !input.checkValidity();
     input.setAttribute("aria-invalid", String(bad));
     input.closest(".bk-f")?.classList.toggle("has-error", bad);
     if (err) err.textContent = bad ? tr(err.dataset.msg) : "";
     return !bad;
   };
-  const fields = [...form.querySelectorAll("input[aria-describedby]")];
   fields.forEach(input => {
     input.addEventListener("blur", () => { if (input.value || input.getAttribute("aria-invalid")) checkField(input); });
-    input.addEventListener("input", () => { if (input.getAttribute("aria-invalid") === "true") checkField(input); });
+    input.addEventListener("input", () => { if (input.getAttribute("aria-invalid") === "true") checkField(input); updateBar(); });
   });
 
+  // ---- Vaste knop onderin (telefoon) ----
+  el.barBtn?.addEventListener("click", () => {
+    if (!state.start || !state.end) { $("step-dates").scrollIntoView({ behavior: "smooth", block: "start" }); return; }
+    if (!detailsValid()) { $("step-details").scrollIntoView({ behavior: "smooth", block: "center" }); setTimeout(() => form.querySelector("#res-name").focus({ preventScroll: true }), 400); return; }
+    form.requestSubmit();
+  });
+  if (el.bar && "IntersectionObserver" in window) {
+    new IntersectionObserver(([e]) => el.bar.classList.toggle("is-hidden", e.isIntersecting), { threshold: 0.4 }).observe(el.submit);
+  }
+
+  // ---- Verzenden ----
   form.addEventListener("submit", async event => {
     event.preventDefault();
-    errorOut.textContent = "";
-
-    if (start && end && !stayFree(start, end)) {
-      errorOut.textContent = tr("calNotFree");
-      return;
-    }
+    el.error.textContent = "";
     if (nights() < 1) {
-      errorOut.textContent = tr("resErrDates");
-      grid.querySelector(".cal-day:not(:disabled)")?.focus();
+      say(tr("resErrDates"));
+      $("step-dates").scrollIntoView({ behavior: "smooth", block: "start" });
       return;
     }
+    if (!Availability.stayFree(state.start, state.end, apts())) { say(tr("calNotFree")); return; }
     const okFields = fields.map(checkField).every(Boolean);
     if (!okFields || !form.checkValidity()) {
       form.querySelector('[aria-invalid="true"], :invalid')?.focus();
       return;
     }
-
-    submit.disabled = true;
+    el.submit.disabled = true;
     try {
       const data = new FormData(form);
       data.append("nachten", String(nights()));
       data.append("taal", lang());
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: data,
-        headers: { Accept: "application/json" }
-      });
+      const response = await fetch(form.action, { method: "POST", body: data, headers: { Accept: "application/json" } });
       const result = await response.json().catch(() => ({}));
       if (!response.ok || result.success === false) throw new Error(result.message || response.status);
       form.hidden = true;
-      done.hidden = false;
-      done.focus();
-      document.getElementById("bk-bar")?.remove();
+      el.done.hidden = false;
+      el.done.focus();
+      el.bar?.remove();
     } catch (error) {
-      errorOut.textContent = tr("resErrSend");
+      el.error.textContent = tr("resErrSend");
     } finally {
-      submit.disabled = false;
+      el.submit.disabled = false;
     }
+  });
+
+  // ---- Start ----
+  desktop.addEventListener("change", render);
+  new MutationObserver(() => { update(); quickPicks(); }).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+  update();
+  Availability.load().then(() => {
+    if (state.start && state.end && !Availability.stayFree(state.start, state.end, apts())) setRange(null, null, false);
+    update();
+    quickPicks();
   });
 }
 
