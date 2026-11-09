@@ -6,6 +6,7 @@
 
 const translations = {
   nl: {
+    titleReserve: "Reserveren | InnVenlo Apartments Venlo",
     resPick: "Kies uw aankomstdatum",
     resPickOut: "kies uw vertrekdatum",
     resPrice: "Vanaf € 90,- per dag. De prijs kan variëren afhankelijk van het seizoen.",
@@ -168,6 +169,7 @@ const translations = {
   },
 
   en: {
+    titleReserve: "Book | InnVenlo Apartments Venlo",
     resPick: "Choose your arrival date",
     resPickOut: "choose your departure date",
     resPrice: "From € 90 per day. Prices may vary by season.",
@@ -330,6 +332,7 @@ const translations = {
   },
 
   de: {
+    titleReserve: "Reservieren | InnVenlo Apartments Venlo",
     resPick: "Wählen Sie Ihr Anreisedatum",
     resPickOut: "wählen Sie Ihr Abreisedatum",
     resPrice: "Ab 90 € pro Tag. Der Preis kann je nach Saison variieren.",
@@ -492,6 +495,7 @@ const translations = {
   },
 
   fr: {
+    titleReserve: "Réserver | InnVenlo Apartments Venlo",
     resPick: "Choisissez votre date d'arrivée",
     resPickOut: "choisissez votre date de départ",
     resPrice: "À partir de 90 € par jour. Le prix peut varier selon la saison.",

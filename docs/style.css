@@ -604,3 +604,7 @@ address{position:relative}
 .cal-day.is-range{background:#0f3d3626}
 .cal-day:hover:not(:disabled){border-color:var(--green)}
 .cal-status.is-set{color:var(--green)}
+/* Losse reserveringspagina */
+.res-page{border-top:0;padding-top:clamp(8rem,16vw,12rem)}
+.res-h1{font:300 clamp(2rem,5vw,4rem)/1.05 var(--serif);letter-spacing:-.02em;margin-bottom:1rem}
+@media(max-width:560px){.res-row-3{grid-template-columns:1fr}.res-row-3>div{grid-column:auto!important}}
