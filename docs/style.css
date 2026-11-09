@@ -608,3 +608,6 @@ address{position:relative}
 .res-page{border-top:0;padding-top:clamp(8rem,16vw,12rem)}
 .res-h1{font:300 clamp(2rem,5vw,4rem)/1.05 var(--serif);letter-spacing:-.02em;margin-bottom:1rem}
 @media(max-width:560px){.res-row-3{grid-template-columns:1fr}.res-row-3>div{grid-column:auto!important}}
+/* Knop 'Reservering aanvragen' donkergroen */
+.res-submit{background:var(--green);border-color:var(--green);color:#fff}
+.res-submit:hover{background:#0a2c27;border-color:#0a2c27}
