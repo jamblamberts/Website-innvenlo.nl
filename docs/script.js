@@ -6,6 +6,10 @@
 
 const translations = {
   nl: {
+    calBusy: "Bezet",
+    calFree: "Beschikbaar",
+    calUpdated: "Beschikbaarheid bijgewerkt:",
+    calNotFree: "Deze datums zijn niet (meer) beschikbaar voor dit appartement. Kies andere datums.",
     bkTitle: "Reserveer uw verblijf in hartje Venlo",
     bkLead: "Kies uw datums en verstuur uw aanvraag. Vrijblijvend en zonder vooruitbetaling – u ontvangt een persoonlijke bevestiging per e-mail.",
     bkStep1: "Kies uw datums",
@@ -190,6 +194,10 @@ const translations = {
   },
 
   en: {
+    calBusy: "Booked",
+    calFree: "Available",
+    calUpdated: "Availability updated:",
+    calNotFree: "These dates are not available for this apartment. Please choose other dates.",
     bkTitle: "Book your stay in the heart of Venlo",
     bkLead: "Choose your dates and send your request. No obligation and no prepayment – you will receive a personal confirmation by email.",
     bkStep1: "Choose your dates",
@@ -374,6 +382,10 @@ const translations = {
   },
 
   de: {
+    calBusy: "Belegt",
+    calFree: "Verfügbar",
+    calUpdated: "Verfügbarkeit aktualisiert:",
+    calNotFree: "Diese Daten sind für dieses Apartment nicht verfügbar. Bitte wählen Sie andere Daten.",
     bkTitle: "Reservieren Sie Ihren Aufenthalt im Herzen von Venlo",
     bkLead: "Wählen Sie Ihre Daten und senden Sie Ihre Anfrage. Unverbindlich und ohne Vorauszahlung – Sie erhalten eine persönliche Bestätigung per E-Mail.",
     bkStep1: "Daten wählen",
@@ -558,6 +570,10 @@ const translations = {
   },
 
   fr: {
+    calBusy: "Occupé",
+    calFree: "Disponible",
+    calUpdated: "Disponibilités mises à jour :",
+    calNotFree: "Ces dates ne sont pas disponibles pour cet appartement. Veuillez choisir d'autres dates.",
     bkTitle: "Réservez votre séjour au cœur de Venlo",
     bkLead: "Choisissez vos dates et envoyez votre demande. Sans engagement et sans prépaiement – vous recevrez une confirmation personnelle par e-mail.",
     bkStep1: "Choisissez vos dates",
@@ -1131,6 +1147,31 @@ function initReservation() {
   let start = null;
   let end = null;
 
+  // ---- Beschikbaarheid (iCal van Airbnb + Booking.com via availability.json) ----
+  const busy = { "1": new Set(), "2": new Set() };
+  let availabilityUpdated = null;
+  const aptChoice = () => {
+    const v = form.querySelector('input[name="appartement"]:checked')?.value || "";
+    return v.endsWith("1") ? ["1"] : v.endsWith("2") ? ["2"] : ["1", "2"];
+  };
+  // Nacht d is vrij als minstens één gekozen appartement die nacht vrij is.
+  const nightFree = key => aptChoice().some(a => !busy[a].has(key));
+  // Verblijf van s t/m e (vertrek) is mogelijk als één appartement álle nachten vrij heeft.
+  const stayFree = (s, e) => aptChoice().some(a => {
+    for (let t = s.getTime(); t < e.getTime(); t += DAY) if (busy[a].has(iso(new Date(t)))) return false;
+    return true;
+  });
+  fetch("availability.json?ts=" + Date.now(), { cache: "no-store" })
+    .then(r => (r.ok ? r.json() : null))
+    .then(data => {
+      if (!data?.apartments) return;
+      ["1", "2"].forEach(a => (data.apartments[a] || []).forEach(d => busy[a].add(d)));
+      availabilityUpdated = data.updated ? new Date(data.updated) : null;
+      if (start && end && !stayFree(start, end)) { start = end = null; arrive.value = leave.value = ""; }
+      render();
+    })
+    .catch(() => {});
+
   const nights = () => (start && end ? Math.round((end - start) / DAY) : 0);
   const fmt = (d, opts) => new Intl.DateTimeFormat(lang(), opts).format(d);
 
@@ -1160,6 +1201,19 @@ function initReservation() {
       b.dataset.date = iso(d);
       b.setAttribute("aria-label", fmt(d, { weekday: "long", day: "numeric", month: "long", year: "numeric" }));
       if (d < today) b.disabled = true;
+      const key = iso(d);
+      const choosingEnd = start && !end && d > start;
+      if (!b.disabled) {
+        if (choosingEnd) {
+          // Vertrekdag: toegestaan zolang alle nachten ertussen vrij zijn
+          // (ook als die dag zelf de aankomstdag van een ander is).
+          if (!stayFree(start, d)) { b.disabled = true; b.classList.add(nightFree(key) ? "is-unreachable" : "is-busy"); }
+          else if (!nightFree(key)) b.classList.add("is-checkout-only");
+        } else if (!nightFree(key)) {
+          b.disabled = true;
+          b.classList.add("is-busy");
+        }
+      }
       if (d.getTime() === today.getTime()) b.classList.add("is-today");
       const t = d.getTime();
       const isStart = start && t === start.getTime();
@@ -1184,6 +1238,10 @@ function initReservation() {
       status.textContent = tr("resPick");
     }
     status.classList.toggle("is-set", Boolean(start && end));
+    const upd = document.getElementById("cal-updated");
+    if (upd && availabilityUpdated) {
+      upd.textContent = `${tr("calUpdated")} ${fmt(availabilityUpdated, { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}`;
+    }
     updateSummary();
   };
 
@@ -1236,6 +1294,14 @@ function initReservation() {
     grid.querySelector(`[data-date="${b.dataset.date}"]`)?.focus();
   });
 
+  form.querySelectorAll('input[name="appartement"]').forEach(r => r.addEventListener("change", () => {
+    if (start && end && !stayFree(start, end)) {
+      start = end = null; arrive.value = leave.value = "";
+      errorOut.textContent = tr("calNotFree");
+    }
+    render();
+  }));
+
   prevBtn.addEventListener("click", () => { view = new Date(view.getFullYear(), view.getMonth() - 1, 1); render(); });
   nextBtn.addEventListener("click", () => { view = new Date(view.getFullYear(), view.getMonth() + 1, 1); render(); });
 
@@ -1248,6 +1314,10 @@ function initReservation() {
     event.preventDefault();
     errorOut.textContent = "";
 
+    if (start && end && !stayFree(start, end)) {
+      errorOut.textContent = tr("calNotFree");
+      return;
+    }
     if (nights() < 1) {
       errorOut.textContent = tr("resErrDates");
       grid.querySelector(".cal-day:not(:disabled)")?.focus();

@@ -1,0 +1,47 @@
+name: Beschikbaarheid synchroniseren
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # elke 30 minuten (GitHub kan dit enkele minuten vertragen)
+  workflow_dispatch:          # handmatig starten via het tabblad Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-availability
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Agenda's ophalen
+        env:
+          ICAL_APT1_AIRBNB: ${{ secrets.ICAL_APT1_AIRBNB }}
+          ICAL_APT1_BOOKING: ${{ secrets.ICAL_APT1_BOOKING }}
+          ICAL_APT2_AIRBNB: ${{ secrets.ICAL_APT2_AIRBNB }}
+          ICAL_APT2_BOOKING: ${{ secrets.ICAL_APT2_BOOKING }}
+        run: python3 scripts/sync_availability.py
+      - name: Opslaan als er iets veranderd is
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json,subprocess
+          old = subprocess.run(["git","show","HEAD:docs/availability.json"],capture_output=True,text=True).stdout
+          new = open("docs/availability.json").read()
+          strip = lambda s: {k:v for k,v in (json.loads(s) if s else {}).items() if k!="updated"}
+          open("/tmp/changed","w").write("1" if strip(old)!=strip(new) else "0")
+          PY
+          if [ "$(cat /tmp/changed)" = "1" ]; then
+            git config user.name "availability-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add docs/availability.json
+            git commit -m "Beschikbaarheid bijgewerkt"
+            git push
+          else
+            echo "Geen wijzigingen in de beschikbaarheid."
+          fi

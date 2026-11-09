@@ -696,3 +696,14 @@ address{position:relative}
 @media(max-width:780px) and (min-height:640px){
  .hero .proof.proof-low{position:absolute;left:var(--pad);margin:0!important;z-index:1}
 }
+/* Kalender: bezette datums uit Airbnb/Booking.com */
+.cal-day.is-busy,.bk-card .cal-day.is-busy{background:repeating-linear-gradient(135deg,#13201c0d 0 4px,transparent 4px 8px);color:#13201c4d;text-decoration:line-through;text-decoration-color:#13201c40;cursor:not-allowed}
+.cal-day.is-checkout-only{background:linear-gradient(135deg,var(--paper) 50%,#13201c14 50%)}
+.cal-legend{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem 1.1rem;margin-top:.8rem;font-size:.75rem;color:var(--mute)}
+.lg{display:inline-flex;align-items:center;gap:.4rem}
+.lg::before{content:"";width:.85rem;height:.85rem;border:1px solid var(--line)}
+.lg-free::before{background:var(--paper)}
+.lg-busy::before{background:repeating-linear-gradient(135deg,#13201c26 0 3px,transparent 3px 6px)}
+.cal-updated{margin-left:auto;font-size:.7rem}
+@media(max-width:560px){.cal-updated{margin-left:0;flex-basis:100%}}
+.cal-day.is-unreachable,.bk-card .cal-day.is-unreachable{background:none;color:#13201c59;cursor:not-allowed;text-decoration:none}
