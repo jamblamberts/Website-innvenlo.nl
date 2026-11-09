@@ -6,6 +6,12 @@
 
 const translations = {
   nl: {
+    bkStep1b: "Kies appartement en datums",
+    bkFrom: "Vanaf € 90 per nacht",
+    bkTotal: "Vanaf € {p}",
+    resPrice: "Vanaf € 90 per nacht. De prijs kan variëren afhankelijk van het seizoen.",
+    errName: "Vul uw naam in.",
+    errEmail: "Vul een geldig e-mailadres in, bijvoorbeeld naam@voorbeeld.nl.",
     calBusy: "Bezet",
     calFree: "Beschikbaar",
     calUpdated: "Beschikbaarheid bijgewerkt:",
@@ -14,8 +20,6 @@ const translations = {
     bkLead: "Kies uw datums en verstuur uw aanvraag. Vrijblijvend en zonder vooruitbetaling – u ontvangt een persoonlijke bevestiging per e-mail.",
     bkStep1: "Kies uw datums",
     bkStep2: "Uw gegevens",
-    bkFrom: "Vanaf € 90,- per dag",
-    bkTotal: "Indicatie vanaf € {p} voor {n} {u}",
     bkPriceNote: "De prijs kan variëren afhankelijk van het seizoen. U ontvangt de definitieve prijs bij de bevestiging.",
     bkNoPref: "Geen voorkeur",
     bkReassure: "Vrijblijvend · geen betaling nu · persoonlijke bevestiging per e-mail",
@@ -34,7 +38,6 @@ const translations = {
     titleReserve: "Reserveren | InnVenlo Apartments Venlo",
     resPick: "Kies uw aankomstdatum",
     resPickOut: "kies uw vertrekdatum",
-    resPrice: "Vanaf € 90,- per dag. De prijs kan variëren afhankelijk van het seizoen.",
     calPrev: "Vorige maand",
     calNext: "Volgende maand",
     resErrDates: "Kies uw aankomst- en vertrekdatum in de kalender.",
@@ -194,6 +197,12 @@ const translations = {
   },
 
   en: {
+    bkStep1b: "Choose apartment and dates",
+    bkFrom: "From € 90 per night",
+    bkTotal: "From € {p}",
+    resPrice: "From € 90 per night. Prices may vary by season.",
+    errName: "Please enter your name.",
+    errEmail: "Please enter a valid email address, e.g. name@example.com.",
     calBusy: "Booked",
     calFree: "Available",
     calUpdated: "Availability updated:",
@@ -202,8 +211,6 @@ const translations = {
     bkLead: "Choose your dates and send your request. No obligation and no prepayment – you will receive a personal confirmation by email.",
     bkStep1: "Choose your dates",
     bkStep2: "Your details",
-    bkFrom: "From € 90 per day",
-    bkTotal: "Estimate from € {p} for {n} {u}",
     bkPriceNote: "Prices may vary by season. You will receive the final price with the confirmation.",
     bkNoPref: "No preference",
     bkReassure: "No obligation · no payment now · personal confirmation by email",
@@ -222,7 +229,6 @@ const translations = {
     titleReserve: "Book | InnVenlo Apartments Venlo",
     resPick: "Choose your arrival date",
     resPickOut: "choose your departure date",
-    resPrice: "From € 90 per day. Prices may vary by season.",
     calPrev: "Previous month",
     calNext: "Next month",
     resErrDates: "Please choose your arrival and departure date in the calendar.",
@@ -382,6 +388,12 @@ const translations = {
   },
 
   de: {
+    bkStep1b: "Apartment und Daten wählen",
+    bkFrom: "Ab 90 € pro Nacht",
+    bkTotal: "Ab {p} €",
+    resPrice: "Ab 90 € pro Nacht. Der Preis kann je nach Saison variieren.",
+    errName: "Bitte geben Sie Ihren Namen ein.",
+    errEmail: "Bitte geben Sie eine gültige E-Mail-Adresse ein, z. B. name@beispiel.de.",
     calBusy: "Belegt",
     calFree: "Verfügbar",
     calUpdated: "Verfügbarkeit aktualisiert:",
@@ -390,8 +402,6 @@ const translations = {
     bkLead: "Wählen Sie Ihre Daten und senden Sie Ihre Anfrage. Unverbindlich und ohne Vorauszahlung – Sie erhalten eine persönliche Bestätigung per E-Mail.",
     bkStep1: "Daten wählen",
     bkStep2: "Ihre Angaben",
-    bkFrom: "Ab 90 € pro Tag",
-    bkTotal: "Richtwert ab {p} € für {n} {u}",
     bkPriceNote: "Der Preis kann je nach Saison variieren. Den endgültigen Preis erhalten Sie mit der Bestätigung.",
     bkNoPref: "Keine Präferenz",
     bkReassure: "Unverbindlich · keine Zahlung jetzt · persönliche Bestätigung per E-Mail",
@@ -410,7 +420,6 @@ const translations = {
     titleReserve: "Reservieren | InnVenlo Apartments Venlo",
     resPick: "Wählen Sie Ihr Anreisedatum",
     resPickOut: "wählen Sie Ihr Abreisedatum",
-    resPrice: "Ab 90 € pro Tag. Der Preis kann je nach Saison variieren.",
     calPrev: "Vorheriger Monat",
     calNext: "Nächster Monat",
     resErrDates: "Bitte wählen Sie Ihr An- und Abreisedatum im Kalender.",
@@ -570,6 +579,12 @@ const translations = {
   },
 
   fr: {
+    bkStep1b: "Choisissez appartement et dates",
+    bkFrom: "À partir de 90 € par nuit",
+    bkTotal: "À partir de {p} €",
+    resPrice: "À partir de 90 € par nuit. Le prix peut varier selon la saison.",
+    errName: "Veuillez indiquer votre nom.",
+    errEmail: "Veuillez indiquer une adresse e-mail valide, p. ex. nom@exemple.fr.",
     calBusy: "Occupé",
     calFree: "Disponible",
     calUpdated: "Disponibilités mises à jour :",
@@ -578,8 +593,6 @@ const translations = {
     bkLead: "Choisissez vos dates et envoyez votre demande. Sans engagement et sans prépaiement – vous recevrez une confirmation personnelle par e-mail.",
     bkStep1: "Choisissez vos dates",
     bkStep2: "Vos coordonnées",
-    bkFrom: "À partir de 90 € par jour",
-    bkTotal: "Estimation à partir de {p} € pour {n} {u}",
     bkPriceNote: "Le prix peut varier selon la saison. Vous recevrez le prix définitif avec la confirmation.",
     bkNoPref: "Pas de préférence",
     bkReassure: "Sans engagement · aucun paiement maintenant · confirmation personnelle par e-mail",
@@ -598,7 +611,6 @@ const translations = {
     titleReserve: "Réserver | InnVenlo Apartments Venlo",
     resPick: "Choisissez votre date d'arrivée",
     resPickOut: "choisissez votre date de départ",
-    resPrice: "À partir de 90 € par jour. Le prix peut varier selon la saison.",
     calPrev: "Mois précédent",
     calNext: "Mois suivant",
     resErrDates: "Veuillez choisir vos dates d'arrivée et de départ dans le calendrier.",
@@ -1190,9 +1202,16 @@ function initReservation() {
 
     grid.innerHTML = "";
     const offset = (view.getDay() + 6) % 7;
-    for (let i = 0; i < offset; i++) grid.appendChild(document.createElement("span"));
     const daysInMonth = new Date(view.getFullYear(), view.getMonth() + 1, 0).getDate();
-    for (let n = 1; n <= daysInMonth; n++) {
+    // Weken die helemaal in het verleden liggen niet tonen.
+    let firstDay = 1;
+    if (view.getFullYear() === today.getFullYear() && view.getMonth() === today.getMonth()) {
+      const weekStart = today.getDate() - ((today.getDay() + 6) % 7);
+      if (weekStart > 1) firstDay = weekStart;
+    }
+    const lead = firstDay === 1 ? offset : 0;
+    for (let i = 0; i < lead; i++) grid.appendChild(document.createElement("span"));
+    for (let n = firstDay; n <= daysInMonth; n++) {
       const d = new Date(view.getFullYear(), view.getMonth(), n);
       const b = document.createElement("button");
       b.type = "button";
@@ -1200,7 +1219,7 @@ function initReservation() {
       b.textContent = n;
       b.dataset.date = iso(d);
       b.setAttribute("aria-label", fmt(d, { weekday: "long", day: "numeric", month: "long", year: "numeric" }));
-      if (d < today) b.disabled = true;
+      if (d < today) { b.disabled = true; b.classList.add("is-past"); }
       const key = iso(d);
       const choosingEnd = start && !end && d > start;
       if (!b.disabled) {
@@ -1235,8 +1254,9 @@ function initReservation() {
     } else if (start) {
       status.textContent = `${short(start)} – ${tr("resPickOut")}`;
     } else {
-      status.textContent = tr("resPick");
+      status.textContent = "";
     }
+    status.hidden = !start;
     status.classList.toggle("is-set", Boolean(start && end));
     const upd = document.getElementById("cal-updated");
     if (upd && availabilityUpdated) {
@@ -1261,7 +1281,7 @@ function initReservation() {
         : tr("bkFrom");
     }
     if (barDates) {
-      barDates.textContent = n > 0 ? status.textContent : (start ? status.textContent : tr("bkBarPick"));
+      barDates.textContent = start ? status.textContent : tr("bkBarPick");
       barPrice.textContent = n > 0 ? `€ ${euro(n * PRICE_FROM)}+` : "";
       bar.classList.toggle("is-ready", n > 0);
     }
@@ -1310,6 +1330,21 @@ function initReservation() {
 
   render();
 
+  // Foutmelding direct onder een veld, zodra het veld verlaten wordt.
+  const checkField = input => {
+    const err = document.getElementById(input.getAttribute("aria-describedby"));
+    const bad = !input.checkValidity();
+    input.setAttribute("aria-invalid", String(bad));
+    input.closest(".bk-f")?.classList.toggle("has-error", bad);
+    if (err) err.textContent = bad ? tr(err.dataset.msg) : "";
+    return !bad;
+  };
+  const fields = [...form.querySelectorAll("input[aria-describedby]")];
+  fields.forEach(input => {
+    input.addEventListener("blur", () => { if (input.value || input.getAttribute("aria-invalid")) checkField(input); });
+    input.addEventListener("input", () => { if (input.getAttribute("aria-invalid") === "true") checkField(input); });
+  });
+
   form.addEventListener("submit", async event => {
     event.preventDefault();
     errorOut.textContent = "";
@@ -1323,9 +1358,9 @@ function initReservation() {
       grid.querySelector(".cal-day:not(:disabled)")?.focus();
       return;
     }
-    if (!form.checkValidity()) {
-      errorOut.textContent = tr("resErrFields");
-      form.querySelector(":invalid")?.focus();
+    const okFields = fields.map(checkField).every(Boolean);
+    if (!okFields || !form.checkValidity()) {
+      form.querySelector('[aria-invalid="true"], :invalid')?.focus();
       return;
     }
 
