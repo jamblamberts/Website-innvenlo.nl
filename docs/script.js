@@ -6,6 +6,12 @@
 
 const translations = {
   nl: {
+    resPick: "Kies uw aankomstdatum",
+    resPickOut: "kies uw vertrekdatum",
+    resPrice: "Vanaf € 90,- per dag. De prijs kan variëren afhankelijk van het seizoen.",
+    calPrev: "Vorige maand",
+    calNext: "Volgende maand",
+    resErrDates: "Kies uw aankomst- en vertrekdatum in de kalender.",
     contactDoneTitle: "Bedankt voor uw bericht",
     contactDoneText: "We nemen zo snel mogelijk contact met u op.",
     resLabel: "Reserveringsaanvraag",
@@ -23,7 +29,6 @@ const translations = {
     resDoneText: "We hebben uw aanvraag ontvangen en bevestigen zo snel mogelijk per e-mail of de datums beschikbaar zijn.",
     resNight: "nacht",
     resNights: "nachten",
-    resErrDates: "Kies een vertrekdatum na de aankomstdatum.",
     resErrFields: "Vul alle verplichte velden correct in.",
     resErrSend: "Versturen is niet gelukt. Probeer het opnieuw of neem contact op via WhatsApp of e-mail.",
     resErrSetup: "Het aanvraagformulier is nog niet geactiveerd. Neem contact op via WhatsApp of e-mail.",
@@ -163,6 +168,12 @@ const translations = {
   },
 
   en: {
+    resPick: "Choose your arrival date",
+    resPickOut: "choose your departure date",
+    resPrice: "From € 90 per day. Prices may vary by season.",
+    calPrev: "Previous month",
+    calNext: "Next month",
+    resErrDates: "Please choose your arrival and departure date in the calendar.",
     contactDoneTitle: "Thank you for your message",
     contactDoneText: "We will get back to you as soon as possible.",
     resLabel: "Booking request",
@@ -180,7 +191,6 @@ const translations = {
     resDoneText: "We have received your request and will confirm by email as soon as possible whether the dates are available.",
     resNight: "night",
     resNights: "nights",
-    resErrDates: "Choose a departure date after the arrival date.",
     resErrFields: "Please fill in all required fields correctly.",
     resErrSend: "Sending failed. Please try again or contact us via WhatsApp or email.",
     resErrSetup: "The booking form is not active yet. Please contact us via WhatsApp or email.",
@@ -320,6 +330,12 @@ const translations = {
   },
 
   de: {
+    resPick: "Wählen Sie Ihr Anreisedatum",
+    resPickOut: "wählen Sie Ihr Abreisedatum",
+    resPrice: "Ab 90 € pro Tag. Der Preis kann je nach Saison variieren.",
+    calPrev: "Vorheriger Monat",
+    calNext: "Nächster Monat",
+    resErrDates: "Bitte wählen Sie Ihr An- und Abreisedatum im Kalender.",
     contactDoneTitle: "Vielen Dank für Ihre Nachricht",
     contactDoneText: "Wir melden uns so schnell wie möglich bei Ihnen.",
     resLabel: "Buchungsanfrage",
@@ -337,7 +353,6 @@ const translations = {
     resDoneText: "Wir haben Ihre Anfrage erhalten und bestätigen so schnell wie möglich per E-Mail, ob die Daten verfügbar sind.",
     resNight: "Nacht",
     resNights: "Nächte",
-    resErrDates: "Bitte wählen Sie ein Abreisedatum nach dem Anreisedatum.",
     resErrFields: "Bitte füllen Sie alle Pflichtfelder korrekt aus.",
     resErrSend: "Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder kontaktieren Sie uns per WhatsApp oder E-Mail.",
     resErrSetup: "Das Anfrageformular ist noch nicht aktiv. Bitte kontaktieren Sie uns per WhatsApp oder E-Mail.",
@@ -477,6 +492,12 @@ const translations = {
   },
 
   fr: {
+    resPick: "Choisissez votre date d'arrivée",
+    resPickOut: "choisissez votre date de départ",
+    resPrice: "À partir de 90 € par jour. Le prix peut varier selon la saison.",
+    calPrev: "Mois précédent",
+    calNext: "Mois suivant",
+    resErrDates: "Veuillez choisir vos dates d'arrivée et de départ dans le calendrier.",
     contactDoneTitle: "Merci pour votre message",
     contactDoneText: "Nous vous répondrons dans les plus brefs délais.",
     resLabel: "Demande de réservation",
@@ -494,7 +515,6 @@ const translations = {
     resDoneText: "Nous avons bien reçu votre demande et vous confirmerons au plus vite par e-mail si les dates sont disponibles.",
     resNight: "nuit",
     resNights: "nuits",
-    resErrDates: "Choisissez une date de départ postérieure à la date d'arrivée.",
     resErrFields: "Veuillez remplir correctement tous les champs obligatoires.",
     resErrSend: "L'envoi a échoué. Réessayez ou contactez-nous via WhatsApp ou par e-mail.",
     resErrSetup: "Le formulaire de réservation n'est pas encore activé. Contactez-nous via WhatsApp ou par e-mail.",
@@ -1001,56 +1021,128 @@ function initReservation() {
   const form = document.getElementById("res-form");
   if (!form) return;
 
-  const tr = key => (translations[document.documentElement.lang] || translations.nl)[key] || translations.nl[key];
+  const lang = () => document.documentElement.lang || "nl";
+  const tr = key => (translations[lang()] || translations.nl)[key] || translations.nl[key];
   const arrive = form.querySelector("#res-in");
   const leave = form.querySelector("#res-out");
-  const nightsOut = document.getElementById("res-nights");
+  const status = document.getElementById("res-nights");
   const errorOut = document.getElementById("res-error");
   const done = document.getElementById("res-done");
   const submit = form.querySelector(".res-submit");
+  const grid = document.getElementById("cal-grid");
+  const daysRow = document.getElementById("cal-days");
+  const monthLabel = document.getElementById("cal-month");
+  const prevBtn = form.querySelector(".cal-prev");
+  const nextBtn = form.querySelector(".cal-next");
 
-  const iso = d => new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
-  const today = new Date();
-  arrive.min = iso(today);
-  leave.min = iso(new Date(today.getTime() + 86400000));
+  const DAY = 86400000;
+  const iso = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  const parse = s => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  let view = new Date(today.getFullYear(), today.getMonth(), 1);
+  let start = null;
+  let end = null;
 
-  const nights = () => {
-    if (!arrive.value || !leave.value) return 0;
-    return Math.round((new Date(leave.value) - new Date(arrive.value)) / 86400000);
-  };
+  const nights = () => (start && end ? Math.round((end - start) / DAY) : 0);
+  const fmt = (d, opts) => new Intl.DateTimeFormat(lang(), opts).format(d);
 
-  const update = () => {
-    if (arrive.value) {
-      const next = new Date(new Date(arrive.value).getTime() + 86400000);
-      leave.min = iso(next);
-      if (leave.value && leave.value <= arrive.value) leave.value = iso(next);
+  const render = () => {
+    const locale = lang();
+    monthLabel.textContent = fmt(view, { month: "long", year: "numeric" });
+    prevBtn.disabled = view <= new Date(today.getFullYear(), today.getMonth(), 1);
+
+    daysRow.innerHTML = "";
+    for (let i = 0; i < 7; i++) {
+      const d = new Date(2024, 0, 1 + i); // maandag
+      const span = document.createElement("span");
+      span.textContent = new Intl.DateTimeFormat(locale, { weekday: "short" }).format(d).replace(".", "").slice(0, 2);
+      daysRow.appendChild(span);
     }
-    const n = nights();
-    nightsOut.textContent = n > 0 ? `${n} ${n === 1 ? tr("resNight") : tr("resNights")}` : "";
-    errorOut.textContent = "";
+
+    grid.innerHTML = "";
+    const offset = (view.getDay() + 6) % 7;
+    for (let i = 0; i < offset; i++) grid.appendChild(document.createElement("span"));
+    const daysInMonth = new Date(view.getFullYear(), view.getMonth() + 1, 0).getDate();
+    for (let n = 1; n <= daysInMonth; n++) {
+      const d = new Date(view.getFullYear(), view.getMonth(), n);
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "cal-day";
+      b.textContent = n;
+      b.dataset.date = iso(d);
+      b.setAttribute("aria-label", fmt(d, { weekday: "long", day: "numeric", month: "long", year: "numeric" }));
+      if (d < today) b.disabled = true;
+      if (d.getTime() === today.getTime()) b.classList.add("is-today");
+      const t = d.getTime();
+      const isStart = start && t === start.getTime();
+      const isEnd = end && t === end.getTime();
+      if (isStart) b.classList.add("is-start");
+      if (isEnd) b.classList.add("is-end");
+      if (start && end && t > start && t < end) b.classList.add("is-range");
+      b.setAttribute("aria-pressed", String(Boolean(isStart || isEnd)));
+      grid.appendChild(b);
+    }
+    updateStatus();
   };
-  arrive.addEventListener("change", update);
-  leave.addEventListener("change", update);
+
+  const updateStatus = () => {
+    const short = d => fmt(d, { day: "numeric", month: "short" });
+    if (start && end) {
+      const n = nights();
+      status.textContent = `${short(start)} – ${short(end)} · ${n} ${n === 1 ? tr("resNight") : tr("resNights")}`;
+    } else if (start) {
+      status.textContent = `${short(start)} – ${tr("resPickOut")}`;
+    } else {
+      status.textContent = tr("resPick");
+    }
+    status.classList.toggle("is-set", Boolean(start && end));
+  };
+
+  grid.addEventListener("click", event => {
+    const b = event.target.closest(".cal-day");
+    if (!b || b.disabled) return;
+    const d = parse(b.dataset.date);
+    if (!start || end || d <= start) {
+      start = d;
+      end = null;
+    } else {
+      end = d;
+    }
+    arrive.value = start ? iso(start) : "";
+    leave.value = end ? iso(end) : "";
+    errorOut.textContent = "";
+    render();
+    grid.querySelector(`[data-date="${b.dataset.date}"]`)?.focus();
+  });
+
+  prevBtn.addEventListener("click", () => { view = new Date(view.getFullYear(), view.getMonth() - 1, 1); render(); });
+  nextBtn.addEventListener("click", () => { view = new Date(view.getFullYear(), view.getMonth() + 1, 1); render(); });
+
+  // Taalwissel: kalender opnieuw opbouwen in de nieuwe taal.
+  new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+
+  render();
 
   form.addEventListener("submit", async event => {
     event.preventDefault();
     errorOut.textContent = "";
 
+    if (nights() < 1) {
+      errorOut.textContent = tr("resErrDates");
+      grid.querySelector(".cal-day:not(:disabled)")?.focus();
+      return;
+    }
     if (!form.checkValidity()) {
       errorOut.textContent = tr("resErrFields");
       form.querySelector(":invalid")?.focus();
       return;
     }
-    if (nights() < 1) {
-      errorOut.textContent = tr("resErrDates");
-      leave.focus();
-      return;
-    }
+
     submit.disabled = true;
     try {
       const data = new FormData(form);
       data.append("nachten", String(nights()));
-      data.append("taal", document.documentElement.lang);
+      data.append("taal", lang());
       const response = await fetch(form.action, {
         method: "POST",
         body: data,
