@@ -1327,6 +1327,34 @@ function initContactForm() {
 
 
 /* =================================
+   HERO: TEKSTBLOK IN HET MIDDEN (TELEFOON)
+================================= */
+
+// Zet kop + tekst + knop in het verticale midden van het scherm,
+// maar nooit over de reviews heen.
+function initHeroCenter() {
+  const hero = document.querySelector(".hero");
+  const main = hero?.querySelector(".hero-main");
+  const proof = hero?.querySelector(".proof");
+  if (!main) return;
+  const mq = matchMedia("(max-width: 780px) and (min-height: 640px)");
+
+  const place = () => {
+    if (!mq.matches) { main.style.top = ""; main.style.transform = ""; return; }
+    const heroBox = hero.getBoundingClientRect();
+    const minTop = proof ? proof.getBoundingClientRect().bottom - heroBox.top + 24 : 0;
+    const centered = heroBox.height / 2 - main.offsetHeight / 2;
+    main.style.transform = "none";
+    main.style.top = Math.round(Math.max(centered, minTop)) + "px";
+  };
+
+  place();
+  window.addEventListener("resize", place);
+  if (document.fonts) document.fonts.ready.then(place);
+}
+
+
+/* =================================
    WEBSITE STARTEN
 ================================= */
 
@@ -1335,6 +1363,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initImageSliders();
 	initLogoReveal();
   initQuoteRotator();
+  initHeroCenter();
   initAutoOpen();
   initReservation();
   initContactForm();

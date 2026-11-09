@@ -686,3 +686,10 @@ address{position:relative}
 .bk-card .cal-day.is-start,.bk-card .cal-day.is-end{background:var(--green);border-color:var(--green);color:#fff}
 .bk-card .cal-day.is-range{background:#0f3d3626}
 .bk-card .cal-day:disabled{background:none}
+/* Hero telefoon: kop, tekst en knop verticaal gecentreerd op het scherm */
+.hero .hero-main{padding:0!important;max-width:none}
+@media(max-width:780px) and (min-height:640px){
+ .hero{position:relative}
+ .hero>div{position:static}
+ .hero .hero-main{position:absolute;left:var(--pad);right:var(--pad);top:50%;transform:translateY(-50%);z-index:1}
+}
