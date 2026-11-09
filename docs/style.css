@@ -599,3 +599,8 @@ address{position:relative}
 .res-row-3{grid-template-columns:1fr 1fr .6fr}
 @media(max-width:560px){.res-row-3{grid-template-columns:1fr 1fr}.res-row-3>div:first-child{grid-column:1/-1}.cal-day{font-size:.82rem}}
 .cal-day{width:100%;padding:0;display:grid;place-items:center}
+/* Kalender: geselecteerde dagen donkergroen */
+.cal-day.is-start,.cal-day.is-end{background:var(--green);border-color:var(--green);color:#fff}
+.cal-day.is-range{background:#0f3d3626}
+.cal-day:hover:not(:disabled){border-color:var(--green)}
+.cal-status.is-set{color:var(--green)}
