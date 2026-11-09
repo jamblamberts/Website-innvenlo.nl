@@ -10,6 +10,21 @@ const translations = {
     resPick: "Kies uw aankomstdatum",
     resPickOut: "kies uw vertrekdatum",
     resPrice: "Vanaf € 90,- per dag. De prijs kan variëren afhankelijk van het seizoen.",
+    bkStep1: "Kies uw appartement",
+    bkStep2: "Kies uw verblijfsdata",
+    bkStep3: "Uw gegevens",
+    bkViewApts: "Bekijk beide appartementen met foto's",
+    calClear: "Datums wissen",
+    sumTitle: "Uw aanvraag",
+    sumStay: "Verblijf",
+    sumTotal: "Indicatie vanaf",
+    sumNote: "Indicatie op basis van € 90,- per nacht. U ontvangt de definitieve prijs in onze bevestiging.",
+    guestOne: "gast",
+    guestMany: "gasten",
+    bkTrust1: "Persoonlijke bevestiging binnen 24 uur",
+    bkTrust2: "Vrijblijvend: pas definitief na onze bevestiging",
+    bkTrust3: "Inchecken vanaf 14:00 · uitchecken tot 11:00",
+    bkContactTitle: "Liever persoonlijk overleggen?",
     calPrev: "Vorige maand",
     calNext: "Volgende maand",
     resErrDates: "Kies uw aankomst- en vertrekdatum in de kalender.",
@@ -173,6 +188,21 @@ const translations = {
     resPick: "Choose your arrival date",
     resPickOut: "choose your departure date",
     resPrice: "From € 90 per day. Prices may vary by season.",
+    bkStep1: "Choose your apartment",
+    bkStep2: "Choose your dates",
+    bkStep3: "Your details",
+    bkViewApts: "View both apartments with photos",
+    calClear: "Clear dates",
+    sumTitle: "Your request",
+    sumStay: "Stay",
+    sumTotal: "Indication from",
+    sumNote: "Indication based on € 90 per night. You will receive the final price in our confirmation.",
+    guestOne: "guest",
+    guestMany: "guests",
+    bkTrust1: "Personal confirmation within 24 hours",
+    bkTrust2: "No obligation: final only after our confirmation",
+    bkTrust3: "Check-in from 14:00 · check-out by 11:00",
+    bkContactTitle: "Prefer to talk it through?",
     calPrev: "Previous month",
     calNext: "Next month",
     resErrDates: "Please choose your arrival and departure date in the calendar.",
@@ -336,6 +366,21 @@ const translations = {
     resPick: "Wählen Sie Ihr Anreisedatum",
     resPickOut: "wählen Sie Ihr Abreisedatum",
     resPrice: "Ab 90 € pro Tag. Der Preis kann je nach Saison variieren.",
+    bkStep1: "Wählen Sie Ihr Apartment",
+    bkStep2: "Wählen Sie Ihre Reisedaten",
+    bkStep3: "Ihre Angaben",
+    bkViewApts: "Beide Apartments mit Fotos ansehen",
+    calClear: "Daten löschen",
+    sumTitle: "Ihre Anfrage",
+    sumStay: "Aufenthalt",
+    sumTotal: "Richtpreis ab",
+    sumNote: "Richtwert auf Basis von 90 € pro Nacht. Den endgültigen Preis erhalten Sie mit unserer Bestätigung.",
+    guestOne: "Gast",
+    guestMany: "Gäste",
+    bkTrust1: "Persönliche Bestätigung innerhalb von 24 Stunden",
+    bkTrust2: "Unverbindlich: erst nach unserer Bestätigung gültig",
+    bkTrust3: "Check-in ab 14:00 · Check-out bis 11:00",
+    bkContactTitle: "Lieber persönlich sprechen?",
     calPrev: "Vorheriger Monat",
     calNext: "Nächster Monat",
     resErrDates: "Bitte wählen Sie Ihr An- und Abreisedatum im Kalender.",
@@ -499,6 +544,21 @@ const translations = {
     resPick: "Choisissez votre date d'arrivée",
     resPickOut: "choisissez votre date de départ",
     resPrice: "À partir de 90 € par jour. Le prix peut varier selon la saison.",
+    bkStep1: "Choisissez votre appartement",
+    bkStep2: "Choisissez vos dates",
+    bkStep3: "Vos coordonnées",
+    bkViewApts: "Voir les deux appartements en photos",
+    calClear: "Effacer les dates",
+    sumTitle: "Votre demande",
+    sumStay: "Séjour",
+    sumTotal: "Estimation à partir de",
+    sumNote: "Estimation basée sur 90 € par nuit. Le prix définitif figure dans notre confirmation.",
+    guestOne: "voyageur",
+    guestMany: "voyageurs",
+    bkTrust1: "Confirmation personnelle sous 24 heures",
+    bkTrust2: "Sans engagement : définitif après notre confirmation",
+    bkTrust3: "Arrivée dès 14h00 · départ avant 11h00",
+    bkContactTitle: "Vous préférez en parler ?",
     calPrev: "Mois précédent",
     calNext: "Mois suivant",
     resErrDates: "Veuillez choisir vos dates d'arrivée et de départ dans le calendrier.",
@@ -1031,62 +1091,98 @@ function initReservation() {
   const leave = form.querySelector("#res-out");
   const status = document.getElementById("res-nights");
   const errorOut = document.getElementById("res-error");
+  const calError = document.getElementById("res-cal-error");
   const done = document.getElementById("res-done");
   const submit = form.querySelector(".res-submit");
-  const grid = document.getElementById("cal-grid");
-  const daysRow = document.getElementById("cal-days");
-  const monthLabel = document.getElementById("cal-month");
+  const cal = document.getElementById("res-cal");
+  const monthsEl = document.getElementById("cal-months");
+  const live = document.getElementById("cal-live");
   const prevBtn = form.querySelector(".cal-prev");
   const nextBtn = form.querySelector(".cal-next");
+  const clearBtn = document.getElementById("res-clear");
+  const guestSel = document.getElementById("res-guests");
+  const sumApt = document.getElementById("sum-apt");
+  const sumDates = document.getElementById("sum-dates");
+  const sumGuests = document.getElementById("sum-guests");
+  const sumPrice = document.getElementById("sum-price");
 
+  const PRICE_FROM = 90; // indicatie: "vanaf € 90,- per nacht"
   const DAY = 86400000;
   const iso = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
   const parse = s => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
   const today = new Date(); today.setHours(0, 0, 0, 0);
-  let view = new Date(today.getFullYear(), today.getMonth(), 1);
+  const firstMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+  let view = firstMonth;
   let start = null;
   let end = null;
+  let hover = null;
+  let shown = 0;
 
   const nights = () => (start && end ? Math.round((end - start) / DAY) : 0);
   const fmt = (d, opts) => new Intl.DateTimeFormat(lang(), opts).format(d);
+  // Twee maanden naast elkaar zodra er ruimte is, anders één.
+  const monthCount = () => (cal.clientWidth >= 620 ? 2 : 1);
 
-  const render = () => {
-    const locale = lang();
-    monthLabel.textContent = fmt(view, { month: "long", year: "numeric" });
-    prevBtn.disabled = view <= new Date(today.getFullYear(), today.getMonth(), 1);
+  const buildMonth = (first, i) => {
+    const block = document.createElement("div");
+    block.className = "cal-month-block";
+    block.setAttribute("role", "group");
+    block.setAttribute("aria-labelledby", `cal-title-${i}`);
 
-    daysRow.innerHTML = "";
-    for (let i = 0; i < 7; i++) {
-      const d = new Date(2024, 0, 1 + i); // maandag
+    const title = document.createElement("p");
+    title.className = "cal-month";
+    title.id = `cal-title-${i}`;
+    title.textContent = fmt(first, { month: "long", year: "numeric" });
+    block.appendChild(title);
+
+    const daysRow = document.createElement("div");
+    daysRow.className = "cal-days";
+    daysRow.setAttribute("aria-hidden", "true");
+    for (let n = 0; n < 7; n++) {
       const span = document.createElement("span");
-      span.textContent = new Intl.DateTimeFormat(locale, { weekday: "short" }).format(d).replace(".", "").slice(0, 2);
+      span.textContent = new Intl.DateTimeFormat(lang(), { weekday: "short" }).format(new Date(2024, 0, 1 + n)).replace(".", "").slice(0, 2);
       daysRow.appendChild(span);
     }
+    block.appendChild(daysRow);
 
-    grid.innerHTML = "";
-    const offset = (view.getDay() + 6) % 7;
-    for (let i = 0; i < offset; i++) grid.appendChild(document.createElement("span"));
-    const daysInMonth = new Date(view.getFullYear(), view.getMonth() + 1, 0).getDate();
+    const grid = document.createElement("div");
+    grid.className = "cal-grid";
+    const offset = (first.getDay() + 6) % 7;
+    for (let n = 0; n < offset; n++) grid.appendChild(document.createElement("span"));
+    const daysInMonth = new Date(first.getFullYear(), first.getMonth() + 1, 0).getDate();
     for (let n = 1; n <= daysInMonth; n++) {
-      const d = new Date(view.getFullYear(), view.getMonth(), n);
+      const d = new Date(first.getFullYear(), first.getMonth(), n);
       const b = document.createElement("button");
       b.type = "button";
       b.className = "cal-day";
       b.textContent = n;
       b.dataset.date = iso(d);
+      b.dataset.t = d.getTime();
       b.setAttribute("aria-label", fmt(d, { weekday: "long", day: "numeric", month: "long", year: "numeric" }));
       if (d < today) b.disabled = true;
       if (d.getTime() === today.getTime()) b.classList.add("is-today");
-      const t = d.getTime();
-      const isStart = start && t === start.getTime();
-      const isEnd = end && t === end.getTime();
-      if (isStart) b.classList.add("is-start");
-      if (isEnd) b.classList.add("is-end");
-      if (start && end && t > start && t < end) b.classList.add("is-range");
-      b.setAttribute("aria-pressed", String(Boolean(isStart || isEnd)));
       grid.appendChild(b);
     }
-    updateStatus();
+    block.appendChild(grid);
+    return block;
+  };
+
+  // Kleurt de dagen volgens de huidige keuze (zonder de kalender opnieuw op te bouwen).
+  const paint = () => {
+    const s = start ? start.getTime() : null;
+    const e = end ? end.getTime() : null;
+    const h = !end && s !== null && hover && hover.getTime() > s ? hover.getTime() : null;
+    const limit = e !== null ? e : h;
+    monthsEl.querySelectorAll(".cal-day").forEach(b => {
+      const t = Number(b.dataset.t);
+      const isStart = s !== null && t === s;
+      const isEnd = e !== null && t === e;
+      b.classList.toggle("is-start", isStart);
+      b.classList.toggle("is-end", isEnd);
+      b.classList.toggle("is-range", s !== null && limit !== null && t > s && t < limit);
+      b.classList.toggle("is-preview", h !== null && t === h);
+      b.setAttribute("aria-pressed", String(isStart || isEnd));
+    });
   };
 
   const updateStatus = () => {
@@ -1100,9 +1196,53 @@ function initReservation() {
       status.textContent = tr("resPick");
     }
     status.classList.toggle("is-set", Boolean(start && end));
+    clearBtn.hidden = !start;
   };
 
-  grid.addEventListener("click", event => {
+  const updateSummary = () => {
+    const checked = form.querySelector('input[name="appartement"]:checked');
+    const name = checked && checked.closest("label").querySelector(".bk-apt-name");
+    sumApt.textContent = name ? name.textContent : "–";
+
+    const g = Number(guestSel.value);
+    sumGuests.textContent = `${g} ${g === 1 ? tr("guestOne") : tr("guestMany")}`;
+
+    if (start && end) {
+      const n = nights();
+      const day = d => fmt(d, { weekday: "short", day: "numeric", month: "short" });
+      sumDates.textContent = `${day(start)} – ${day(end)} · ${n} ${n === 1 ? tr("resNight") : tr("resNights")}`;
+      sumPrice.textContent = new Intl.NumberFormat(lang(), { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(n * PRICE_FROM);
+    } else {
+      sumDates.textContent = "–";
+      sumPrice.textContent = "–";
+    }
+  };
+
+  const refresh = () => { paint(); updateStatus(); updateSummary(); };
+
+  const render = () => {
+    shown = monthCount();
+    monthsEl.style.setProperty("--m", shown);
+    monthsEl.innerHTML = "";
+    for (let i = 0; i < shown; i++) {
+      monthsEl.appendChild(buildMonth(new Date(view.getFullYear(), view.getMonth() + i, 1), i));
+    }
+    prevBtn.disabled = view <= firstMonth;
+    refresh();
+  };
+
+  const announceMonths = () => {
+    live.textContent = [...monthsEl.querySelectorAll(".cal-month")].map(p => p.textContent).join(", ");
+  };
+
+  const setSelection = () => {
+    arrive.value = start ? iso(start) : "";
+    leave.value = end ? iso(end) : "";
+    calError.textContent = "";
+    errorOut.textContent = "";
+  };
+
+  monthsEl.addEventListener("click", event => {
     const b = event.target.closest(".cal-day");
     if (!b || b.disabled) return;
     const d = parse(b.dataset.date);
@@ -1112,28 +1252,74 @@ function initReservation() {
     } else {
       end = d;
     }
-    arrive.value = start ? iso(start) : "";
-    leave.value = end ? iso(end) : "";
-    errorOut.textContent = "";
-    render();
-    grid.querySelector(`[data-date="${b.dataset.date}"]`)?.focus();
+    hover = null;
+    setSelection();
+    refresh();
   });
 
-  prevBtn.addEventListener("click", () => { view = new Date(view.getFullYear(), view.getMonth() - 1, 1); render(); });
-  nextBtn.addEventListener("click", () => { view = new Date(view.getFullYear(), view.getMonth() + 1, 1); render(); });
+  monthsEl.addEventListener("mouseover", event => {
+    const b = event.target.closest(".cal-day");
+    if (!b || b.disabled || !start || end) return;
+    hover = parse(b.dataset.date);
+    paint();
+  });
+  monthsEl.addEventListener("mouseleave", () => {
+    if (!hover) return;
+    hover = null;
+    paint();
+  });
 
-  // Taalwissel: kalender opnieuw opbouwen in de nieuwe taal.
+  // Toetsenbord: pijltjes verplaatsen de focus door de kalender.
+  monthsEl.addEventListener("keydown", event => {
+    const b = event.target.closest(".cal-day");
+    const delta = { ArrowLeft: -1, ArrowRight: 1, ArrowUp: -7, ArrowDown: 7 }[event.key];
+    if (!b || !delta) return;
+    event.preventDefault();
+    const from = parse(b.dataset.date);
+    const target = new Date(from.getFullYear(), from.getMonth(), from.getDate() + delta);
+    if (target < today) return;
+    let el = monthsEl.querySelector(`[data-date="${iso(target)}"]`);
+    if (!el) {
+      view = target < view
+        ? new Date(target.getFullYear(), target.getMonth(), 1)
+        : new Date(target.getFullYear(), target.getMonth() - (shown - 1), 1);
+      render();
+      announceMonths();
+      el = monthsEl.querySelector(`[data-date="${iso(target)}"]`);
+    }
+    if (el) el.focus();
+  });
+
+  prevBtn.addEventListener("click", () => { view = new Date(view.getFullYear(), view.getMonth() - 1, 1); render(); announceMonths(); });
+  nextBtn.addEventListener("click", () => { view = new Date(view.getFullYear(), view.getMonth() + 1, 1); render(); announceMonths(); });
+  clearBtn.addEventListener("click", () => {
+    start = null; end = null; hover = null;
+    setSelection();
+    refresh();
+  });
+
+  form.addEventListener("change", event => {
+    if (event.target.matches('input[name="appartement"], #res-guests')) updateSummary();
+  });
+  form.addEventListener("input", () => { errorOut.textContent = ""; });
+
+  // Taalwissel: kalender en samenvatting opnieuw opbouwen in de nieuwe taal.
   new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+  // Aantal getoonde maanden volgt de beschikbare breedte.
+  if ("ResizeObserver" in window) {
+    new ResizeObserver(() => { if (monthCount() !== shown) render(); }).observe(cal);
+  }
 
   render();
 
   form.addEventListener("submit", async event => {
     event.preventDefault();
     errorOut.textContent = "";
+    calError.textContent = "";
 
     if (nights() < 1) {
-      errorOut.textContent = tr("resErrDates");
-      grid.querySelector(".cal-day:not(:disabled)")?.focus();
+      calError.textContent = tr("resErrDates");
+      (monthsEl.querySelector(".cal-day.is-start") || monthsEl.querySelector(".cal-day:not(:disabled)"))?.focus();
       return;
     }
     if (!form.checkValidity()) {
