@@ -6,6 +6,8 @@
 
 const translations = {
   nl: {
+    contactDoneTitle: "Bedankt voor uw bericht",
+    contactDoneText: "We nemen zo snel mogelijk contact met u op.",
     resLabel: "Reserveringsaanvraag",
     resTitle: "Direct bij ons aanvragen",
     resIntro: "Kies uw appartement en datums. U ontvangt binnen 24 uur een persoonlijke bevestiging per e-mail. Uw aanvraag is pas definitief na onze bevestiging.",
@@ -161,6 +163,8 @@ const translations = {
   },
 
   en: {
+    contactDoneTitle: "Thank you for your message",
+    contactDoneText: "We will get back to you as soon as possible.",
     resLabel: "Booking request",
     resTitle: "Request directly with us",
     resIntro: "Choose your apartment and dates. You will receive a personal confirmation by email within 24 hours. Your request is only final after our confirmation.",
@@ -316,6 +320,8 @@ const translations = {
   },
 
   de: {
+    contactDoneTitle: "Vielen Dank für Ihre Nachricht",
+    contactDoneText: "Wir melden uns so schnell wie möglich bei Ihnen.",
     resLabel: "Buchungsanfrage",
     resTitle: "Direkt bei uns anfragen",
     resIntro: "Wählen Sie Ihr Apartment und Ihre Daten. Sie erhalten innerhalb von 24 Stunden eine persönliche Bestätigung per E-Mail. Ihre Anfrage ist erst nach unserer Bestätigung verbindlich.",
@@ -471,6 +477,8 @@ const translations = {
   },
 
   fr: {
+    contactDoneTitle: "Merci pour votre message",
+    contactDoneText: "Nous vous répondrons dans les plus brefs délais.",
     resLabel: "Demande de réservation",
     resTitle: "Réservez directement chez nous",
     resIntro: "Choisissez votre appartement et vos dates. Vous recevrez une confirmation personnelle par e-mail sous 24 heures. Votre demande n'est définitive qu'après notre confirmation.",
@@ -1038,11 +1046,6 @@ function initReservation() {
       leave.focus();
       return;
     }
-    if (form.action.includes("VUL_HIER_UW_ID_IN")) {
-      errorOut.textContent = tr("resErrSetup");
-      return;
-    }
-
     submit.disabled = true;
     try {
       const data = new FormData(form);
@@ -1053,7 +1056,50 @@ function initReservation() {
         body: data,
         headers: { Accept: "application/json" }
       });
-      if (!response.ok) throw new Error(response.status);
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || result.success === false) throw new Error(result.message || response.status);
+      form.hidden = true;
+      done.hidden = false;
+      done.focus();
+    } catch (error) {
+      errorOut.textContent = tr("resErrSend");
+    } finally {
+      submit.disabled = false;
+    }
+  });
+}
+
+
+/* =================================
+   CONTACTFORMULIER
+================================= */
+
+function initContactForm() {
+  const form = document.getElementById("contact-form");
+  if (!form) return;
+
+  const tr = key => (translations[document.documentElement.lang] || translations.nl)[key] || translations.nl[key];
+  const errorOut = document.getElementById("contact-error");
+  const done = document.getElementById("contact-done");
+  const submit = form.querySelector("button[type=submit]");
+
+  form.addEventListener("submit", async event => {
+    event.preventDefault();
+    errorOut.textContent = "";
+    if (!form.checkValidity()) {
+      errorOut.textContent = tr("resErrFields");
+      form.querySelector(":invalid")?.focus();
+      return;
+    }
+    submit.disabled = true;
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || result.success === false) throw new Error(result.message || response.status);
       form.hidden = true;
       done.hidden = false;
       done.focus();
@@ -1077,6 +1123,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initQuoteRotator();
   initAutoOpen();
   initReservation();
+  initContactForm();
   fitQuoteBoxes();
   if (document.fonts) document.fonts.ready.then(fitQuoteBoxes);
   window.addEventListener("resize", fitQuoteBoxes);

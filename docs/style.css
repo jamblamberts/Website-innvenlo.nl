@@ -573,3 +573,4 @@ address{position:relative}
 .res-done h3{margin-bottom:.6rem}
 @media(max-width:900px){.res-head,.res-form,.res-done{grid-column:1/-1}}
 @media(max-width:560px){.res-row{grid-template-columns:1fr 1fr}.res-row>div:last-child{grid-column:1/-1}.res-row-2{grid-template-columns:1fr}.res-apts{grid-template-columns:1fr}.res-submit{justify-self:stretch;justify-content:space-between}}
+.hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
