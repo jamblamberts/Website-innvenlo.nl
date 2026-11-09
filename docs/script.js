@@ -6,6 +6,27 @@
 
 const translations = {
   nl: {
+    bkTitle: "Reserveer uw verblijf in hartje Venlo",
+    bkLead: "Kies uw datums en verstuur uw aanvraag. Vrijblijvend en zonder vooruitbetaling – u ontvangt een persoonlijke bevestiging per e-mail.",
+    bkStep1: "Kies uw datums",
+    bkStep2: "Uw gegevens",
+    bkFrom: "Vanaf € 90,- per dag",
+    bkTotal: "Indicatie vanaf € {p} voor {n} {u}",
+    bkPriceNote: "De prijs kan variëren afhankelijk van het seizoen. U ontvangt de definitieve prijs bij de bevestiging.",
+    bkNoPref: "Geen voorkeur",
+    bkReassure: "Vrijblijvend · geen betaling nu · persoonlijke bevestiging per e-mail",
+    bkAside: "Over uw verblijf",
+    bkIncl: "Inbegrepen bij elk appartement",
+    bkBath: "Eigen badkamer met bad en douche",
+    bkTimes: "Inchecken vanaf 14:00 · uitchecken tot 11:00",
+    bkPets: "Huisdieren welkom",
+    bkHow: "Zo werkt het",
+    bkHow1: "Kies uw datums en verstuur de aanvraag.",
+    bkHow2: "Wij controleren de beschikbaarheid.",
+    bkHow3: "U ontvangt een persoonlijke bevestiging per e-mail.",
+    bkHelp: "Vragen? Wij helpen u graag.",
+    bkBarPick: "Kies uw datums",
+    bkBarBtn: "Aanvragen",
     titleReserve: "Reserveren | InnVenlo Apartments Venlo",
     resPick: "Kies uw aankomstdatum",
     resPickOut: "kies uw vertrekdatum",
@@ -169,6 +190,27 @@ const translations = {
   },
 
   en: {
+    bkTitle: "Book your stay in the heart of Venlo",
+    bkLead: "Choose your dates and send your request. No obligation and no prepayment – you will receive a personal confirmation by email.",
+    bkStep1: "Choose your dates",
+    bkStep2: "Your details",
+    bkFrom: "From € 90 per day",
+    bkTotal: "Estimate from € {p} for {n} {u}",
+    bkPriceNote: "Prices may vary by season. You will receive the final price with the confirmation.",
+    bkNoPref: "No preference",
+    bkReassure: "No obligation · no payment now · personal confirmation by email",
+    bkAside: "About your stay",
+    bkIncl: "Included with every apartment",
+    bkBath: "Private bathroom with bath and shower",
+    bkTimes: "Check-in from 14:00 · check-out by 11:00",
+    bkPets: "Pets welcome",
+    bkHow: "How it works",
+    bkHow1: "Choose your dates and send the request.",
+    bkHow2: "We check availability.",
+    bkHow3: "You receive a personal confirmation by email.",
+    bkHelp: "Questions? We are happy to help.",
+    bkBarPick: "Choose your dates",
+    bkBarBtn: "Request",
     titleReserve: "Book | InnVenlo Apartments Venlo",
     resPick: "Choose your arrival date",
     resPickOut: "choose your departure date",
@@ -332,6 +374,27 @@ const translations = {
   },
 
   de: {
+    bkTitle: "Reservieren Sie Ihren Aufenthalt im Herzen von Venlo",
+    bkLead: "Wählen Sie Ihre Daten und senden Sie Ihre Anfrage. Unverbindlich und ohne Vorauszahlung – Sie erhalten eine persönliche Bestätigung per E-Mail.",
+    bkStep1: "Daten wählen",
+    bkStep2: "Ihre Angaben",
+    bkFrom: "Ab 90 € pro Tag",
+    bkTotal: "Richtwert ab {p} € für {n} {u}",
+    bkPriceNote: "Der Preis kann je nach Saison variieren. Den endgültigen Preis erhalten Sie mit der Bestätigung.",
+    bkNoPref: "Keine Präferenz",
+    bkReassure: "Unverbindlich · keine Zahlung jetzt · persönliche Bestätigung per E-Mail",
+    bkAside: "Über Ihren Aufenthalt",
+    bkIncl: "Bei jedem Apartment inklusive",
+    bkBath: "Eigenes Bad mit Badewanne und Dusche",
+    bkTimes: "Check-in ab 14:00 · Check-out bis 11:00",
+    bkPets: "Haustiere willkommen",
+    bkHow: "So funktioniert es",
+    bkHow1: "Wählen Sie Ihre Daten und senden Sie die Anfrage.",
+    bkHow2: "Wir prüfen die Verfügbarkeit.",
+    bkHow3: "Sie erhalten eine persönliche Bestätigung per E-Mail.",
+    bkHelp: "Fragen? Wir helfen gerne.",
+    bkBarPick: "Daten wählen",
+    bkBarBtn: "Anfragen",
     titleReserve: "Reservieren | InnVenlo Apartments Venlo",
     resPick: "Wählen Sie Ihr Anreisedatum",
     resPickOut: "wählen Sie Ihr Abreisedatum",
@@ -495,6 +558,27 @@ const translations = {
   },
 
   fr: {
+    bkTitle: "Réservez votre séjour au cœur de Venlo",
+    bkLead: "Choisissez vos dates et envoyez votre demande. Sans engagement et sans prépaiement – vous recevrez une confirmation personnelle par e-mail.",
+    bkStep1: "Choisissez vos dates",
+    bkStep2: "Vos coordonnées",
+    bkFrom: "À partir de 90 € par jour",
+    bkTotal: "Estimation à partir de {p} € pour {n} {u}",
+    bkPriceNote: "Le prix peut varier selon la saison. Vous recevrez le prix définitif avec la confirmation.",
+    bkNoPref: "Pas de préférence",
+    bkReassure: "Sans engagement · aucun paiement maintenant · confirmation personnelle par e-mail",
+    bkAside: "À propos de votre séjour",
+    bkIncl: "Inclus dans chaque appartement",
+    bkBath: "Salle de bains privée avec baignoire et douche",
+    bkTimes: "Arrivée à partir de 14h00 · départ avant 11h00",
+    bkPets: "Animaux bienvenus",
+    bkHow: "Comment ça marche",
+    bkHow1: "Choisissez vos dates et envoyez la demande.",
+    bkHow2: "Nous vérifions la disponibilité.",
+    bkHow3: "Vous recevez une confirmation personnelle par e-mail.",
+    bkHelp: "Des questions ? Nous sommes là pour vous aider.",
+    bkBarPick: "Choisissez vos dates",
+    bkBarBtn: "Demander",
     titleReserve: "Réserver | InnVenlo Apartments Venlo",
     resPick: "Choisissez votre date d'arrivée",
     resPickOut: "choisissez votre date de départ",
@@ -1100,7 +1184,40 @@ function initReservation() {
       status.textContent = tr("resPick");
     }
     status.classList.toggle("is-set", Boolean(start && end));
+    updateSummary();
   };
+
+  // Prijsindicatie en (mobiele) boekingsbalk; alleen als die op de pagina staan.
+  const totalOut = document.getElementById("bk-total");
+  const bar = document.getElementById("bk-bar");
+  const barDates = document.getElementById("bk-bar-dates");
+  const barPrice = document.getElementById("bk-bar-price");
+  const PRICE_FROM = 90;
+  const euro = v => new Intl.NumberFormat(lang(), { maximumFractionDigits: 0 }).format(v);
+  const updateSummary = () => {
+    const n = nights();
+    const unit = n === 1 ? tr("resNight") : tr("resNights");
+    if (totalOut) {
+      totalOut.textContent = n > 0
+        ? tr("bkTotal").replace("{p}", euro(n * PRICE_FROM)).replace("{n}", n).replace("{u}", unit)
+        : tr("bkFrom");
+    }
+    if (barDates) {
+      barDates.textContent = n > 0 ? status.textContent : (start ? status.textContent : tr("bkBarPick"));
+      barPrice.textContent = n > 0 ? `€ ${euro(n * PRICE_FROM)}+` : "";
+      bar.classList.toggle("is-ready", n > 0);
+    }
+  };
+  if (bar) {
+    bar.querySelector(".bk-bar-btn").addEventListener("click", () => {
+      if (nights() < 1) document.getElementById("res-cal").scrollIntoView({ behavior: "smooth", block: "center" });
+      else form.requestSubmit();
+    });
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(([e]) => bar.classList.toggle("is-hidden", e.isIntersecting), { threshold: 0.4 })
+        .observe(submit);
+    }
+  }
 
   grid.addEventListener("click", event => {
     const b = event.target.closest(".cal-day");
@@ -1157,6 +1274,7 @@ function initReservation() {
       form.hidden = true;
       done.hidden = false;
       done.focus();
+      document.getElementById("bk-bar")?.remove();
     } catch (error) {
       errorOut.textContent = tr("resErrSend");
     } finally {
