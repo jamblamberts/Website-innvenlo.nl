@@ -707,3 +707,5 @@ address{position:relative}
 .cal-updated{margin-left:auto;font-size:.7rem}
 @media(max-width:560px){.cal-updated{margin-left:0;flex-basis:100%}}
 .cal-day.is-unreachable,.bk-card .cal-day.is-unreachable{background:none;color:#13201c59;cursor:not-allowed;text-decoration:none}
+/* Koppen uitklapblokken vetgedrukt */
+.why summary h2{font-weight:600}
