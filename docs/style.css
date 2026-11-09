@@ -693,3 +693,6 @@ address{position:relative}
  .hero>div{position:static}
  .hero .hero-main{position:absolute;left:var(--pad);right:var(--pad);top:50%;transform:translateY(-50%);z-index:1}
 }
+@media(max-width:780px) and (min-height:640px){
+ .hero .proof.proof-low{position:absolute;left:var(--pad);margin:0!important;z-index:1}
+}

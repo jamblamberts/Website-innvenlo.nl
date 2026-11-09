@@ -1336,21 +1336,45 @@ function initHeroCenter() {
   const hero = document.querySelector(".hero");
   const main = hero?.querySelector(".hero-main");
   const proof = hero?.querySelector(".proof");
+  const header = document.querySelector(".hd");
   if (!main) return;
   const mq = matchMedia("(max-width: 780px) and (min-height: 640px)");
 
+  const reset = () => {
+    main.style.top = ""; main.style.transform = "";
+    if (proof) { proof.classList.remove("proof-low"); proof.style.top = ""; }
+  };
+
   const place = () => {
-    if (!mq.matches) { main.style.top = ""; main.style.transform = ""; return; }
+    if (!mq.matches) { reset(); return; }
     const heroBox = hero.getBoundingClientRect();
-    const minTop = proof ? proof.getBoundingClientRect().bottom - heroBox.top + 24 : 0;
-    const centered = heroBox.height / 2 - main.offsetHeight / 2;
+    const rel = r => r - heroBox.top;
+
+    // 1. Kop, tekst en knop in het midden van het scherm (maar onder het menu).
+    const minTop = header ? rel(header.getBoundingClientRect().bottom) + 16 : 0;
+    const top = Math.max(heroBox.height / 2 - main.offsetHeight / 2, minTop);
     main.style.transform = "none";
-    main.style.top = Math.round(Math.max(centered, minTop)) + "px";
+    main.style.top = Math.round(top) + "px";
+
+    // 2. Review in het midden van de ruimte tussen knop en onderrand
+    //    (boven de zwevende contactknoppen).
+    if (proof) {
+      proof.classList.add("proof-low");
+      const cb = document.querySelector(".cb");
+      const floor = heroBox.height - (cb ? cb.offsetHeight + 28 : 24);
+      const from = top + main.offsetHeight;
+      const proofTop = from + (floor - from) / 2 - proof.offsetHeight / 2;
+      proof.style.top = Math.round(Math.max(proofTop, from + 16)) + "px";
+    }
   };
 
   place();
   window.addEventListener("resize", place);
   if (document.fonts) document.fonts.ready.then(place);
+  // De review wisselt van lengte: opnieuw centreren na elke wissel.
+  proof?.querySelectorAll(".quotes li").forEach(li =>
+    new MutationObserver(place).observe(li, { attributes: true, attributeFilter: ["class"] })
+  );
 }
 
 
