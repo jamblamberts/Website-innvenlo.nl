@@ -613,7 +613,6 @@ address{position:relative}
 .res-submit:hover{background:#0a2c27;border-color:#0a2c27}
 /* ============ Boekingspagina (reserveren.html) ============ */
 .page-book{background:var(--paper)}
-.page-book .cb{display:none}
 .bk-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);grid-template-areas:"intro card" "side card";column-gap:clamp(2rem,5vw,5rem);row-gap:2.5rem;align-items:start;padding:clamp(7.5rem,13vw,10rem) var(--pad) clamp(3rem,6vw,5rem);max-width:84rem;margin:0 auto}
 .bk-intro{grid-area:intro}
 .bk-card{grid-area:card;position:sticky;top:1.5rem;background:#fff;border:1px solid var(--line);box-shadow:0 30px 60px -30px #13201c40;padding:clamp(1.25rem,3vw,2.25rem)}
@@ -833,3 +832,15 @@ address{position:relative}
 .bk-faq{display:grid;gap:1rem;margin:0 0 2rem}
 .bk-faq dt{font-weight:500;font-size:.95rem}
 .bk-faq dd{margin:.2rem 0 0;font-size:.92rem;color:var(--mute)}
+
+/* Reserveren: contactknoppen (inline SVG) */
+.cb-i svg{width:58%;height:58%;display:block}
+.cb-tel svg{width:30px;height:30px}
+.cb-mail-svg{background:linear-gradient(#22a2f5,#1a6cf0)}
+.cb-i:focus-visible,.bk-ci:focus-visible{outline:2px solid var(--clay);outline-offset:3px}
+@media(max-width:900px){.page-book .cb{bottom:calc(88px + env(safe-area-inset-bottom))}}
+.bk-help{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem}
+.bk-help-ic{display:flex;gap:.5rem}
+.bk-ci{display:grid;place-items:center;width:2rem;height:2rem;border-radius:50%;transition:transform .2s}
+.bk-ci:hover{transform:scale(1.08)}
+.bk-ci svg{width:56%;height:56%}
