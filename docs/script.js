@@ -6,6 +6,14 @@
 
 const translations = {
   nl: {
+    cardFrom: "vanaf €{p}",
+    cardCap2: "Max. 3 personen",
+    cardCap1: "Max. 2 personen",
+    proofCount: "{n} reviews",
+    proofOn: "op",
+    calMinShort: "Minimaal 2 nachten",
+    calMin: "Niet kiesbaar (min. 2 nachten)",
+    bkPerk: "Direct boeken: flexibel aankomen en uitchecken, in overleg met de host.",
     calSel: "Uw verblijf",
     qkLabel: "Snel kiezen",
     qkFirst: "Eerst beschikbaar",
@@ -15,7 +23,7 @@ const translations = {
     rgPickOut: "Kies vertrek",
     msgBusy: "Deze nacht is al bezet. Kies een andere aankomstdag.",
     msgCross: "Uw verblijf kan niet over een bezette nacht lopen. Vertrek uiterlijk op {d}.",
-    bkTotal: "vanaf €{p}",
+    bkTotal: "ca. €{p}",
     bkBarPick: "Kies uw datums",
     barPick: "Kies data",
     barPickOut: "Kies vertrek",
@@ -26,8 +34,8 @@ const translations = {
     addNote: "+ Opmerking toevoegen",
     resErrDates: "Kies eerst uw aankomst- en vertrekdatum.",
     bkStep1b: "Kies appartement en datums",
-    bkFrom: "Vanaf slechts €125 per nacht",
-    resPrice: "Vanaf slechts €125 per nacht. De prijs kan variëren afhankelijk van het seizoen.",
+    bkFrom: "Vanaf €{p} per nacht",
+    resPrice: "Vanaf €125 per nacht. De prijs kan variëren afhankelijk van het seizoen.",
     errName: "Vul uw naam in.",
     errEmail: "Vul een geldig e-mailadres in, bijvoorbeeld naam@voorbeeld.nl.",
     calBusy: "Bezet",
@@ -38,7 +46,7 @@ const translations = {
     bkLead: "Kies uw datums en verstuur uw aanvraag. Vrijblijvend en zonder vooruitbetaling – u ontvangt een persoonlijke bevestiging per e-mail.",
     bkStep1: "Kies uw datums",
     bkStep2: "Uw gegevens",
-    bkPriceNote: "Minimaal verblijf: 2 nachten. De prijs kan variëren afhankelijk van het seizoen. U ontvangt de definitieve prijs bij de bevestiging.",
+    bkPriceNote: "Min. 2 nachten · indicatieve prijs, definitief bij de bevestiging.",
     bkNoPref: "Geen voorkeur",
     bkReassure: "Vrijblijvend · geen betaling nu · persoonlijke bevestiging per e-mail",
     bkAside: "Over uw verblijf",
@@ -94,8 +102,8 @@ const translations = {
     maxGuests: "Max. personen",
     capOne: "2 personen",
     capTwo: "3 personen",
-    msgMinStay: "Het minimale verblijf is 2 nachten. Kies een vertrekdatum vanaf {d}.",
-    msgMinStart: "Vanaf deze dag zijn geen 2 nachten op rij beschikbaar (minimaal verblijf). Kies een andere aankomstdag.",
+    msgMinStay: "Minimaal 2 nachten: kies een vertrekdatum vanaf {d}.",
+    msgMinStart: "Minimaal 2 nachten: vanaf deze dag zijn geen 2 nachten op rij vrij. Kies een andere aankomstdag.",
     resErrMin: "Het minimale verblijf is 2 nachten. Kies een latere vertrekdatum.",
     msgGuestsCap: "Appartement 1 is geschikt voor maximaal 2 personen.",
     msgGuestsDates: "Voor 3 personen is alleen Appartement 2 geschikt, en dat is niet vrij op de gekozen datums. Kies andere datums.",
@@ -221,6 +229,14 @@ const translations = {
   },
 
   en: {
+    cardFrom: "from €{p}",
+    cardCap2: "Max. 3 guests",
+    cardCap1: "Max. 2 guests",
+    proofCount: "{n} reviews",
+    proofOn: "on",
+    calMinShort: "Minimum 2 nights",
+    calMin: "Not available (min. 2 nights)",
+    bkPerk: "Book direct: flexible arrival and check-out, by arrangement with the host.",
     calSel: "Your stay",
     qkLabel: "Quick pick",
     qkFirst: "First available",
@@ -230,7 +246,7 @@ const translations = {
     rgPickOut: "Choose departure",
     msgBusy: "This night is already booked. Please choose another arrival day.",
     msgCross: "Your stay cannot include a booked night. Latest departure: {d}.",
-    bkTotal: "from €{p}",
+    bkTotal: "approx. €{p}",
     bkBarPick: "Choose your dates",
     barPick: "Choose dates",
     barPickOut: "Choose departure",
@@ -241,8 +257,8 @@ const translations = {
     addNote: "+ Add a comment",
     resErrDates: "Please choose your arrival and departure date first.",
     bkStep1b: "Choose apartment and dates",
-    bkFrom: "From only €125 per night",
-    resPrice: "From only €125 per night. Prices may vary by season.",
+    bkFrom: "From €{p} per night",
+    resPrice: "From €125 per night. Prices may vary by season.",
     errName: "Please enter your name.",
     errEmail: "Please enter a valid email address, e.g. name@example.com.",
     calBusy: "Booked",
@@ -253,7 +269,7 @@ const translations = {
     bkLead: "Choose your dates and send your request. No obligation and no prepayment – you will receive a personal confirmation by email.",
     bkStep1: "Choose your dates",
     bkStep2: "Your details",
-    bkPriceNote: "Minimum stay: 2 nights. Prices may vary by season. You will receive the final price with the confirmation.",
+    bkPriceNote: "Min. 2 nights · indicative price, final price on confirmation.",
     bkNoPref: "No preference",
     bkReassure: "No obligation · no payment now · personal confirmation by email",
     bkAside: "About your stay",
@@ -309,8 +325,8 @@ const translations = {
     maxGuests: "Max. guests",
     capOne: "2 guests",
     capTwo: "3 guests",
-    msgMinStay: "The minimum stay is 2 nights. Please choose a departure date from {d}.",
-    msgMinStart: "2 consecutive nights are not available from this day (minimum stay). Please choose another arrival date.",
+    msgMinStay: "Minimum 2 nights: please choose a departure date from {d}.",
+    msgMinStart: "Minimum 2 nights: there are no 2 consecutive free nights from this day. Please choose another arrival date.",
     resErrMin: "The minimum stay is 2 nights. Please choose a later departure date.",
     msgGuestsCap: "Apartment 1 accommodates up to 2 guests.",
     msgGuestsDates: "Only Apartment 2 is suitable for 3 guests, and it is not available on the selected dates. Please choose other dates.",
@@ -436,6 +452,14 @@ const translations = {
   },
 
   de: {
+    cardFrom: "ab {p} €",
+    cardCap2: "Max. 3 Personen",
+    cardCap1: "Max. 2 Personen",
+    proofCount: "{n} Bewertungen",
+    proofOn: "auf",
+    calMinShort: "Mindestens 2 Nächte",
+    calMin: "Nicht wählbar (mind. 2 Nächte)",
+    bkPerk: "Direkt buchen: flexible An- und Abreise nach Absprache mit dem Gastgeber.",
     calSel: "Ihr Aufenthalt",
     qkLabel: "Schnellauswahl",
     qkFirst: "Nächster freier Termin",
@@ -445,7 +469,7 @@ const translations = {
     rgPickOut: "Abreise wählen",
     msgBusy: "Diese Nacht ist bereits belegt. Bitte wählen Sie einen anderen Anreisetag.",
     msgCross: "Ihr Aufenthalt kann keine belegte Nacht enthalten. Späteste Abreise: {d}.",
-    bkTotal: "ab {p} €",
+    bkTotal: "ca. {p} €",
     bkBarPick: "Daten wählen",
     barPick: "Daten wählen",
     barPickOut: "Abreise wählen",
@@ -456,8 +480,8 @@ const translations = {
     addNote: "+ Anmerkung hinzufügen",
     resErrDates: "Bitte wählen Sie zuerst Ihr An- und Abreisedatum.",
     bkStep1b: "Apartment und Daten wählen",
-    bkFrom: "Ab nur 125 € pro Nacht",
-    resPrice: "Ab nur 125 € pro Nacht. Der Preis kann je nach Saison variieren.",
+    bkFrom: "Ab {p} € pro Nacht",
+    resPrice: "Ab 125 € pro Nacht. Der Preis kann je nach Saison variieren.",
     errName: "Bitte geben Sie Ihren Namen ein.",
     errEmail: "Bitte geben Sie eine gültige E-Mail-Adresse ein, z. B. name@beispiel.de.",
     calBusy: "Belegt",
@@ -468,7 +492,7 @@ const translations = {
     bkLead: "Wählen Sie Ihre Daten und senden Sie Ihre Anfrage. Unverbindlich und ohne Vorauszahlung – Sie erhalten eine persönliche Bestätigung per E-Mail.",
     bkStep1: "Daten wählen",
     bkStep2: "Ihre Angaben",
-    bkPriceNote: "Mindestaufenthalt: 2 Nächte. Der Preis kann je nach Saison variieren. Den endgültigen Preis erhalten Sie mit der Bestätigung.",
+    bkPriceNote: "Mind. 2 Nächte · Richtpreis, endgültiger Preis mit der Bestätigung.",
     bkNoPref: "Keine Präferenz",
     bkReassure: "Unverbindlich · keine Zahlung jetzt · persönliche Bestätigung per E-Mail",
     bkAside: "Über Ihren Aufenthalt",
@@ -524,8 +548,8 @@ const translations = {
     maxGuests: "Max. Personen",
     capOne: "2 Personen",
     capTwo: "3 Personen",
-    msgMinStay: "Der Mindestaufenthalt beträgt 2 Nächte. Bitte wählen Sie ein Abreisedatum ab {d}.",
-    msgMinStart: "Ab diesem Tag sind keine 2 Nächte am Stück verfügbar (Mindestaufenthalt). Bitte wählen Sie einen anderen Anreisetag.",
+    msgMinStay: "Mindestens 2 Nächte: Bitte wählen Sie ein Abreisedatum ab {d}.",
+    msgMinStart: "Mindestens 2 Nächte: Ab diesem Tag sind keine 2 Nächte am Stück frei. Bitte wählen Sie einen anderen Anreisetag.",
     resErrMin: "Der Mindestaufenthalt beträgt 2 Nächte. Bitte wählen Sie ein späteres Abreisedatum.",
     msgGuestsCap: "Apartment 1 bietet Platz für maximal 2 Personen.",
     msgGuestsDates: "Für 3 Personen ist nur Apartment 2 geeignet, und es ist an den gewählten Daten nicht frei. Bitte wählen Sie andere Daten.",
@@ -651,6 +675,14 @@ const translations = {
   },
 
   fr: {
+    cardFrom: "à partir de {p} €",
+    cardCap2: "Max. 3 personnes",
+    cardCap1: "Max. 2 personnes",
+    proofCount: "{n} avis",
+    proofOn: "sur",
+    calMinShort: "Minimum 2 nuits",
+    calMin: "Indisponible (min. 2 nuits)",
+    bkPerk: "Réservation directe : arrivée et départ flexibles, en accord avec l'hôte.",
     calSel: "Votre séjour",
     qkLabel: "Choix rapide",
     qkFirst: "Première disponibilité",
@@ -660,7 +692,7 @@ const translations = {
     rgPickOut: "Choisir le départ",
     msgBusy: "Cette nuit est déjà réservée. Choisissez un autre jour d’arrivée.",
     msgCross: "Votre séjour ne peut pas inclure une nuit réservée. Départ au plus tard : {d}.",
-    bkTotal: "à partir de {p} €",
+    bkTotal: "env. {p} €",
     bkBarPick: "Choisissez vos dates",
     barPick: "Choisir les dates",
     barPickOut: "Choisir le départ",
@@ -671,8 +703,8 @@ const translations = {
     addNote: "+ Ajouter une remarque",
     resErrDates: "Choisissez d'abord vos dates d'arrivée et de départ.",
     bkStep1b: "Choisissez appartement et dates",
-    bkFrom: "À partir de seulement 125 € par nuit",
-    resPrice: "À partir de seulement 125 € par nuit. Le prix peut varier selon la saison.",
+    bkFrom: "À partir de {p} € par nuit",
+    resPrice: "À partir de 125 € par nuit. Le prix peut varier selon la saison.",
     errName: "Veuillez indiquer votre nom.",
     errEmail: "Veuillez indiquer une adresse e-mail valide, p. ex. nom@exemple.fr.",
     calBusy: "Occupé",
@@ -683,7 +715,7 @@ const translations = {
     bkLead: "Choisissez vos dates et envoyez votre demande. Sans engagement et sans prépaiement – vous recevrez une confirmation personnelle par e-mail.",
     bkStep1: "Choisissez vos dates",
     bkStep2: "Vos coordonnées",
-    bkPriceNote: "Séjour minimum : 2 nuits. Le prix peut varier selon la saison. Vous recevrez le prix définitif avec la confirmation.",
+    bkPriceNote: "Min. 2 nuits · prix indicatif, prix définitif à la confirmation.",
     bkNoPref: "Pas de préférence",
     bkReassure: "Sans engagement · aucun paiement maintenant · confirmation personnelle par e-mail",
     bkAside: "À propos de votre séjour",
@@ -739,8 +771,8 @@ const translations = {
     maxGuests: "Max. personnes",
     capOne: "2 personnes",
     capTwo: "3 personnes",
-    msgMinStay: "Le séjour minimum est de 2 nuits. Choisissez une date de départ à partir du {d}.",
-    msgMinStart: "2 nuits consécutives ne sont pas disponibles à partir de ce jour (séjour minimum). Choisissez un autre jour d'arrivée.",
+    msgMinStay: "Minimum 2 nuits : choisissez une date de départ à partir du {d}.",
+    msgMinStart: "Minimum 2 nuits : aucune période de 2 nuits consécutives n'est libre à partir de ce jour. Choisissez un autre jour d'arrivée.",
     resErrMin: "Le séjour minimum est de 2 nuits. Choisissez une date de départ plus tardive.",
     msgGuestsCap: "L'appartement 1 peut accueillir jusqu'à 2 personnes.",
     msgGuestsDates: "Seul l'appartement 2 convient pour 3 personnes, et il n'est pas libre aux dates choisies. Choisissez d'autres dates.",
@@ -1246,6 +1278,25 @@ const DateKey = {
 
 
 /* ---------------------------------------------------------------
+   RESERVERING – 0. Configuratie (prijzen, minimumverblijf, capaciteit, reviews)
+   Alle boekingsgegevens staan hier op één plek.
+   Let op: de teksten over het minimumverblijf in de vertalingen gaan uit van 2 nachten.
+--------------------------------------------------------------- */
+const BOOKING_CONFIG = {
+  minNights: 2,
+  apartments: {
+    "1": { capacity: 2, priceFrom: 125 }, // Appartement 1: max. personen, vanaf-prijs per nacht (EUR)
+    "2": { capacity: 3, priceFrom: 125 }  // Appartement 2
+  },
+  // count = aantal reviews; null = niet tonen.
+  reviews: [
+    { platform: "Booking.com", score: 9.3, count: null },
+    { platform: "Airbnb", score: 4.9, count: null }
+  ]
+};
+
+
+/* ---------------------------------------------------------------
    RESERVERING – 2. Beschikbaarheid (data uit availability.json)
    Een "nacht" is de datum waarop je overnacht; de vertrekdag is geen nacht.
 --------------------------------------------------------------- */
@@ -1253,8 +1304,8 @@ const Availability = {
   busy: { "1": new Set(), "2": new Set() },
   updated: null,
   MAX_NIGHTS: 60,
-  MIN_NIGHTS: 2, // minimaal verblijf
-  CAPACITY: { "1": 2, "2": 3 }, // max. personen per appartement
+  MIN_NIGHTS: BOOKING_CONFIG.minNights,
+  CAPACITY: Object.fromEntries(Object.entries(BOOKING_CONFIG.apartments).map(([a, c]) => [a, c.capacity])),
 
   load() {
     return fetch("availability.json?ts=" + Date.now(), { cache: "no-store" })
@@ -1302,7 +1353,9 @@ function initReservation() {
   const $ = id => document.getElementById(id);
   const lang = () => document.documentElement.lang || "nl";
   const tr = key => (translations[lang()] || translations.nl)[key] || translations.nl[key];
-  const PRICE_FROM = 125;
+  // Indicatieve prijs: laagste vanaf-prijs van de appartementen die in aanmerking komen.
+  const priceFrom = list => Math.min(...list.map(a => BOOKING_CONFIG.apartments[a].priceFrom));
+  const priceText = (key, p) => tr(key).replace("{p}", euro(p));
   const MIN = Availability.MIN_NIGHTS;
   const euro = v => new Intl.NumberFormat(lang(), { maximumFractionDigits: 0 }).format(v);
   const desktop = matchMedia("(min-width: 901px)");
@@ -1357,13 +1410,13 @@ function initReservation() {
     if (key === e) return "end";
     if (s && e && key > s && key < e) return "range";
     if (s && !e && key > s) {
-      if (key < DateKey.add(s, MIN)) return "unreachable";
+      if (key < DateKey.add(s, MIN)) return "minstay";
       if (key > state.maxDep) return Availability.nightFree(key, a) ? "unreachable" : "busy";
       if (state.hover && key <= state.hover) return "preview";
       return Availability.nightFree(key, a) ? "free" : "checkout";
     }
     if (!Availability.nightFree(key, a)) return "busy";
-    return Availability.canStart(key, a) ? "free" : "unreachable";
+    return Availability.canStart(key, a) ? "free" : "minstay"; // vrij, maar geen 2 nachten op rij
   };
 
   const monthHTML = first => {
@@ -1383,9 +1436,11 @@ function initReservation() {
       const st = dayState(key);
       const label = DateKey.format(key, lang(), { weekday: "long", day: "numeric", month: "long" });
       const dis = st === "past" ? " disabled" : "";
-      const ariaDis = ["busy", "unreachable"].includes(st) ? ' aria-disabled="true"' : "";
+      const ariaDis = ["busy", "unreachable", "minstay"].includes(st) ? ' aria-disabled="true"' : "";
+      const note = st === "busy" ? " – " + tr("calBusy") : st === "minstay" ? " – " + tr("calMinShort") : "";
+      const title = st === "minstay" ? ` title="${tr("calMinShort")}"` : "";
       const sel = st === "start" || st === "end";
-      cells += `<button type="button" class="cd is-${st}${key === today ? " is-today" : ""}" data-date="${key}" tabindex="-1" aria-label="${label}${st === "busy" ? " – " + tr("calBusy") : ""}" aria-pressed="${sel}"${dis}${ariaDis}><span>${d}</span></button>`;
+      cells += `<button type="button" class="cd is-${st}${key === today ? " is-today" : ""}" data-date="${key}" tabindex="-1" aria-label="${label}${note}" aria-pressed="${sel}"${title}${dis}${ariaDis}><span>${d}</span></button>`;
     }
     return `<div class="cm"><p class="cm-title">${title}</p><div class="cm-wd" aria-hidden="true">${wd}</div><div class="cm-grid" role="group" aria-label="${title}">${cells}</div></div>`;
   };
@@ -1411,8 +1466,9 @@ function initReservation() {
     el.rgIn.textContent = state.start ? fmtShort(state.start) : "–";
     el.rgOut.textContent = state.end ? fmtShort(state.end) : (state.start ? tr("rgPickOut") : "–");
     el.total.textContent = n > 0
-      ? `${n} ${n === 1 ? tr("resNight") : tr("resNights")} · ${tr("bkTotal").replace("{p}", euro(n * PRICE_FROM))}`
-      : tr("bkFrom");
+      ? `${n} ${n === 1 ? tr("resNight") : tr("resNights")} · ${priceText("bkTotal", n * priceFrom(apts()))}`
+      : priceText("bkFrom", priceFrom(apts()));
+    form.querySelectorAll("[data-apt-price]").forEach(e => { e.textContent = priceText("cardFrom", priceFrom([e.dataset.aptPrice])); });
     el.clear.hidden = !state.start;
     form.querySelector("#bk-range").classList.toggle("is-set", n > 0);
     if (Availability.updated) {
@@ -1429,7 +1485,7 @@ function initReservation() {
     else if (!state.end) { label = `${fmtDay(state.start)} – …`; btn = tr("barPickOut"); }
     else { label = `${fmtDay(state.start)} – ${fmtDay(state.end)} · ${n} ${n === 1 ? tr("resNight") : tr("resNights")}`; btn = detailsValid() ? tr("barSend") : tr("barNext"); }
     el.barDates.textContent = label;
-    el.barPrice.textContent = n > 0 ? tr("bkTotal").replace("{p}", euro(n * PRICE_FROM)) : tr("bkFrom");
+    el.barPrice.textContent = n > 0 ? priceText("bkTotal", n * priceFrom(apts())) : priceText("bkFrom", priceFrom(apts()));
     el.barBtn.textContent = btn;
     el.bar.classList.toggle("is-ready", n > 0);
   };
@@ -1448,6 +1504,15 @@ function initReservation() {
     el.quick.innerHTML = picks.map(([label, s, e]) =>
       `<button type="button" class="qk" data-s="${s}" data-e="${e}"><b>${label}</b><span>${fmtDay(s)} – ${fmtDay(e)}</span></button>`).join("");
     el.quick.hidden = !picks.length;
+  };
+
+  // Reviewscores (niet klikbaar), decimaalteken per taal.
+  const renderProof = () => {
+    const list = $("bk-trust");
+    if (!list) return;
+    const score = v => new Intl.NumberFormat(lang(), { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(v);
+    list.innerHTML = BOOKING_CONFIG.reviews.map(r =>
+      `<li><b>${score(r.score)}</b><span>${tr("proofOn")} ${r.platform}${r.count ? " · " + tr("proofCount").replace("{n}", r.count) : ""}</span></li>`).join("");
   };
 
   const update = () => { render(); summary(); updateBar(); };
@@ -1644,8 +1709,9 @@ function initReservation() {
 
   // ---- Start ----
   desktop.addEventListener("change", render);
-  new MutationObserver(() => { update(); quickPicks(); }).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+  new MutationObserver(() => { update(); quickPicks(); renderProof(); }).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
   update();
+  renderProof();
   Availability.load().then(() => {
     if (state.start && state.end && !Availability.stayFree(state.start, state.end, apts())) setRange(null, null, false);
     update();

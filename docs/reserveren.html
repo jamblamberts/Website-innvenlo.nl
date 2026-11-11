@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0f3d36"><meta property="og:type" content="website"><meta property="og:locale" content="nl_NL"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=107">
+<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0f3d36"><meta property="og:type" content="website"><meta property="og:locale" content="nl_NL"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=108">
 <title data-i18n="titleReserve">Reserveren | InnVenlo Apartments Venlo</title>
 <meta name="description" content="Vraag direct een reservering aan bij InnVenlo Apartments in Venlo. Kies uw appartement en datums; u ontvangt een persoonlijke bevestiging per e-mail.">
 <link rel="canonical" href="https://www.innvenlo.nl/reserveren.html"><meta property="og:title" content="Reserveren | InnVenlo Apartments"><meta property="og:description" content="Vraag direct een reservering aan in Venlo."><meta property="og:url" content="https://www.innvenlo.nl/reserveren.html"><meta property="og:image" content="https://www.innvenlo.nl/images/hero-venlo.jpg"></head><body class="page-book">
@@ -13,10 +13,11 @@
 <header class="bk-intro">
 <p class="lbl" data-i18n="resLabel">Reserveringsaanvraag</p>
 <h1 id="res-title" class="bk-h1" data-i18n="bkTitle">Reserveer uw verblijf in hartje Venlo</h1>
+<p class="bk-perk"><svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-clock"/></svg><span data-i18n="bkPerk">Direct boeken: flexibel aankomen en uitchecken, in overleg met de host.</span></p>
 <p class="bk-lead" data-i18n="bkLead">Kies uw datums en verstuur uw aanvraag. Vrijblijvend en zonder vooruitbetaling – u ontvangt een persoonlijke bevestiging per e-mail.</p>
-<ul class="bk-trust" aria-label="Beoordelingen" data-i18n-aria="ratings">
-<li><a href="https://www.booking.com/Share-dFmzQ5" target="_blank" rel="noopener noreferrer"><b>9.3</b><span>Booking.com</span></a></li>
-<li><a href="https://www.airbnb.nl/rooms/1077478657044682001" target="_blank" rel="noopener noreferrer"><b>4,9</b><span>Airbnb</span></a></li>
+<ul class="bk-trust" id="bk-trust" aria-label="Beoordelingen" data-i18n-aria="ratings">
+<li><b>9,3</b><span>op Booking.com</span></li>
+<li><b>4,9</b><span>op Airbnb</span></li>
 </ul>
 </header>
 
@@ -27,23 +28,23 @@
 <input type="hidden" name="subject" value="Nieuwe reserveringsaanvraag – InnVenlo Apartments">
 
 <div class="bk-step" id="step-dates"><p class="bk-step-h"><span>1</span><b data-i18n="bkStep1b">Kies appartement en datums</b></p>
-<div class="seg" role="radiogroup" aria-label="Appartement" data-i18n-aria="resChoose">
-<label><input type="radio" name="appartement" value="Geen voorkeur" checked><span data-i18n="bkNoPref">Geen voorkeur</span></label>
-<label><input type="radio" name="appartement" value="Appartement 1"><span data-i18n="oneBedroomShort">Appartement 1</span></label>
-<label><input type="radio" name="appartement" value="Appartement 2"><span data-i18n="deluxeShort">Appartement 2</span></label>
+<div class="seg seg-apt" role="radiogroup" aria-label="Appartement" data-i18n-aria="resChoose">
+<label class="seg-any"><input type="radio" name="appartement" value="Geen voorkeur" checked><span data-i18n="bkNoPref">Geen voorkeur</span></label>
+<label class="apt-opt"><input type="radio" name="appartement" value="Appartement 1"><span class="apt-card"><img src="images/appartement-1-7.jpg" alt="" width="1024" height="768"><span class="apt-card-t"><b data-i18n="oneBedroomShort">Appartement 1</b><small data-i18n="cardCap1">Max. 2 personen</small><small class="apt-price" data-apt-price="1">vanaf €125</small></span></span></label>
+<label class="apt-opt"><input type="radio" name="appartement" value="Appartement 2"><span class="apt-card"><img src="images/appartement-2-5.jpg" alt="" width="1024" height="768"><span class="apt-card-t"><b data-i18n="deluxeShort">Appartement 2</b><small data-i18n="cardCap2">Max. 3 personen</small><small class="apt-price" data-apt-price="2">vanaf €125</small></span></span></label>
 </div>
 <div class="quick" id="bk-quick" aria-label="Snel kiezen" data-i18n-aria="qkLabel"></div>
 <div class="cal2" id="res-cal">
 <div class="cal2-nav"><button type="button" class="cal-nav cal-prev" aria-label="Vorige maand" data-i18n-aria="calPrev"></button><button type="button" class="cal-nav cal-next" aria-label="Volgende maand" data-i18n-aria="calNext"></button></div>
 <div class="cal2-months" id="cal-months"></div>
-<p class="cal-legend"><span class="lg lg-free" data-i18n="calFree">Beschikbaar</span><span class="lg lg-busy" data-i18n="calBusy">Bezet</span><span class="lg lg-sel" data-i18n="calSel">Uw verblijf</span><span class="cal-updated" id="cal-updated"></span></p>
+<p class="cal-legend"><span class="lg lg-free" data-i18n="calFree">Beschikbaar</span><span class="lg lg-busy" data-i18n="calBusy">Bezet</span><span class="lg lg-sel" data-i18n="calSel">Uw verblijf</span><span class="lg lg-min" data-i18n="calMin">Niet kiesbaar (min. 2 nachten)</span><span class="cal-updated" id="cal-updated"></span></p>
 </div>
 <p class="cal-msg" id="cal-msg" role="status" aria-live="polite"></p>
 <div class="range" id="bk-range">
 <div class="range-box"><span data-i18n="resIn">Aankomst</span><b id="rg-in">–</b></div>
 <div class="range-box"><span data-i18n="resOut">Vertrek</span><b id="rg-out">–</b></div>
-<div class="range-sum"><p id="bk-total">Vanaf slechts €125 per nacht</p><button type="button" class="range-clear" id="rg-clear" hidden data-i18n="rgClear">Wissen</button></div>
-<p class="bk-note" data-i18n="bkPriceNote">Minimaal verblijf: 2 nachten. De prijs kan variëren afhankelijk van het seizoen. U ontvangt de definitieve prijs bij de bevestiging.</p>
+<div class="range-sum"><p id="bk-total">Vanaf €125 per nacht</p><button type="button" class="range-clear" id="rg-clear" hidden data-i18n="rgClear">Wissen</button></div>
+<p class="bk-note" data-i18n="bkPriceNote">Min. 2 nachten · indicatieve prijs, definitief bij de bevestiging.</p>
 </div>
 <input type="hidden" id="res-in" name="aankomst"><input type="hidden" id="res-out" name="vertrek">
 </div>
@@ -68,22 +69,25 @@
 </div>
 
 <aside class="bk-side" aria-label="Over uw verblijf" data-i18n-aria="bkAside">
-<figure class="bk-photo"><img src="images/appartement-1-7.jpg" alt="Woonkamer met eettafel van een InnVenlo-appartement" width="1024" height="768" loading="lazy"></figure>
-<h2 class="bk-h2" data-i18n="bkIncl">Inbegrepen bij elk appartement</h2>
-<ul class="bk-list">
-<li><svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-door"/></svg><span data-i18n="own">Eigen ingang</span></li>
-<li><svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-bath"/></svg><span data-i18n="bkBath">Eigen badkamer met bad en douche</span></li>
-<li><svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-pot"/></svg><span data-i18n="kitchenOwn">Eigen keuken, volledig uitgerust</span></li>
-<li><svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wifi"/></svg><span data-i18n="wifi">Gratis WiFi</span></li>
-<li><svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-clock"/></svg><span data-i18n="bkTimes">Inchecken vanaf 14:00 · uitchecken tot 11:00</span></li>
-<li><svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-paw"/></svg><span data-i18n="bkPets">Huisdieren welkom</span></li>
-</ul>
 <h2 class="bk-h2" data-i18n="bkHow">Zo werkt het</h2>
 <ol class="bk-steps">
 <li data-i18n="bkHow1">Kies uw datums en verstuur de aanvraag.</li>
 <li data-i18n="bkHow2">Wij controleren de beschikbaarheid.</li>
 <li data-i18n="bkHow3">U ontvangt een persoonlijke bevestiging per e-mail.</li>
 </ol>
+<h2 class="bk-h2" data-i18n="bkIncl">Inbegrepen bij elk appartement</h2>
+<ul class="bk-list">
+<li><svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-door"/></svg><span data-i18n="own">Eigen ingang</span></li>
+<li><svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-bath"/></svg><span data-i18n="bkBath">Eigen badkamer met bad en douche</span></li>
+<li><svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-pot"/></svg><span data-i18n="kitchenOwn">Eigen keuken, volledig uitgerust</span></li>
+<li><svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wifi"/></svg><span data-i18n="wifi">Gratis WiFi</span></li>
+</ul>
+<h2 class="bk-h2" data-i18n="faqTitle">Veelgestelde vragen</h2>
+<dl class="bk-faq">
+<div><dt data-i18n="faqParkQ">Is er parkeergelegenheid beschikbaar?</dt><dd data-i18n="faqParkA">Ja, parkeren is mogelijk in de omgeving. Houd er rekening mee dat parkeren betaald is.</dd></div>
+<div><dt data-i18n="faqTimeQ">Wat zijn de in- en uitchecktijden?</dt><dd data-i18n="faqTimeA">Inchecken is mogelijk vanaf 14:00 uur. Uitchecken dient uiterlijk om 11:00 uur te gebeuren.</dd></div>
+<div><dt data-i18n="faqPetsQ">Zijn huisdieren toegestaan?</dt><dd data-i18n="faqPetsA">Ja, huisdieren zijn toegestaan.</dd></div>
+</dl>
 <p class="bk-help"><span data-i18n="bkHelp">Vragen? Wij helpen u graag.</span> <a href="https://wa.me/31648742693" target="_blank" rel="noopener noreferrer">WhatsApp</a> · <a href="tel:+31648742693">+31 6 48742693</a></p>
 </aside>
 
@@ -97,5 +101,5 @@
     <a class="cb-i cb-wa" href="https://wa.me/31648742693" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp"><img src="https://cdn.simpleicons.org/whatsapp/FFFFFF" alt=""></a>
     <a class="cb-i cb-mail" href="mailto:jamb.lamberts@ziggo.nl" aria-label="E-mail" title="E-mail"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt=""></a>
   </div>  
-<script src="script.js?v=107"></script></body></html>
+<script src="script.js?v=108"></script></body></html>
 
