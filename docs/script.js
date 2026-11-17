@@ -7,8 +7,8 @@
 const translations = {
   nl: {
     cardFrom: "vanaf €{p}",
-    cardCap2: "Max. 3 personen",
-    cardCap1: "Max. 2 personen",
+    cardCap2: "Max. 2 personen",
+    cardCap1: "Max. 3 personen",
     proofCount: "{n} reviews",
     proofOn: "op",
     calMinShort: "Minimaal 2 nachten",
@@ -98,15 +98,15 @@ const translations = {
     faqTimeQ: "Wat zijn de in- en uitchecktijden?",
     faqTimeA: "Inchecken is mogelijk vanaf 14:00 uur. Uitchecken dient uiterlijk om 11:00 uur te gebeuren.",
     faqGuestsQ: "Hoeveel gasten kunnen er overnachten?",
-    faqGuestsA: "Appartement 1 is geschikt voor maximaal 2 personen, Appartement 2 voor maximaal 3 personen.",
+    faqGuestsA: "Appartement 1 is geschikt voor maximaal 3 personen, Appartement 2 voor maximaal 2 personen.",
     maxGuests: "Max. personen",
-    capOne: "2 personen",
-    capTwo: "3 personen",
+    capOne: "3 personen",
+    capTwo: "2 personen",
     msgMinStay: "Minimaal 2 nachten: kies als laatste nacht {d} of later.",
     msgMinStart: "Minimaal 2 nachten: vanaf deze dag zijn geen 2 nachten op rij vrij. Kies een andere aankomstdag.",
     resErrMin: "Het minimale verblijf is 2 nachten. Kies een latere vertrekdatum.",
-    msgGuestsCap: "Appartement 1 is geschikt voor maximaal 2 personen.",
-    msgGuestsDates: "Voor 3 personen is alleen Appartement 2 geschikt, en dat is niet vrij op de gekozen datums. Kies andere datums.",
+    msgGuestsCap: "Appartement 2 is geschikt voor maximaal 2 personen.",
+    msgGuestsDates: "Voor 3 personen is alleen Appartement 1 geschikt, en dat is niet vrij op de gekozen datums. Kies andere datums.",
     faqPetsQ: "Zijn huisdieren toegestaan?",
     faqPetsA: "Ja, huisdieren zijn toegestaan.",
     faqWifiQ: "Is er wifi beschikbaar?",
@@ -229,8 +229,8 @@ const translations = {
 
   en: {
     cardFrom: "from €{p}",
-    cardCap2: "Max. 3 guests",
-    cardCap1: "Max. 2 guests",
+    cardCap2: "Max. 2 guests",
+    cardCap1: "Max. 3 guests",
     proofCount: "{n} reviews",
     proofOn: "on",
     calMinShort: "Minimum 2 nights",
@@ -320,15 +320,15 @@ const translations = {
     faqTimeQ: "What are the check-in and check-out times?",
     faqTimeA: "Check-in is from 14:00. Check-out is by 11:00 at the latest.",
     faqGuestsQ: "How many guests can stay?",
-    faqGuestsA: "Apartment 1 accommodates up to 2 guests, Apartment 2 up to 3 guests.",
+    faqGuestsA: "Apartment 1 accommodates up to 3 guests, Apartment 2 up to 2 guests.",
     maxGuests: "Max. guests",
-    capOne: "2 guests",
-    capTwo: "3 guests",
+    capOne: "3 guests",
+    capTwo: "2 guests",
     msgMinStay: "Minimum 2 nights: please choose {d} or later as your last night.",
     msgMinStart: "Minimum 2 nights: there are no 2 consecutive free nights from this day. Please choose another arrival date.",
     resErrMin: "The minimum stay is 2 nights. Please choose a later departure date.",
-    msgGuestsCap: "Apartment 1 accommodates up to 2 guests.",
-    msgGuestsDates: "Only Apartment 2 is suitable for 3 guests, and it is not available on the selected dates. Please choose other dates.",
+    msgGuestsCap: "Apartment 2 accommodates up to 2 guests.",
+    msgGuestsDates: "Only Apartment 1 is suitable for 3 guests, and it is not available on the selected dates. Please choose other dates.",
     faqPetsQ: "Are pets allowed?",
     faqPetsA: "Yes, pets are allowed.",
     faqWifiQ: "Is there WiFi?",
@@ -451,8 +451,8 @@ const translations = {
 
   de: {
     cardFrom: "ab {p} €",
-    cardCap2: "Max. 3 Personen",
-    cardCap1: "Max. 2 Personen",
+    cardCap2: "Max. 2 Personen",
+    cardCap1: "Max. 3 Personen",
     proofCount: "{n} Bewertungen",
     proofOn: "auf",
     calMinShort: "Mindestens 2 Nächte",
@@ -542,15 +542,15 @@ const translations = {
     faqTimeQ: "Wann sind An- und Abreise möglich?",
     faqTimeA: "Check-in ist ab 14:00 Uhr möglich. Check-out bis spätestens 11:00 Uhr.",
     faqGuestsQ: "Wie viele Gäste können übernachten?",
-    faqGuestsA: "Apartment 1 bietet Platz für maximal 2 Personen, Apartment 2 für maximal 3 Personen.",
+    faqGuestsA: "Apartment 1 bietet Platz für maximal 3 Personen, Apartment 2 für maximal 2 Personen.",
     maxGuests: "Max. Personen",
-    capOne: "2 Personen",
-    capTwo: "3 Personen",
+    capOne: "3 Personen",
+    capTwo: "2 Personen",
     msgMinStay: "Mindestens 2 Nächte: Bitte wählen Sie den {d} oder später als letzte Nacht.",
     msgMinStart: "Mindestens 2 Nächte: Ab diesem Tag sind keine 2 Nächte am Stück frei. Bitte wählen Sie einen anderen Anreisetag.",
     resErrMin: "Der Mindestaufenthalt beträgt 2 Nächte. Bitte wählen Sie ein späteres Abreisedatum.",
-    msgGuestsCap: "Apartment 1 bietet Platz für maximal 2 Personen.",
-    msgGuestsDates: "Für 3 Personen ist nur Apartment 2 geeignet, und es ist an den gewählten Daten nicht frei. Bitte wählen Sie andere Daten.",
+    msgGuestsCap: "Apartment 2 bietet Platz für maximal 2 Personen.",
+    msgGuestsDates: "Für 3 Personen ist nur Apartment 1 geeignet, und es ist an den gewählten Daten nicht frei. Bitte wählen Sie andere Daten.",
     faqPetsQ: "Sind Haustiere erlaubt?",
     faqPetsA: "Ja, Haustiere sind erlaubt.",
     faqWifiQ: "Gibt es WLAN?",
@@ -673,8 +673,8 @@ const translations = {
 
   fr: {
     cardFrom: "à partir de {p} €",
-    cardCap2: "Max. 3 personnes",
-    cardCap1: "Max. 2 personnes",
+    cardCap2: "Max. 2 personnes",
+    cardCap1: "Max. 3 personnes",
     proofCount: "{n} avis",
     proofOn: "sur",
     calMinShort: "Minimum 2 nuits",
@@ -764,15 +764,15 @@ const translations = {
     faqTimeQ: "Quels sont les horaires d'arrivée et de départ ?",
     faqTimeA: "L'arrivée est possible à partir de 14h00. Le départ doit se faire au plus tard à 11h00.",
     faqGuestsQ: "Combien de personnes peuvent séjourner ?",
-    faqGuestsA: "L'appartement 1 peut accueillir jusqu'à 2 personnes, l'appartement 2 jusqu'à 3 personnes.",
+    faqGuestsA: "L'appartement 1 peut accueillir jusqu'à 3 personnes, l'appartement 2 jusqu'à 2 personnes.",
     maxGuests: "Max. personnes",
-    capOne: "2 personnes",
-    capTwo: "3 personnes",
+    capOne: "3 personnes",
+    capTwo: "2 personnes",
     msgMinStay: "Minimum 2 nuits : choisissez le {d} ou plus tard comme dernière nuit.",
     msgMinStart: "Minimum 2 nuits : aucune période de 2 nuits consécutives n'est libre à partir de ce jour. Choisissez un autre jour d'arrivée.",
     resErrMin: "Le séjour minimum est de 2 nuits. Choisissez une date de départ plus tardive.",
-    msgGuestsCap: "L'appartement 1 peut accueillir jusqu'à 2 personnes.",
-    msgGuestsDates: "Seul l'appartement 2 convient pour 3 personnes, et il n'est pas libre aux dates choisies. Choisissez d'autres dates.",
+    msgGuestsCap: "L'appartement 2 peut accueillir jusqu'à 2 personnes.",
+    msgGuestsDates: "Seul l'appartement 1 convient pour 3 personnes, et il n'est pas libre aux dates choisies. Choisissez d'autres dates.",
     faqPetsQ: "Les animaux sont-ils acceptés ?",
     faqPetsA: "Oui, les animaux sont acceptés.",
     faqWifiQ: "Y a-t-il le Wi-Fi ?",
@@ -1281,8 +1281,8 @@ const DateKey = {
 const BOOKING_CONFIG = {
   minNights: 2,
   apartments: {
-    "1": { capacity: 2, priceFrom: 125 }, // Appartement 1: max. personen, vanaf-prijs per nacht (EUR)
-    "2": { capacity: 3, priceFrom: 125 }  // Appartement 2
+    "1": { capacity: 3, priceFrom: 125 }, // Appartement 1: max. personen, vanaf-prijs per nacht (EUR)
+    "2": { capacity: 2, priceFrom: 125 }  // Appartement 2
   },
   // count = aantal reviews; null = niet tonen.
   reviews: [
@@ -1377,7 +1377,7 @@ function initReservation() {
     return v.endsWith("1") ? ["1"] : v.endsWith("2") ? ["2"] : ["1", "2"];
   };
   const guestCount = () => Number(el.guests.value) || 1;
-  // Appartementen die passen bij keuze én aantal gasten (bij "Geen voorkeur" met 3 gasten alleen Appartement 2).
+  // Appartementen die passen bij keuze én aantal gasten (bij "Geen voorkeur" met 3 gasten alleen Appartement 1).
   const apts = () => {
     const fit = chosenApts().filter(a => Availability.CAPACITY[a] >= guestCount());
     return fit.length ? fit : chosenApts();
@@ -1625,7 +1625,7 @@ function initReservation() {
   }));
 
   // ---- Gasten en opmerking ----
-  // Max. aantal gasten hangt af van het gekozen appartement (1: 2 personen, 2: 3 personen).
+  // Max. aantal gasten hangt af van het gekozen appartement (1: 3 personen, 2: 2 personen).
   // Geeft true terug als het aantal is verlaagd tot de capaciteit.
   const setGuests = n => {
     const max = maxGuests();
