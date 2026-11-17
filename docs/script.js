@@ -174,7 +174,6 @@ const translations = {
     send: "Verstuur bericht",
     map: "Bekijk op Google Maps",
     phone: "Telefoon",
-    directBooking: "Direct boeken? Bekijk de appartementen en boek via Booking.com of Airbnb.",
 
     titleHome: "Overnachten in Venlo centrum | InnVenlo Apartments",
     titleApartments: "Appartementen in Venlo huren | InnVenlo Apartments",
@@ -397,7 +396,6 @@ const translations = {
     send: "Send message",
     map: "View on Google Maps",
     phone: "Phone",
-    directBooking: "Want to book directly? View our apartments and book via Booking.com or Airbnb.",
 
     titleHome: "Stay in Venlo city centre | InnVenlo Apartments",
     titleApartments: "Rent apartments in Venlo | InnVenlo Apartments",
@@ -620,7 +618,6 @@ const translations = {
     send: "Nachricht senden",
     map: "Auf Google Maps ansehen",
     phone: "Telefon",
-    directBooking: "Direkt buchen? Sehen Sie sich unsere Apartments an und buchen Sie über Booking.com oder Airbnb.",
 
     titleHome: "Übernachten im Zentrum von Venlo | InnVenlo Apartments",
     titleApartments: "Apartments in Venlo mieten | InnVenlo Apartments",
@@ -843,7 +840,6 @@ const translations = {
     send: "Envoyer le message",
     map: "Voir sur Google Maps",
     phone: "Téléphone",
-    directBooking: "Vous souhaitez réserver directement ? Consultez nos appartements et réservez via Booking.com ou Airbnb.",
 
     titleHome: "Séjourner au centre de Venlo | InnVenlo Apartments",
     titleApartments: "Louer des appartements à Venlo | InnVenlo Apartments",
