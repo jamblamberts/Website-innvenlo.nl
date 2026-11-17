@@ -20,13 +20,13 @@ const translations = {
     qkWeekend: "Dit weekend",
     qkNextWeekend: "Volgend weekend",
     rgClear: "Wissen",
-    rgPickOut: "Kies vertrek",
+    rgPickOut: "Kies laatste nacht",
     msgBusy: "Deze nacht is al bezet. Kies een andere aankomstdag.",
-    msgCross: "Uw verblijf kan niet over een bezette nacht lopen. Vertrek uiterlijk op {d}.",
+    msgCross: "Uw verblijf kan niet over een bezette nacht lopen. Laatste nacht uiterlijk op {d}.",
     bkTotal: "ca. €{p}",
     bkBarPick: "Kies uw datums",
     barPick: "Kies data",
-    barPickOut: "Kies vertrek",
+    barPickOut: "Kies laatste nacht",
     barNext: "Verder",
     barSend: "Versturen",
     gMinus: "Minder gasten",
@@ -62,7 +62,7 @@ const translations = {
     bkBarBtn: "Aanvragen",
     titleReserve: "Reserveren | InnVenlo Apartments Venlo",
     resPick: "Kies uw aankomstdatum",
-    resPickOut: "kies uw vertrekdatum",
+    resPickOut: "kies uw laatste nacht",
     calPrev: "Vorige maand",
     calNext: "Volgende maand",
     contactDoneTitle: "Bedankt voor uw bericht",
@@ -102,7 +102,7 @@ const translations = {
     maxGuests: "Max. personen",
     capOne: "2 personen",
     capTwo: "3 personen",
-    msgMinStay: "Minimaal 2 nachten: kies een vertrekdatum vanaf {d}.",
+    msgMinStay: "Minimaal 2 nachten: kies als laatste nacht {d} of later.",
     msgMinStart: "Minimaal 2 nachten: vanaf deze dag zijn geen 2 nachten op rij vrij. Kies een andere aankomstdag.",
     resErrMin: "Het minimale verblijf is 2 nachten. Kies een latere vertrekdatum.",
     msgGuestsCap: "Appartement 1 is geschikt voor maximaal 2 personen.",
@@ -243,13 +243,13 @@ const translations = {
     qkWeekend: "This weekend",
     qkNextWeekend: "Next weekend",
     rgClear: "Clear",
-    rgPickOut: "Choose departure",
+    rgPickOut: "Choose last night",
     msgBusy: "This night is already booked. Please choose another arrival day.",
-    msgCross: "Your stay cannot include a booked night. Latest departure: {d}.",
+    msgCross: "Your stay cannot include a booked night. Last night no later than {d}.",
     bkTotal: "approx. €{p}",
     bkBarPick: "Choose your dates",
     barPick: "Choose dates",
-    barPickOut: "Choose departure",
+    barPickOut: "Choose last night",
     barNext: "Continue",
     barSend: "Send",
     gMinus: "Fewer guests",
@@ -285,7 +285,7 @@ const translations = {
     bkBarBtn: "Request",
     titleReserve: "Book | InnVenlo Apartments Venlo",
     resPick: "Choose your arrival date",
-    resPickOut: "choose your departure date",
+    resPickOut: "choose your last night",
     calPrev: "Previous month",
     calNext: "Next month",
     contactDoneTitle: "Thank you for your message",
@@ -325,7 +325,7 @@ const translations = {
     maxGuests: "Max. guests",
     capOne: "2 guests",
     capTwo: "3 guests",
-    msgMinStay: "Minimum 2 nights: please choose a departure date from {d}.",
+    msgMinStay: "Minimum 2 nights: please choose {d} or later as your last night.",
     msgMinStart: "Minimum 2 nights: there are no 2 consecutive free nights from this day. Please choose another arrival date.",
     resErrMin: "The minimum stay is 2 nights. Please choose a later departure date.",
     msgGuestsCap: "Apartment 1 accommodates up to 2 guests.",
@@ -466,13 +466,13 @@ const translations = {
     qkWeekend: "Dieses Wochenende",
     qkNextWeekend: "Nächstes Wochenende",
     rgClear: "Löschen",
-    rgPickOut: "Abreise wählen",
+    rgPickOut: "Letzte Nacht wählen",
     msgBusy: "Diese Nacht ist bereits belegt. Bitte wählen Sie einen anderen Anreisetag.",
-    msgCross: "Ihr Aufenthalt kann keine belegte Nacht enthalten. Späteste Abreise: {d}.",
+    msgCross: "Ihr Aufenthalt kann keine belegte Nacht enthalten. Letzte Nacht spätestens am {d}.",
     bkTotal: "ca. {p} €",
     bkBarPick: "Daten wählen",
     barPick: "Daten wählen",
-    barPickOut: "Abreise wählen",
+    barPickOut: "Letzte Nacht wählen",
     barNext: "Weiter",
     barSend: "Senden",
     gMinus: "Weniger Gäste",
@@ -508,7 +508,7 @@ const translations = {
     bkBarBtn: "Anfragen",
     titleReserve: "Reservieren | InnVenlo Apartments Venlo",
     resPick: "Wählen Sie Ihr Anreisedatum",
-    resPickOut: "wählen Sie Ihr Abreisedatum",
+    resPickOut: "wählen Sie Ihre letzte Nacht",
     calPrev: "Vorheriger Monat",
     calNext: "Nächster Monat",
     contactDoneTitle: "Vielen Dank für Ihre Nachricht",
@@ -548,7 +548,7 @@ const translations = {
     maxGuests: "Max. Personen",
     capOne: "2 Personen",
     capTwo: "3 Personen",
-    msgMinStay: "Mindestens 2 Nächte: Bitte wählen Sie ein Abreisedatum ab {d}.",
+    msgMinStay: "Mindestens 2 Nächte: Bitte wählen Sie den {d} oder später als letzte Nacht.",
     msgMinStart: "Mindestens 2 Nächte: Ab diesem Tag sind keine 2 Nächte am Stück frei. Bitte wählen Sie einen anderen Anreisetag.",
     resErrMin: "Der Mindestaufenthalt beträgt 2 Nächte. Bitte wählen Sie ein späteres Abreisedatum.",
     msgGuestsCap: "Apartment 1 bietet Platz für maximal 2 Personen.",
@@ -689,13 +689,13 @@ const translations = {
     qkWeekend: "Ce week-end",
     qkNextWeekend: "Week-end prochain",
     rgClear: "Effacer",
-    rgPickOut: "Choisir le départ",
+    rgPickOut: "Choisir la dernière nuit",
     msgBusy: "Cette nuit est déjà réservée. Choisissez un autre jour d’arrivée.",
-    msgCross: "Votre séjour ne peut pas inclure une nuit réservée. Départ au plus tard : {d}.",
+    msgCross: "Votre séjour ne peut pas inclure une nuit réservée. Dernière nuit au plus tard le {d}.",
     bkTotal: "env. {p} €",
     bkBarPick: "Choisissez vos dates",
     barPick: "Choisir les dates",
-    barPickOut: "Choisir le départ",
+    barPickOut: "Choisir la dernière nuit",
     barNext: "Continuer",
     barSend: "Envoyer",
     gMinus: "Moins de personnes",
@@ -731,7 +731,7 @@ const translations = {
     bkBarBtn: "Demander",
     titleReserve: "Réserver | InnVenlo Apartments Venlo",
     resPick: "Choisissez votre date d'arrivée",
-    resPickOut: "choisissez votre date de départ",
+    resPickOut: "choisissez votre dernière nuit",
     calPrev: "Mois précédent",
     calNext: "Mois suivant",
     contactDoneTitle: "Merci pour votre message",
@@ -771,7 +771,7 @@ const translations = {
     maxGuests: "Max. personnes",
     capOne: "2 personnes",
     capTwo: "3 personnes",
-    msgMinStay: "Minimum 2 nuits : choisissez une date de départ à partir du {d}.",
+    msgMinStay: "Minimum 2 nuits : choisissez le {d} ou plus tard comme dernière nuit.",
     msgMinStart: "Minimum 2 nuits : aucune période de 2 nuits consécutives n'est libre à partir de ce jour. Choisissez un autre jour d'arrivée.",
     resErrMin: "Le séjour minimum est de 2 nuits. Choisissez une date de départ plus tardive.",
     msgGuestsCap: "L'appartement 1 peut accueillir jusqu'à 2 personnes.",
@@ -1407,13 +1407,15 @@ function initReservation() {
     if (key < today) return "past";
     const s = state.start, e = state.end;
     if (key === s) return "start";
-    if (key === e) return "end";
-    if (s && e && key > s && key < e) return "range";
+    // Gemarkeerd worden alleen de nachten: van aankomst t/m de laatste nacht (vertrekdag - 1).
+    if (s && e && key === DateKey.add(e, -1)) return "end";
+    if (s && e && key > s && key < DateKey.add(e, -1)) return "range";
     if (s && !e && key > s) {
-      if (key < DateKey.add(s, MIN)) return "minstay";
-      if (key > state.maxDep) return Availability.nightFree(key, a) ? "unreachable" : "busy";
+      // Tweede klik = laatste nacht.
+      if (key < DateKey.add(s, MIN - 1)) return "minstay";
+      if (key >= state.maxDep) return Availability.nightFree(key, a) ? "unreachable" : "busy";
       if (state.hover && key <= state.hover) return "preview";
-      return Availability.nightFree(key, a) ? "free" : "checkout";
+      return "free";
     }
     if (!Availability.nightFree(key, a)) return "busy";
     return Availability.canStart(key, a) ? "free" : "minstay"; // vrij, maar geen 2 nachten op rij
@@ -1527,17 +1529,18 @@ function initReservation() {
     const choosingEnd = state.start && !state.end && key > state.start;
 
     if (choosingEnd) {
-      const minDep = DateKey.add(state.start, MIN);
-      if (key < minDep) {
-        say(tr("msgMinStay").replace("{d}", fmtShort(minDep)));
+      // Tweede klik = laatste nacht; vertrek is de dag erna.
+      const minLast = DateKey.add(state.start, MIN - 1);
+      if (key < minLast) {
+        say(tr("msgMinStay").replace("{d}", fmtShort(minLast)));
         return;
       }
-      if (key > state.maxDep) {
-        say(tr("msgCross").replace("{d}", fmtShort(state.maxDep)));
+      if (key >= state.maxDep) {
+        say(tr("msgCross").replace("{d}", fmtShort(DateKey.add(state.maxDep, -1))));
         return;
       }
       say("");
-      setRange(state.start, key, false);
+      setRange(state.start, DateKey.add(key, 1), false);
       return;
     }
     if (!Availability.nightFree(key, a)) {
@@ -1557,7 +1560,7 @@ function initReservation() {
   el.months.addEventListener("pointerover", event => {
     if (event.pointerType !== "mouse" || !state.start || state.end) return;
     const k = event.target.closest(".cd")?.dataset.date || null;
-    const hover = k && k >= DateKey.add(state.start, MIN) && k <= state.maxDep ? k : null;
+    const hover = k && k >= DateKey.add(state.start, MIN - 1) && k < state.maxDep ? k : null;
     if (hover === state.hover) return;
     state.hover = hover;
     el.months.querySelectorAll(".cd").forEach(b => {
